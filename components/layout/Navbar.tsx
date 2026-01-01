@@ -4,11 +4,11 @@ import Link from "next/link";
 import { NavLink } from "@/types";
 
 const navLinks: NavLink[] = [
-    { label: "Home", href: "#" },
-    { label: "Packages", href: "#packages" },
-    { label: "Experience", href: "#experience" },
-    { label: "Destinations", href: "#destinations" },
-    { label: "About", href: "#about" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Packages", href: "/#packages" },
+    { label: "Experience", href: "/#experience" },
+    { label: "Destinations", href: "/#destinations" },
 ];
 
 export default function Navbar() {
