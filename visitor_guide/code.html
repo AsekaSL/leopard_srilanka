@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visitor Guide - Leopard Sri Lanka</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dfaf2a",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#171611",
+                        "surface-dark": "#211d11",
+                        "surface-highlight": "#2a261a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for details/summary animation */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-[#383429] bg-background-dark/95 backdrop-blur-md">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Leopard Sri Lanka</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Safaris</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Accommodation</a>
+<a class="text-white text-sm font-medium" href="#">Visitor Guide</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+</nav>
+<button class="hidden md:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary hover:bg-yellow-500 transition-colors text-[#171611] text-sm font-bold">
+                Book Now
+            </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat" data-alt="Majestic leopard resting on a tree branch in dark moody lighting" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(23, 22, 17, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDceC5vYgwlGJWi29MESzn1ZkHfqeZlphq2JShgBkLScmHZgcJ5rLVRcKdmRMUOSW_qZEXJeyfezvgGqGdhw4jWzdZgwZtR5TmrlY0OY03DwpSgUbVEmRfpraATgBnnC_3knFNoLnd4qxD7NszoJkgOMNUIIOk1XmjWhIZ2Jt_4CCwcH8hPsfkFlHjkkHI6EqlDYuNrq1BdgTp7iekWRT-rDfIEIAyvHAOru24yqDwkxUQDhKXJq4fVbmtQ43_vAVANpD9j9tBlcmnQ");'>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col gap-6">
+<span class="text-primary font-medium tracking-widest uppercase text-sm">Essential Information</span>
+<h1 class="text-white text-5xl md:text-7xl font-black tracking-tight leading-tight">
+                Visitor Guide
+            </h1>
+<p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Prepare for the Wild. Everything you need to know for your expedition into the heart of Yala National Park.
+            </p>
+</div>
+</div>
+<!-- Main Content Layout -->
+<div class="layout-container px-4 sm:px-6 lg:px-8 py-12 md:py-20 max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Sidebar / TOC (Desktop only) -->
+<div class="hidden lg:block w-64 shrink-0">
+<div class="sticky top-24 flex flex-col gap-2">
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4 px-3">Contents</p>
+<a class="px-3 py-2 text-primary font-medium border-l-2 border-primary bg-primary/5 rounded-r-md" href="#before-you-go">Preparation</a>
+<a class="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent" href="#timings">Timings &amp; Fees</a>
+<a class="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent" href="#what-to-bring">Essentials</a>
+<a class="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent" href="#rules">Park Regulations</a>
+</div>
+</div>
+<!-- Accordion Content -->
+<div class="flex-1 min-w-0">
+<div class="flex flex-col gap-4">
+<!-- Accordion 1: Before You Go -->
+<div class="scroll-mt-24" id="before-you-go">
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30" open="">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">flight_takeoff</span>
+</div>
+<h3 class="text-xl font-bold text-white">Before You Go</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+<div>
+<h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">badge</span> Visa Requirements
+                                        </h4>
+<p class="text-sm mb-4">Most visitors require an Electronic Travel Authorization (ETA) before arrival. Apply online at eta.gov.lk. Ensure your passport is valid for at least 6 months.</p>
+<h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">vaccines</span> Health
+                                        </h4>
+<p class="text-sm">Consult your doctor 4-6 weeks before travel. Routine vaccines are recommended. Malaria risk is low in Yala, but mosquito repellent is essential.</p>
+</div>
+<div class="bg-surface-highlight p-4 rounded-lg border border-[#383429]">
+<h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wide">Quick Tips</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Currency: Sri Lankan Rupee (LKR). Bring cash for tips.</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Plugs: Type D, M, and G. Bring a universal adapter.</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Language: Sinhala &amp; Tamil. English is widely spoken.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+</div>
+<!-- Accordion 2: Best Time to Visit -->
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<h3 class="text-xl font-bold text-white">Best Time to Visit</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 text-gray-300 text-sm leading-relaxed">
+<p class="mb-4">Yala has a hot, semi-arid environment. The best time for leopard sightings is during the dry season when animals congregate around waterholes.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+<div class="bg-surface-highlight p-4 rounded-lg border-l-4 border-primary">
+<span class="block text-white font-bold mb-1">Feb - Jun</span>
+<span class="text-xs text-gray-400 uppercase tracking-wide">Peak Dry Season</span>
+<p class="mt-2 text-xs">Highest probability of spotting leopards and sloth bears. Vegetation is sparse.</p>
+</div>
+<div class="bg-surface-highlight p-4 rounded-lg border-l-4 border-gray-600">
+<span class="block text-white font-bold mb-1">Oct - Dec</span>
+<span class="text-xs text-gray-400 uppercase tracking-wide">Monsoon Season</span>
+<p class="mt-2 text-xs">Park is lush and green. Bird watching is excellent, though mammal spotting is harder.</p>
+</div>
+</div>
+<p class="mt-4 text-xs text-primary/80 italic">* Note: Block 1 is sometimes closed in September for maintenance.</p>
+</div>
+<div class="w-full md:w-1/3 h-48 md:h-auto rounded-lg bg-cover bg-center" data-alt="Dry landscape of Yala National Park with golden grass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkBWYV_DUVnVelnpLh2llTfD78xlMyqMgoV32BwnBX8Bco5ZE8tKFoDw9THx--Mqaw2eBovo2zIiQEtozUV9hMrq9gBr4GDXEMZaoR0EvMNMQHBB8iveH9lfy8-RWvup2YGwWFKH9whWr9UZe6CYJ6QyOygFGpm0sGS6hbhGBzdD6YzHtpZEbJmokXPSyMoT3lxsjcPuKkACXqSG8-Gz9gwh5TRw8031c2yVFW28qp9xdvFM9kLfyhjqFcM_zMJZEo-HHthFA8aOKU");'></div>
+</div>
+</div>
+</details>
+<!-- Accordion 3: Safari Timings -->
+<div class="scroll-mt-24" id="timings">
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<h3 class="text-xl font-bold text-white">Safari Timings</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-4 p-5 rounded-lg border border-[#383429] bg-gradient-to-br from-surface-highlight to-surface-dark">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold text-white">Morning Safari</h4>
+<p class="text-sm text-gray-400">Best for bird watching &amp; active predators</p>
+</div>
+<span class="material-symbols-outlined text-primary">wb_sunny</span>
+</div>
+<div class="mt-2 pt-4 border-t border-[#383429] flex justify-between items-center">
+<span class="text-sm text-gray-300">Park Entry</span>
+<span class="font-mono text-primary font-bold">6:00 AM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-300">Duration</span>
+<span class="font-mono text-white">3-4 Hours</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-5 rounded-lg border border-[#383429] bg-gradient-to-br from-surface-highlight to-surface-dark">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-lg font-bold text-white">Evening Safari</h4>
+<p class="text-sm text-gray-400">Best for leopards &amp; sunset views</p>
+</div>
+<span class="material-symbols-outlined text-primary">nights_stay</span>
+</div>
+<div class="mt-2 pt-4 border-t border-[#383429] flex justify-between items-center">
+<span class="text-sm text-gray-300">Park Entry</span>
+<span class="font-mono text-primary font-bold">2:30 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-300">Duration</span>
+<span class="font-mono text-white">3-4 Hours</span>
+</div>
+</div>
+</div>
+<p class="mt-4 text-center text-xs text-gray-500">Full day safaris are also available from 6:00 AM to 6:00 PM.</p>
+</div>
+</details>
+</div>
+<!-- Accordion 4: Entrance Fees -->
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="text-xl font-bold text-white">Entrance Fees</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm text-gray-300">
+<thead class="text-xs uppercase bg-[#2a261a] text-primary">
+<tr>
+<th class="px-4 py-3 rounded-l-lg" scope="col">Visitor Type</th>
+<th class="px-4 py-3" scope="col">Adult</th>
+<th class="px-4 py-3 rounded-r-lg" scope="col">Child (6-12)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-[#383429]">
+<td class="px-4 py-4 font-medium text-white">Foreign National</td>
+<td class="px-4 py-4">$25.00 + Taxes</td>
+<td class="px-4 py-4">$15.00 + Taxes</td>
+</tr>
+<tr class="border-b border-[#383429]">
+<td class="px-4 py-4 font-medium text-white">SAARC Country National</td>
+<td class="px-4 py-4">$20.00 + Taxes</td>
+<td class="px-4 py-4">$10.00 + Taxes</td>
+</tr>
+<tr>
+<td class="px-4 py-4 font-medium text-white">Local Citizen</td>
+<td class="px-4 py-4">LKR 150.00</td>
+<td class="px-4 py-4">LKR 60.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 text-xs text-gray-500">* Additional service charges apply for vehicles ($8-10). Prices subject to change by Wildlife Department.</p>
+</div>
+</details>
+<!-- Accordion 5: What to Bring -->
+<div class="scroll-mt-24" id="what-to-bring">
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">backpack</span>
+</div>
+<h3 class="text-xl font-bold text-white">What to Bring</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 bg-surface-highlight rounded-lg flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">checkroom</span>
+<span class="text-white font-semibold text-sm">Neutral Clothing</span>
+<span class="text-xs text-gray-400">Avoid bright colors</span>
+</div>
+<div class="p-4 bg-surface-highlight rounded-lg flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
+<span class="text-white font-semibold text-sm">Zoom Lens</span>
+<span class="text-xs text-gray-400">Min 300mm recommended</span>
+</div>
+<div class="p-4 bg-surface-highlight rounded-lg flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">water_drop</span>
+<span class="text-white font-semibold text-sm">Hydration</span>
+<span class="text-xs text-gray-400">Reusable water bottle</span>
+</div>
+<div class="p-4 bg-surface-highlight rounded-lg flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">light_mode</span>
+<span class="text-white font-semibold text-sm">Sun Protection</span>
+<span class="text-xs text-gray-400">Hat, sunglasses, SPF</span>
+</div>
+</div>
+<div class="mt-4 p-4 rounded-lg bg-blue-900/20 border border-blue-900/30 flex gap-3">
+<span class="material-symbols-outlined text-blue-400">info</span>
+<p class="text-sm text-blue-200">Binoculars are provided by our luxury jeep service, but bringing your own personal pair is always a good idea.</p>
+</div>
+</div>
+</details>
+</div>
+<!-- Accordion 6: Park Rules -->
+<div class="scroll-mt-24" id="rules">
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<h3 class="text-xl font-bold text-white">Park Rules</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<ul class="grid md:grid-cols-2 gap-4">
+<li class="flex gap-4 items-start p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-red-500 mt-1">no_food</span>
+<div>
+<strong class="block text-white text-sm">Do Not Feed Animals</strong>
+<span class="text-xs text-gray-400">Strictly prohibited to maintain natural behaviors.</span>
+</div>
+</li>
+<li class="flex gap-4 items-start p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-red-500 mt-1">directions_car</span>
+<div>
+<strong class="block text-white text-sm">Stay in Vehicle</strong>
+<span class="text-xs text-gray-400">Disembarking is only allowed at designated spots.</span>
+</div>
+</li>
+<li class="flex gap-4 items-start p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-red-500 mt-1">volume_off</span>
+<div>
+<strong class="block text-white text-sm">Keep Noise Low</strong>
+<span class="text-xs text-gray-400">Silence increases your chances of sightings.</span>
+</div>
+</li>
+<li class="flex gap-4 items-start p-3 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-red-500 mt-1">flash_off</span>
+<div>
+<strong class="block text-white text-sm">No Flash Photography</strong>
+<span class="text-xs text-gray-400">Flash disturbs animals and is not allowed.</span>
+</div>
+</li>
+</ul>
+</div>
+</details>
+</div>
+<!-- Accordion 7: Health & Safety -->
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<h3 class="text-xl font-bold text-white">Health &amp; Safety</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<p class="text-sm text-gray-300 mb-4">Your safety is our priority. Our guides are trained in first aid and emergency protocols.</p>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="bg-surface-highlight p-4 rounded-lg border border-[#383429]">
+<h5 class="text-white text-sm font-bold mb-2">Nearest Hospital</h5>
+<p class="text-xs text-gray-400">Debarawewa Base Hospital</p>
+<p class="text-xs text-gray-400 mt-1">Approx. 45 mins from park entrance</p>
+</div>
+<div class="bg-surface-highlight p-4 rounded-lg border border-[#383429]">
+<h5 class="text-white text-sm font-bold mb-2">Emergency Contacts</h5>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-xs text-gray-400">
+<span>Tourist Police</span>
+<span class="text-white">1912</span>
+</div>
+<div class="flex justify-between text-xs text-gray-400">
+<span>Ambulance</span>
+<span class="text-white">1990</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+<!-- Accordion 8: Mobile Network Info -->
+<details class="group bg-surface-dark border border-[#383429] rounded-xl overflow-hidden transition-all duration-300 open:border-primary/30">
+<summary class="flex cursor-pointer items-center justify-between p-6 hover:bg-surface-highlight transition-colors select-none">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">signal_cellular_alt</span>
+</div>
+<h3 class="text-xl font-bold text-white">Mobile Network Info</h3>
+</div>
+<span class="material-symbols-outlined text-gray-400 transition-transform duration-300 group-open:rotate-180 group-open:text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 border-t border-[#383429]/50">
+<p class="text-sm text-gray-300 mb-4">Coverage within the park is sporadic. We recommend embracing the disconnection, but if you need to stay connected:</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex-1 min-w-[140px] bg-surface-highlight p-3 rounded-lg border border-[#383429] flex items-center justify-between">
+<span class="text-sm font-bold text-white">Dialog</span>
+<div class="flex text-primary text-[10px] gap-0.5">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="self-center">Good</span>
+</div>
+</div>
+<div class="flex-1 min-w-[140px] bg-surface-highlight p-3 rounded-lg border border-[#383429] flex items-center justify-between">
+<span class="text-sm font-bold text-white">Mobitel</span>
+<div class="flex text-yellow-500/70 text-[10px] gap-0.5">
+<span class="material-symbols-outlined text-sm">signal_cellular_3_bar</span>
+<span class="self-center">Fair</span>
+</div>
+</div>
+<div class="flex-1 min-w-[140px] bg-surface-highlight p-3 rounded-lg border border-[#383429] flex items-center justify-between">
+<span class="text-sm font-bold text-white">Hutch/Airtel</span>
+<div class="flex text-red-500/70 text-[10px] gap-0.5">
+<span class="material-symbols-outlined text-sm">signal_cellular_1_bar</span>
+<span class="self-center">Poor</span>
+</div>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="relative py-20 px-4">
+<div class="absolute inset-0 bg-cover bg-center opacity-30" data-alt="Wide shot of a safari jeep driving through Yala park at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDufO8D_NIv_GopXAhmrkgQau7tm5XKRJeZ-wUt7FkmoUSl1btiPE5qrFBG1KgkB1k9WjFDqXgJx_kvA9r-XCi1waYzwrHij2LUKXVG549dkgPeMm2uf_APLLVsV4Ovj0ehKqB2e_APGJ4pVCIGnZmlsoQV5LSEApvxWwh0iEHhOiEomkKPRN_iJKVLxA5VzJg5i1-DHeJK-d7PsrrI3v3dRJZcGBOR3rZzYLWUJbbVhCTCI5fBuWP_3-3_6WqlsIRWZUciuwF8Tfji");'></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark via-background-dark/80 to-background-dark"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col gap-8 items-center">
+<h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Ready for your adventure?</h2>
+<p class="text-gray-300 text-lg max-w-2xl">
+                Experience the raw beauty of Yala with our premium guided safaris. Slots fill up fast during peak season.
+            </p>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-yellow-500 transition-all text-[#171611] text-base font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40">
+                Book Your Safari
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#12110d] border-t border-[#383429] py-12 px-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-2xl">pets</span>
+</div>
+<span class="text-white font-bold text-lg">Leopard Sri Lanka</span>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">public</span> <!-- Placeholder for social icon -->
+</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-8 text-center">
+<p class="text-gray-600 text-sm">© 2024 Leopard Sri Lanka. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

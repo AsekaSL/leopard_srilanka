@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { packagesData } from "@/app/data/packages";
+import { packagesData } from "@/components/data/packages";
 import { Metadata } from "next";
 
 type Props = {
