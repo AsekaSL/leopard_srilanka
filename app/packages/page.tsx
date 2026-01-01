@@ -103,10 +103,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">From</span>
                                     <span className="text-xl font-bold text-white">$60 <span className="text-sm font-normal text-gray-400">/ person</span></span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/morning-safari" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -148,10 +148,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">From</span>
                                     <span className="text-xl font-bold text-white">$60 <span className="text-sm font-normal text-gray-400">/ person</span></span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/afternoon-safari" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -196,10 +196,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">From</span>
                                     <span className="text-xl font-bold text-white">$150 <span className="text-sm font-normal text-gray-400">/ person</span></span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/full-day-safari" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -241,10 +241,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">Price</span>
                                     <span className="text-lg font-bold text-white">Contact Us</span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/private-safari" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -289,10 +289,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">Price</span>
                                     <span className="text-lg font-bold text-white">Contact Us</span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/luxury-safari" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -334,10 +334,10 @@ export default function PackagesPage() {
                                     <span className="text-xs text-gray-500 uppercase">From</span>
                                     <span className="text-xl font-bold text-white">$75 <span className="text-sm font-normal text-gray-400">/ person</span></span>
                                 </div>
-                                <button className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
+                                <Link href="/packages/bird-watching" className="h-10 px-5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-[#171611] text-sm font-bold transition-all duration-200 flex items-center gap-2">
                                     View Details
                                     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </article>
