@@ -1,5 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import MobileBottomCTA from "@/components/layout/MobileBottomCTA";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustInfoStrip from "@/components/sections/TrustInfoStrip";
@@ -16,7 +14,6 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <TrustInfoStrip />
       <IntroductionSection />
@@ -28,7 +25,6 @@ export default function Home() {
       <ReviewsSection />
       <FAQSection />
       <FinalCTA />
-      <Footer />
       <MobileBottomCTA />
     </>
   );
