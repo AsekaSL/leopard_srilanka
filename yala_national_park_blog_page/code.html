@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yala National Park Blog – Latest Sightings, Stories &amp; Guides</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eead2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", /* Matching the example background */
+                        "card-dark": "#27231c",
+                        "border-dark": "#393328",
+                        "text-muted": "#b9b09d",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-[#181611]/90 backdrop-blur-md border-b border-border-dark px-6 py-4">
+<div class="layout-content-container max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">YalaSriLanka.co</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">Safari Packages</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">Plan Your Trip</a>
+<a class="text-primary text-sm font-medium" href="#">Blog</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">About Yala</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-card-dark rounded-lg px-3 py-2 border border-border-dark focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none text-white text-sm placeholder-text-muted focus:ring-0 w-32 lg:w-48" placeholder="Search articles..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-[#d99a1e] text-[#181611] px-5 py-2 rounded-lg text-sm font-bold transition-colors">
+                    Book Safari
+                </button>
+</div>
+</div>
+</header>
+<main class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative min-h-[600px] flex items-center justify-center px-4 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-[#181611] via-[#181611]/60 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#181611]/30 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic close-up of a leopard resting on a tree branch in Yala National Park at dusk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4jw1tziKTrCQ0iCJTd7VWiSX11XS-zcJAc1PsevfB_wp2ZddtVM6tKjmpjoLtua2QwCmaf-k-d4z1U6KgYSCmV_dGxvc6s1Xo6sG0wm5ALU6KYvT9p3TQg7-kP8UpilTvUYjOdG3qn6DT7Rbi3Xt6YGQxbDysfWdkvLQJWJFp2B9EDhZW2neBdVv6Ey0I7W4PxKshn0QFyxlnAOJOdTbR47JpKxszRMUNZ8lHJyfjhJ_kQrGgZ1E1b2Goifakkr3lqxea4NhUpfBs');"></div>
+</div>
+<div class="relative z-20 max-w-[960px] text-center flex flex-col items-center gap-6">
+<span class="px-3 py-1 bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider rounded-full backdrop-blur-sm">
+                    The Official Blog
+                </span>
+<h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">
+                    Dive Deeper into the Wild
+                </h1>
+<p class="text-xl md:text-2xl text-white/90 font-light max-w-2xl">
+                    Your source for Yala’s latest discoveries, stories &amp; guides.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="bg-primary text-[#181611] px-8 py-3 rounded-lg text-base font-bold hover:bg-[#d99a1e] transition-colors">
+                        Start Exploring
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-lg text-base font-medium hover:bg-white/20 transition-colors">
+                        View Sightings
+                    </button>
+</div>
+</div>
+</section>
+<!-- Intro Content -->
+<section class="py-16 px-6 bg-background-dark">
+<div class="max-w-[800px] mx-auto text-center">
+<h2 class="text-3xl font-bold mb-6 text-primary">Expert Insights for the Modern Explorer</h2>
+<p class="text-lg text-text-muted leading-relaxed font-sans">
+                    Discover the secrets of Yala National Park through expert-written content. From understanding animal behavior to mastering safari photography, our guides are designed to enhance your journey into the wild. Whether you are a seasoned tracker or a first-time visitor, knowledge transforms a simple sighting into a lifelong memory.
+                </p>
+</div>
+</section>
+<!-- Category Grid -->
+<section class="py-8 px-6 bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+<!-- Category Item -->
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">visibility</span>
+<span class="text-sm font-bold text-center">Sightings</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">pets</span>
+<span class="text-sm font-bold text-center">Species</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">photo_camera</span>
+<span class="text-sm font-bold text-center">Photography</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">nature_people</span>
+<span class="text-sm font-bold text-center">Conservation</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">auto_stories</span>
+<span class="text-sm font-bold text-center">Stories</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">map</span>
+<span class="text-sm font-bold text-center">Planning</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-6 bg-card-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-card-dark/80 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">temple_buddhist</span>
+<span class="text-sm font-bold text-center">Culture</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Featured & Sightings Split -->
+<section class="py-12 px-6 bg-background-dark">
+<div class="max-w-[1200px] mx-auto grid lg:grid-cols-3 gap-8">
+<!-- Featured Posts (Left 2/3) -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="flex items-center justify-between border-b border-border-dark pb-4">
+<h3 class="text-2xl font-bold">Featured Stories</h3>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All</a>
+</div>
+<!-- Large Featured Card 1 -->
+<article class="group relative flex flex-col md:flex-row bg-card-dark border border-border-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img alt="Elephant herd crossing a dirt road in Yala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A family of elephants walking through the dry scrub forest of Yala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYiNHe38tflIypPz4SRczSuXn82XFDPEbH62ljGieQ63r_Ovx1N3Wl4Ak0Hyhcni6_zwqNIPTw0nAU1u1U7jyr7Agc09DwtErasgpjfM-sVp6fAOCpXLjIFmIf9VUhNXDSi3OjB_4tYf2-9RghxvA3vGbKLMvIivecPdDci-215Gv8TTVTQkrMZQoiijX8QL2KHOtfs-vJ2auZZskFn1Pyeso4jL7iCJMcKI8Oi72OGfgkiYF8ayCSJAsP4G9bD_6LqWZaTB_3AC5"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Conservation</span>
+<span class="text-xs text-text-muted">Oct 12, 2023</span>
+</div>
+<h2 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">The Return of the Tuskers: A Season to Remember</h2>
+<p class="text-text-muted text-sm mb-4 line-clamp-2 font-sans">
+                                Recent months have seen unprecedented sightings of iconic tuskers returning to Block 1. We explore the migratory patterns driving this return.
+                            </p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform" href="#">
+                                Read Full Story <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Large Featured Card 2 -->
+<article class="group relative flex flex-col md:flex-row bg-card-dark border border-border-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img alt="Close up of a green bee-eater bird on a branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant green bee-eater bird perched on a dry twig against a blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANdQRV9H8zBySObpxMqsncTk_l_mz1o0IQQpl-RSPLBkUe7RjO-NWqqJfYmE-Dy9TYPOOmIoovynNMZWqS6drh5gjYvFXFO6NJo5QgUOu4iJJ1ygN9g_bA8nHCw4BlthOYLCS-jpsh-VUXzzgTH_Qi7FfvqG4z_agBdNgNDQh-FEciGC93jfSWEKz2P-tDVJPpKnCUhVpohkkP2DreX78BZBXWO7xpR9qXdh5oieGhM1kFZqXCsbzKToPZI5ZCTGVqDJLfBu21M0-i"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Photography</span>
+<span class="text-xs text-text-muted">Sep 28, 2023</span>
+</div>
+<h2 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Mastering Golden Hour: Capturing Yala's Birds</h2>
+<p class="text-text-muted text-sm mb-4 line-clamp-2 font-sans">
+                                The light in Yala transforms dramatically between 5 PM and 6 PM. Learn how to adjust your ISO and shutter speed for perfect avian portraits.
+                            </p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform" href="#">
+                                Read Full Guide <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Latest Sightings Feed (Right 1/3) -->
+<div class="lg:col-span-1 bg-card-dark border border-border-dark rounded-xl p-6 h-fit sticky top-24">
+<div class="flex items-center gap-2 mb-6 border-b border-border-dark pb-4">
+<span class="material-symbols-outlined text-primary animate-pulse">emergency_home</span>
+<h3 class="text-lg font-bold">Live Sightings Log</h3>
+</div>
+<div class="relative pl-4 border-l border-border-dark space-y-8">
+<!-- Sighting Item -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-primary ring-4 ring-background-dark"></div>
+<span class="text-xs font-bold text-primary mb-1 block">Today, 06:45 AM</span>
+<h4 class="text-sm font-bold text-white mb-1">Leopard at Kotabendi Rock</h4>
+<p class="text-xs text-text-muted font-sans">Male leopard 'Lucas' spotted resting on the lower ridge. Excellent visibility.</p>
+</div>
+<!-- Sighting Item -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-[#544b3b] ring-4 ring-background-dark"></div>
+<span class="text-xs font-bold text-text-muted mb-1 block">Yesterday, 04:30 PM</span>
+<h4 class="text-sm font-bold text-white mb-1">Sloth Bear near Buttuwa</h4>
+<p class="text-xs text-text-muted font-sans">Mother and cub foraging for termites near the main tank bund.</p>
+</div>
+<!-- Sighting Item -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-[#544b3b] ring-4 ring-background-dark"></div>
+<span class="text-xs font-bold text-text-muted mb-1 block">Oct 14, 09:15 AM</span>
+<h4 class="text-sm font-bold text-white mb-1">Tusker 'Gemunu'</h4>
+<p class="text-xs text-text-muted font-sans">Sighted crossing the main road near the entrance gate. Traffic stopped briefly.</p>
+</div>
+<!-- Sighting Item -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 h-3 w-3 rounded-full bg-[#544b3b] ring-4 ring-background-dark"></div>
+<span class="text-xs font-bold text-text-muted mb-1 block">Oct 13, 07:00 AM</span>
+<h4 class="text-sm font-bold text-white mb-1">Painted Stork Colony</h4>
+<p class="text-xs text-text-muted font-sans">Large gathering at the lagoon. Nesting behavior observed.</p>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-border-dark text-text-muted text-sm rounded hover:bg-white/5 hover:text-white transition-colors">
+                        View Full Log
+                    </button>
+</div>
+</div>
+</section>
+<!-- Wildlife Deep Dive Grid -->
+<section class="py-12 px-6 bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<h3 class="text-2xl font-bold mb-8 border-l-4 border-primary pl-4">Wildlife Deep-Dives</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img alt="Sri Lankan Leopard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Portrait of a Sri Lankan leopard staring intensely" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDePn-sqjTmFgAEznnzNrCBl6nEi8UB9xsgud7EHFVT3m-qEBPRqgRd9cM-oFlgpPMLM4SigMAdwbk6Aq6wsM8XV6E8iq2H0yh5V3qbfx_aejmyYvxtQOSGV6u0pP_iQoeeWFE_B0umNBRgZ_anzX-Iqbf5sVviWjkTRjytmKc3znTAM2cbutvUmVEk2EEw96gNTS7h_dQyRFBENDmdeXDS9o20drznPPS0S8qfYpgodATyQk3rLHMefy1y2J24y06TG9XuJFIgLpP5"/>
+</div>
+<h4 class="text-lg font-bold group-hover:text-primary transition-colors">The Sri Lankan Leopard</h4>
+<p class="text-sm text-text-muted font-sans mt-2">The apex predator of the island. Understand their territories and behavior.</p>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img alt="Asian Elephant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A wild Asian elephant dusting itself with sand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPEJTspNgjJgaIDmbz6S7lCx4gKQrql57drRlCCnA5MxIlP9ZqZwhTvWfBAqTMJnGqPEJGWJW2dszmVBBQ-Puc6-6EG0pOYQ0Yx5L5xpaGOvpFGE8SauAGzPgSucK1xYwtygDCy_NaVm0rhlOpkUlZS-5iNUxSB4VkU2WWVFoWKSY7DcE4iCdgLeaUYEWHds3eeoUiTbklYvsBwgkNGum52MBTrBLR1L58LujDV0nDlSRklcxFldKZy2uDa_cpufEYApsFCW_mNSSh"/>
+</div>
+<h4 class="text-lg font-bold group-hover:text-primary transition-colors">Asian Elephants</h4>
+<p class="text-sm text-text-muted font-sans mt-2">Nomads of the scrub jungle. Tracking the gentle giants of Yala.</p>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img alt="Sloth Bear" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A rare sloth bear walking through tall grass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb8K_1nZ85AAYkwUyERGDBtSqRQGPNU1GYW2WyQwzPhMUIptOymzPP_EtQm3p3T_WixahYQrRDn7CYBajVSUfRtxLOQ6K03KKMuAyS1paxS--c9g7w4FQfa-kJnRpDbtbOJeNcvzbEVWqY8FACC7ipDA753snHEzd24o80YzEte9lfG-Dipaidn43GP5aYkfz-irOvYUCI-rJgb6P0PAm7Zrf0U9Rp0e81j71kv_GLpIF7BSupeMoiG3h6BqFv6l2iQcqtQXMgq_0O"/>
+</div>
+<h4 class="text-lg font-bold group-hover:text-primary transition-colors">The Elusive Sloth Bear</h4>
+<p class="text-sm text-text-muted font-sans mt-2">Why they are harder to spot than leopards and where to look.</p>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img alt="Mugger Crocodile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A mugger crocodile basking on a river bank with mouth open" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtZzR9r0y7x7KFRcSZY7r92DghKp7sFKoInrzXOFkL7R3SCZR4SczfhamAZDiZnvtQHOv3g7w9fsd2JJ9tzmZL65x8eNmFu8-KU0E_x7k4v11Y4cvG4T6ad5w85345-gs1J4k4LVm7MTesZzZf1ZqjDiYZ3HZwjp2CBIPM5y4IW6rjy4hSywg2YdITw9Jq8uPje9IRw-zXR-0nlEZSARpKw7xI9W3H1A2C6BSO472SysuDUkpSxYIMvhCQN8bMWHGSvHpjNp2ajpzX"/>
+</div>
+<h4 class="text-lg font-bold group-hover:text-primary transition-colors">Reptiles &amp; Amphibians</h4>
+<p class="text-sm text-text-muted font-sans mt-2">From mugger crocodiles to land monitors, the ancient rulers of the water.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Photography Section (Split) -->
+<section class="py-16 px-6 bg-[#221c10]">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2 relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-xl blur-lg"></div>
+<img alt="Photographer in safari jeep" class="relative rounded-lg shadow-2xl w-full" data-alt="A photographer with a large telephoto lens taking pictures from a safari jeep" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0ZKM1RMadjYd_wdsQmXWl0X2J1XzZYtnuJYNqyGzmdNioqwbuKzuCu2YQnknQKYwiM0LGU1ev8QPNP2bAm5BVH1sOdXvpHYh1LKtpI26oqe5EWh1B8IfiuyOyWuEX5RcgfTrH78ODJRhlthdtW4tYmcYCWMS_iGsZLVphuwyJCGHU8U-JLUISjR9pQIw_ggUNFtXQ9YqJQAWoge9CurfVXQl_5VMNmLyLj1GCQx0367HAo2Kz-_Sv_Dt9XKDk7tHHUTOgry-S5gs"/>
+</div>
+<div class="md:w-1/2">
+<span class="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Photography Guides</span>
+<h2 class="text-4xl font-bold text-white mb-6">Capture the Perfect Moment</h2>
+<p class="text-text-muted font-sans mb-6 text-lg leading-relaxed">
+                        Yala presents unique challenges for photographers: high contrast lighting, thick brush, and fast-moving subjects. Our guides cover essential camera settings, ethical wildlife photography practices, and recommended gear for the tropical environment.
+                    </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-white font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Best Lenses for Yala's Terrain
+                        </li>
+<li class="flex items-center gap-3 text-white font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Understanding Animal Body Language
+                        </li>
+<li class="flex items-center gap-3 text-white font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Optimizing for Low Light Conditions
+                        </li>
+</ul>
+<button class="bg-primary hover:bg-[#d99a1e] text-[#181611] px-6 py-3 rounded-lg font-bold transition-colors flex items-center gap-2">
+                        View All Photography Guides
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Conservation Quote Block -->
+<section class="py-20 px-6 bg-cover bg-fixed bg-center relative" data-alt="Dark dense forest canopy texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADr2lsh8K86rqXr1IZFNdIXV8vP2Va46JE5oLtWplZ2j8M_HcS4K-7tTkd5nduRFbXnJGduqyfPoeUnBohIcTlsjsJsquSn4wxUixr85-sT8SZSLRHxm0IYS9Do-InnHI9qZQAqy83OUJ78JMkA260lMt6cBrjzVm0_1VgLQ_8Sy-HxDSGLBS7J90BRiLReKmFNfbV-Q3zQIHmXjkS_NxC8tYB_8iDcy-73F3iI5AupRP7DaXbZBd1r_fn1g0NksgKJo4sNx-CT5Uw');">
+<div class="absolute inset-0 bg-[#181611]/90"></div>
+<div class="relative max-w-[800px] mx-auto text-center z-10">
+<span class="material-symbols-outlined text-primary text-6xl mb-6">format_quote</span>
+<h2 class="text-3xl md:text-5xl font-serif italic font-light text-white leading-tight mb-8">
+                    "Preserving Wildlife, Inspiring Wonder. Every visitor plays a crucial role in the future of Yala's ecosystem."
+                </h2>
+<div class="w-16 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-text-muted mb-8 font-sans">Learn about our efforts in habitat restoration and anti-poaching initiatives.</p>
+<a class="inline-block border border-white/30 hover:bg-white/10 hover:border-white text-white px-6 py-2 rounded-full text-sm font-bold transition-all" href="#">
+                    Our Conservation Mission
+                </a>
+</div>
+</section>
+<!-- Latest Posts List -->
+<section class="py-16 px-6 bg-background-dark">
+<div class="max-w-[800px] mx-auto">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-2xl font-bold">Latest Articles</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold bg-primary text-[#181611] rounded-full">All</button>
+<button class="px-3 py-1 text-xs font-bold bg-card-dark text-text-muted border border-border-dark rounded-full hover:text-white">Guides</button>
+<button class="px-3 py-1 text-xs font-bold bg-card-dark text-text-muted border border-border-dark rounded-full hover:text-white">Stories</button>
+</div>
+</div>
+<div class="space-y-8">
+<!-- List Item 1 -->
+<article class="flex flex-col sm:flex-row gap-6 border-b border-border-dark pb-8 group">
+<div class="sm:w-48 sm:h-32 shrink-0 overflow-hidden rounded-lg">
+<img alt="Safari jeep" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A safari jeep driving on a dusty red road surrounded by trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEGGTcbZCoOS8j2NuOhLG6w7AmpObISHdJO1wOps__tuxS-orpFMyTt3-8di9GvjWhXv9HvXEPTklU64p1AuQj623p7zHYa2HZY8pHMGOZTlEhuRMJVzJhA6ZbJBUFjKCg7wV0eUmLgpWCJKQcXSR-MLCyCIBnil-d4t9a06DSPxmYlEbCSU0nEbd0y_VSqofF3okweftAdsw538AWf4PD0wKSveOq75l3iQY3UZxQ4_QP1LkRWP0Sl3Gt7PsLsmpAuepXene3gW5D"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold text-primary">Planning</span>
+<span class="text-xs text-text-muted">3 days ago</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors cursor-pointer">The Importance of a Good Guide</h4>
+<p class="text-text-muted text-sm font-sans line-clamp-2 mb-3">
+                                A naturalist does more than drive. They are the storytellers of the jungle. Here is how to ensure you get the best tracking experience.
+                            </p>
+<a class="text-sm font-bold text-white hover:text-primary transition-colors" href="#">Read More</a>
+</div>
+</article>
+<!-- List Item 2 -->
+<article class="flex flex-col sm:flex-row gap-6 border-b border-border-dark pb-8 group">
+<div class="sm:w-48 sm:h-32 shrink-0 overflow-hidden rounded-lg">
+<img alt="Ancient ruins" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Ancient stone ruins of a Buddhist temple hidden in the jungle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZZTdm9GjqvZhxnLi35VkECyU3fY6c1XI5s0ZxbcVlJNZseh3zJgAh-1zPDU-VQDdlbquZpWksY-t0ElV3h43tN7XV8-VAoZyveqRnIKQHSbBs3Dlhf-p0FzzXdqDM8SfeyEp6Idr7wQtHfvgYX8MXzsOBTbtQiaTOb39IajmGVTHPVg4VXx00d2rBxofc3AHujVipEp-TB6Nc2iBDTgKk0M9BLxI-YnQJMoELy37WeMXf4NC_LEZ8P1KayKwxRBFaIjXVceLMGUM"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold text-primary">Culture</span>
+<span class="text-xs text-text-muted">1 week ago</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors cursor-pointer">Hidden Gems: Sithulpawwa Rock Temple</h4>
+<p class="text-text-muted text-sm font-sans line-clamp-2 mb-3">
+                                Beyond the leopards, Yala hides a 2000-year-old monastic complex. Explore the history carved into the rocks.
+                            </p>
+<a class="text-sm font-bold text-white hover:text-primary transition-colors" href="#">Read More</a>
+</div>
+</article>
+<!-- List Item 3 -->
+<article class="flex flex-col sm:flex-row gap-6 border-b border-border-dark pb-8 group">
+<div class="sm:w-48 sm:h-32 shrink-0 overflow-hidden rounded-lg">
+<img alt="Luxury tent interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Interior of a luxury glamping tent with a view of the wilderness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7E1ZHTQk9i5hTFKpBqV5ZwWuf10YIiOtmerqzn1OvtcpZiTEzkbYISh-Zu8KRADbNT0w-GKlg0XhJKJzh0DWs7dXsx1vK5GA1uVm6ijbV5aoxuXQ2o7b8Tkk0mX8s2n8st9bee8PCMvj6yEc6UprZO2ALjIpHYrzlnIY8c66tnJI8u42LDvps5lGOJlb-XuOSS2pfxsz7BNWiC9bh7bbeemrGd7-zGqJOl24MGuA5iaUX7FlyLJoj0vGm37vk-o3Nl1s7DfmGwmr"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold text-primary">Traveler Stories</span>
+<span class="text-xs text-text-muted">2 weeks ago</span>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors cursor-pointer">Sleeping Under the Stars: A Guest Diary</h4>
+<p class="text-text-muted text-sm font-sans line-clamp-2 mb-3">
+                                "The sounds of the jungle at night are deafeningly beautiful." Sarah J. recounts her first night glamping on the border of the park.
+                            </p>
+<a class="text-sm font-bold text-white hover:text-primary transition-colors" href="#">Read More</a>
+</div>
+</article>
+</div>
+<div class="mt-10 text-center">
+<button class="border border-border-dark text-text-muted hover:text-white hover:border-white px-6 py-2 rounded-full transition-all text-sm font-medium">
+                        Load More Articles
+                    </button>
+</div>
+</div>
+</section>
+<!-- Newsletter & Community -->
+<section class="py-16 px-6 bg-[#27231c]">
+<div class="max-w-[600px] mx-auto text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
+<h3 class="text-2xl font-bold mb-3 text-white">Join the Yala Community</h3>
+<p class="text-text-muted font-sans mb-8">
+                    Get the latest sighting reports, conservation news, and exclusive safari offers delivered to your inbox.
+                </p>
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="flex-1 bg-background-dark border border-border-dark rounded-lg px-4 py-3 text-white placeholder-text-muted focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Your email address" type="email"/>
+<button class="bg-primary hover:bg-[#d99a1e] text-[#181611] font-bold px-6 py-3 rounded-lg transition-colors whitespace-nowrap" type="button">
+                        Subscribe
+                    </button>
+</form>
+<div class="flex justify-center gap-6 mt-8">
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="text-sm font-bold">Instagram</span></a>
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="text-sm font-bold">Facebook</span></a>
+<a class="text-text-muted hover:text-primary transition-colors" href="#"><span class="text-sm font-bold">YouTube</span></a>
+</div>
+</div>
+</section>
+<!-- Main CTA Section -->
+<section class="py-16 px-6 bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold text-white">Plan Your Yala Adventure</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- CTA Card 1 -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-8 flex flex-col items-center text-center hover:border-primary/50 transition-colors group">
+<div class="bg-[#181611] p-4 rounded-full mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">local_activity</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Safari Packages</h3>
+<p class="text-text-muted font-sans text-sm mb-6 flex-1">Explore curated full-day and half-day safari options tailored to your interests.</p>
+<button class="text-primary font-bold text-sm hover:underline">View Packages</button>
+</div>
+<!-- CTA Card 2 -->
+<div class="bg-primary rounded-xl p-8 flex flex-col items-center text-center transform md:-translate-y-4 shadow-xl shadow-primary/10">
+<div class="bg-[#181611] p-4 rounded-full mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">calendar_month</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-[#181611]">Book Your Safari</h3>
+<p class="text-[#181611]/80 font-sans text-sm mb-6 flex-1">Ready to go? Secure your jeep and naturalist guide instantly online.</p>
+<button class="bg-[#181611] text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-black transition-colors">Book Now</button>
+</div>
+<!-- CTA Card 3 -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-8 flex flex-col items-center text-center hover:border-primary/50 transition-colors group">
+<div class="bg-[#181611] p-4 rounded-full mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Contact Experts</h3>
+<p class="text-text-muted font-sans text-sm mb-6 flex-1">Need help planning? Our local travel experts are here to assist you.</p>
+<button class="text-primary font-bold text-sm hover:underline">Get in Touch</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0f0e0b] border-t border-border-dark pt-16 pb-8 px-6">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div>
+<div class="flex items-center gap-2 mb-6 text-white">
+<span class="material-symbols-outlined text-primary">pets</span>
+<h2 class="text-lg font-bold">YalaSriLanka.co</h2>
+</div>
+<p class="text-text-muted text-sm font-sans leading-relaxed">
+                        The ultimate guide to Yala National Park. Dedicated to responsible tourism, wildlife conservation, and unforgettable safari experiences.
+                    </p>
+</div>
+<div>
+<h3 class="text-white font-bold mb-4">Blog Categories</h3>
+<ul class="space-y-2 text-sm font-sans text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Latest Sightings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Species Guides</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Photography Tips</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Conservation News</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Traveler Stories</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-4">Popular Posts</h3>
+<ul class="space-y-3 text-sm font-sans text-text-muted">
+<li><a class="hover:text-white transition-colors block" href="#">Best Time to Visit Yala</a></li>
+<li><a class="hover:text-white transition-colors block" href="#">Top 5 Hotels Near the Park</a></li>
+<li><a class="hover:text-white transition-colors block" href="#">Leopard Tracking Guide 101</a></li>
+<li><a class="hover:text-white transition-colors block" href="#">What to Pack for Safari</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-4">Quick Links</h3>
+<ul class="space-y-2 text-sm font-sans text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Book a Safari</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-dark pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-text-muted text-xs font-sans">© 2023 YalaSriLanka.co. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-text-muted text-lg cursor-pointer hover:text-white">public</span>
+<span class="material-symbols-outlined text-text-muted text-lg cursor-pointer hover:text-white">rss_feed</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
