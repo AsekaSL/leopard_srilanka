@@ -12,6 +12,7 @@ const navLinks: NavLink[] = [
     { label: "Visitor Guide", href: "/visitor-guide" },
     { label: "Contact", href: "/contact" },
     { label: "Blog", href: "/blog" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Destinations", href: "/#destinations" },
 ];
 

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yala National Park Photo &amp; Video Gallery</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eead2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", // Matching the component base dark color for consistency
+                        "surface-dark": "#231f17",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-dark/90 backdrop-blur-md border-b border-[#393328]">
+<div class="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-6 lg:px-10">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-white text-xl font-bold tracking-tight">YalaSriLanka</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Safaris</a>
+<a class="text-white text-sm font-medium transition-colors" href="#">Gallery</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">About</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+<button class="hidden md:flex items-center justify-center rounded-lg bg-primary hover:bg-primary/90 transition-colors h-10 px-5 text-background-dark text-sm font-bold tracking-wide">
+                    Book Safari
+                </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="relative w-full h-[70vh] min-h-[500px] flex items-end justify-start overflow-hidden group">
+<div class="absolute inset-0 z-0 transition-transform duration-[20s] ease-linear group-hover:scale-110" data-alt="Majestic Sri Lankan leopard resting on a tree branch in Yala National Park" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(24, 22, 17, 1) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDSCW36LeXAn0BcXvLCnDpy7P5nOiSR-datnbvGy0IEeoa0s8ljb8jjlvbUKek8xTuM1PxxgPD6D1hjt5GZwurign-0g7Lt68CUDlmBkKVbL2fexcT2ReZiYpUmHYixtD_a1Ir_Tb3-Oi_fboV82vB2Ifa2EztVgPHnkNraX2kH4iU9Ubx9xPO6vXHQDI05rVNxBF6q_7shCqHHoQP99SAXR1XB9U0JYrHpfhM59om7xF96udzs0pWzvjxQ0cW-ELWyjQVtkLBDVyv'); background-size: cover; background-position: center;">
+</div>
+<div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 lg:px-10 pb-16">
+<div class="max-w-3xl animate-fade-in-up">
+<span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full border border-primary/20 backdrop-blur-sm">
+                        Immersion in the Wild
+                    </span>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-4 text-white drop-shadow-xl">
+                        A Visual Journey into the Heart of Yala’s Wilderness
+                    </h1>
+<p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mb-8 leading-relaxed">
+                        Photo &amp; Video Gallery of Sri Lanka’s Most Iconic National Park. Experience the raw beauty, from elusive leopards to majestic elephants.
+                    </p>
+<button class="flex items-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white h-12 px-6 transition-all duration-300 group/btn">
+<span class="text-sm font-bold tracking-wide">Start Exploring</span>
+<span class="material-symbols-outlined text-lg group-hover/btn:translate-y-1 transition-transform">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Introduction -->
+<div class="layout-container flex flex-col items-center py-12 px-6">
+<div class="max-w-[800px] text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 opacity-80">photo_camera</span>
+<p class="text-xl md:text-2xl font-display font-medium text-gray-200 leading-relaxed">
+                    "Discover the raw beauty of Yala through our curated collection of high-quality images and videos. From the elusive leopards to the majestic elephants, immerse yourself in the stories of the wild."
+                </p>
+</div>
+</div>
+<!-- Sticky Category Navigation -->
+<div class="sticky top-16 z-40 bg-background-dark/95 border-b border-[#393328] backdrop-blur-sm shadow-lg">
+<div class="max-w-[1280px] mx-auto overflow-x-auto no-scrollbar">
+<div class="flex px-6 lg:px-10 min-w-max gap-8 md:gap-10">
+<a class="relative py-4 text-primary font-bold text-sm tracking-wide group" href="#all">
+                        All
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-primary rounded-t-sm"></span>
+</a>
+<a class="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group" href="#leopards">
+                        Leopards
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-600 rounded-t-sm transition-colors"></span>
+</a>
+<a class="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group" href="#elephants">
+                        Elephants
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-600 rounded-t-sm transition-colors"></span>
+</a>
+<a class="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group" href="#birds">
+                        Birds
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-600 rounded-t-sm transition-colors"></span>
+</a>
+<a class="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group" href="#landscapes">
+                        Landscapes
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-600 rounded-t-sm transition-colors"></span>
+</a>
+<a class="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group" href="#videos">
+                        Videos
+                        <span class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-600 rounded-t-sm transition-colors"></span>
+</a>
+</div>
+</div>
+</div>
+<!-- Main Gallery Container -->
+<div class="flex-1 w-full max-w-[1280px] mx-auto px-6 lg:px-10 py-12 flex flex-col gap-24">
+<!-- Leopards Section -->
+<section class="scroll-mt-36" id="leopards">
+<div class="flex items-end justify-between mb-8 pb-4 border-b border-[#393328]">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2">Leopards of Yala</h2>
+<p class="text-gray-400 text-sm">The highest density of leopards in the world.</p>
+</div>
+<button class="hidden md:flex items-center text-primary text-sm font-bold hover:underline">
+                        View All Leopards <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
+<!-- Large Feature -->
+<div class="group relative overflow-hidden rounded-lg md:col-span-2 lg:row-span-2 lg:h-full">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up portrait of a Sri Lankan leopard walking towards camera" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC85kfkZxHR0fJdL6q8uA5p6vjZFUoIiXoccfb8oKsXyQ5RVcfUCP-HAuTphRTtpW2gLF-4fFQWYczJ0DSk1hnDz7S97Tf9UBL9Lu_Cys00Z-nWC01frxD1jzTXH0vrgjyz5CcTRDgSkABZtgo-FFKJqQXsHsaEZGStptTQ6GFRkCiy3VMAYlRfpD-X--u7jBpGmhYUqTE4GnIUcD2Zg392k2SvMZHKNbU1kPsjJNLr_pfO-I8jffwiwxAgpR2JnIc1p34ZbW3dWwzG');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1 block">Panthera pardus kotiya</span>
+<h3 class="text-xl font-bold text-white">The Prince of the Jungle</h3>
+</div>
+</div>
+<!-- Side Items -->
+<div class="group relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Leopard sleeping on a large rock formation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0aWotfCR04MbkH3PAIm6la5Ey96ETjbG0JUQqwFXrsvw29xGoncVJuFeF6f6947ckNrzhKgxzy7uj7_mdP6LMauU9h0r-zt-KMvYt-NLUNvgM3O56T7po23y-GWqg4Wqgkpm-1tAY2-pC9_v3tUYxeZvWJy3u1GWhSk5FVoHs3G5Dd9z7DroKHwOIlH7UynCFzY7_u5vsSh_YIR8QTxoxA8b45uO4IwjGyCI1ra2v7vc8KKk8H-wP0TjGRKqANruAlERYa5MAjVGr');"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Leopard hiding in the tall dry grass" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0c-Lp9KEyYt6OJAPU3cX7JH1S3mwkFWede_wkGwx_9xWBsEPeZtZ2Dl_zJaCmGRRqq0--3Cmy9dB_bHX1hMRUraD3EAM8AtqqWA9QUyAlJMi-5Xk-6RoMxHJ8VrwdCJxTe_mM5f9doWjC4bwNbqUMIUh7BqCFneKBHn8QsQpJrJMjttAolhuaD9V_0eLTgTVbG6orODgpUYlE1HOCHj4-6b4ADFELFcNx3Z3kMVkf5e1HZ8ZwQK_T9j3JA5i1n_BWYhj48DxoR8KR');"></div>
+</div>
+</div>
+</section>
+<!-- Elephants Section -->
+<section class="scroll-mt-36" id="elephants">
+<div class="flex items-end justify-between mb-8 pb-4 border-b border-[#393328]">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2">Gentle Giants</h2>
+<p class="text-gray-400 text-sm">Herds, tuskers, and playful calves.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="group relative overflow-hidden rounded-lg h-64 lg:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elephant herd crossing a dirt road in Yala" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDz9-DsUd6brNHCg23J3lkT_4zb7XunzM8IudYJlmG8p5tspjd3wHJkslCj09KCu6F2eT51EHiSgysWw5OiyUDlLWEmlsIMCGjGf3ME-fp5HHfiJKnvN6cBng8Ww-ug0aSXcq78FbX4Mhowr2IPi8NXpaa5pIT34HWei4uMTl8zrufNDyqNhpkLKLQCaIaY1KvrgjQOP8vghEyGEaAI3nCvEeRaZtKZGH5wg4f2ywPhMbOXTaenRWdwlFlqRLVHF_YDFMwhHtbmxbCq');"></div>
+<div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-md">
+<p class="text-xs font-bold text-white">Family Herd</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg h-64">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of elephant eye and textured skin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvCIAMyzdNP0u0ELcmvSa1uWd0Z5EfU1YQ_W9v-nAARmhH4PswOQahYbZSomA0Y1Zzs1H33xNaRWp3r6JfGhwaIm4IEj4ukx6RouY9k7I0yUSVD1KyQ9jY4XSPUzYH13HzGX-7LlBmIL9ylyZIDT3M6ShI4Cdzpq0EMdBDgAw-CVnZaI5lnCYVwcHPVK7e4CEqmvN2OIv8bEuM7_3eXgrhF5Ol6QImje-6_tdNqG_cJoggjyu_TqLEOTSQk-7wZgT2OTdiKHmY1moK');"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg h-64">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elephant dusting itself with dirt" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO8ZM_lFXabjjMy1vNrShaMA9HBTv00Iaj3sifFekViX8lFKH2lwrPSUQocCBp6hquNxXefQnNXyqir-cCKPRz2BPaKsX21hq0hQ7Di8dE6uwAgsQTcfGLC7bxZCe9eaV2czs2nms7tyQbK4BSgHabuVX2k2FNxxfIGp1DZUAyubHXamo4VY2APgz5TcA9X-2yzTulDj-BQQQ4EEPxLtlYEGNnrczJOZ7YjAFZBYRZErpyhnyVxlNvAqmjA2llYhtR7uJeXWb3XyH2');"></div>
+</div>
+</div>
+</section>
+<!-- Birds & Reptiles (Masonry feel) -->
+<section class="scroll-mt-36" id="birds">
+<div class="flex items-end justify-between mb-8 pb-4 border-b border-[#393328]">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2">Avian &amp; Reptilian Life</h2>
+<p class="text-gray-400 text-sm">From peacocks to crocodiles.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<!-- Tall Item -->
+<div class="group relative overflow-hidden rounded-lg row-span-2 bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Peacock displaying colorful feathers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBe0RxV4eGMpS_Io-U4ujzVivULwHGdekw90gd2JwDq5eJPB97OjjTl347Yta8TP6TuF89nHwBz1VlKKGzge07TXEWHngxKMYfTEFg4EkRCy5ServVuxZMMiEwbO8G5GkCYFZmiclfivxw4nsjnXXrq3Br-d-6YN0QbwD6txaZKYkwOb3_WRYEBiODFx1Q0g1hWGkfidQFWosLOvCS4mebxWnGgxYKVmh3Ny12lNfzzQil_AwTF5ZCaR1VJ65o9E3_QUCcx1IrI0D37');"></div>
+<div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+<p class="text-white font-bold text-sm">Indian Peafowl</p>
+</div>
+</div>
+<!-- Standard Items -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Green Bee-eater bird on a branch" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMMeCitbZ5_P73TYiJcW0HNMwDPVc0woKs0YHZm_tdEV0LnsULg1mucbKJvenZnIVWi594rMhjXVcEm7nk_L8jvdcSwKqRpZFGE6DuzipR2nrgN4j01KAxnrPV-T4dROcH_CrrkZ-ji96AP3QmuGrz-oePJTaXzySiuNFGsNjrvVOruNey0QFCsJuY58j46T_pYwwwzSXNKV3KD5kp5HkNKcgP30aDf2WNzwiDUvONvDOoXhAiiCgnyqpCTz1yQ7grQagwwoZHQ_X4');"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-surface-dark col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Mugger crocodile basking on the river bank with mouth open" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMrwJyuIMAAbgxkkasczgn55e8DigeE_0MLXNhtNd1fitCCvi65nvT-LDy_u8io2XQPD1J3YPUz7sHDCSp5KHg0_88SPUcqj4hCI2qEAFP216V7cUPMCErBBsuFqlX2CzTNcBchUWcnMQ2v427W55zHn4wqJQdJjY5cwONDaP3PL2o3GLp5ntsOdXGoVDHItxoIQhEVj71WmTntZzltq5pRnDlxhG33RumHPE82e7TP-RclHl0MDapWMYzxMmEigeBUwtgRXA5ogkz');"></div>
+<div class="absolute top-2 right-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white uppercase tracking-wide">Predator</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-surface-dark col-span-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Monitor lizard climbing a tree trunk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmeqR4009S1Z_X7pt_gxP3e-hvdbvZ7rgvFjyy542I16GVDFKtdH1KvIVrSmMwsa01x24qPcLEy0Q9EphmreHKMgvjt9z4RRL4AOQu8KFZmmAAWBYfhdZbO9eH00JrykUtfbh7Cg5dmEsWwBDlWt3EgZ-rJ63O7JLvTNpK2NMH_To-oDwZxf1KyouiFOQ8WfZLiFJ2Q6QP1hUngPMUtXd0p9ZAFU0PzCJbAseplgYUxyD8fTYlu0adbXxjXaQbApiTMgA-2MBPhPSm');"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Hornbill bird perched in foliage" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvYr5oZumUzKM1Ut7es0eyvliZKOwyUEIBLgj2PqErbtDja5_asH_JnL9xGCXS5EcwL1chR78bnF9z1QQkKW9G4fRu3SrTQRF8EXVlcf2vIgq-Nb_lxptX_Ysxxs2wS0VdS4Fzy1SSfwn51aR7aqD1wEhz7myO2zsJm6RvPjZCX7DjsOgdO9ElV7rGh7yFEIjkpwojR-E1fSQXc-emB04rQPSrOLu-gJyAvtLGE6EQcygYNp8XrY7BO9TSTLARachxaRnvDelWzySo');"></div>
+</div>
+</div>
+</section>
+<!-- Video Gallery -->
+<section class="scroll-mt-36" id="videos">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">videocam</span>
+<h2 class="text-3xl font-bold text-white">Explore the Wild in Motion</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Video Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-video mb-3 shadow-lg bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-60 transition-opacity" data-alt="Video thumbnail of safari jeep driving on dirt road" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4pgde9Zr2Bq6ZItN0JwmPX3ICuXCXL36ho-oxoEtrpB39pzBIazR_J6KWd3M8Oh83yZ40bMpiqLI4frryPHwBVKq8OQyqu5JeABAnxlQb0NabYa9xSmtuetS7Im5JhHEsbhhX5QP8EqO-Qk2cRzsxH68cUn2yp6paJb-VPL29pAniVniiy6BrYbH16AwzZ0Fqub-l9TuIoUTxElRyEctn0CTWRs4zYUw5VIgNgGCWKGa5VHkVwi4kZFYMIIByvN5AeV1C8VsUCTTU');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-14 rounded-full bg-primary/90 text-background-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 px-2 py-0.5 rounded text-xs font-mono">03:45</div>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">The Morning Roar</h3>
+<p class="text-sm text-gray-400">An early morning encounter with a dominant male.</p>
+</div>
+<!-- Video Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-video mb-3 shadow-lg bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-60 transition-opacity" data-alt="Video thumbnail of elephant spraying water" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtQK0SZQT8XrwZM6Bo32qyfSF4uqWzDZJkgjPMlLtNT5gwaoPrv2xPGRe27py47Fw-lDduopE5Uz1gzMqE53F2l55zsjFosW3XeBQkcrfXbaGLa4Bm8OzE_k160tgHmczefqDFQsJY55KVRfAwyoOFayawRkY5S6nlAflqLCYl6BD4-_1rS2ZjMOHzH_Cp4ljb9T9mhVL_ZoVG8ufqoQaW3yIsHfdZEIAFnN_skEPirpDFryap_WVWPhLWckG64IP4XYBeTuk8JPDc');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-14 rounded-full bg-primary/90 text-background-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 px-2 py-0.5 rounded text-xs font-mono">01:20</div>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Playful Giants</h3>
+<p class="text-sm text-gray-400">Elephants cooling off in the local watering hole.</p>
+</div>
+<!-- Video Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-video mb-3 shadow-lg bg-surface-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-60 transition-opacity" data-alt="Video thumbnail of safari guide pointing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8y2kMZGC3OfFvpG0_B9mI0ezeCpu2KwDaAiwbnyB7yNQN5fvSHq3kAn212pY2gfu7MJ2irWx2UjE7uGrfKZpXA85gwCr8aUOPI2lSyUccDmUTFsrwEpXaaJ0RHlGa04fVyoQ-J2iOKjoz9yTj7RLNLFxX4pJg7L88iP7OfZOUE-YQ3UJLHhiVlarwr4KXpXniluaPOjnkfLqM0WodPjyZ0YXFS5-TKgPWOXLhkKSDZCuIZDjxtPnyr8mdm_E8HqKdoYyFGiDFoUdN');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-14 rounded-full bg-primary/90 text-background-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 px-2 py-0.5 rounded text-xs font-mono">05:12</div>
+</div>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Yala From Above</h3>
+<p class="text-sm text-gray-400">Drone footage capturing the diverse landscapes.</p>
+</div>
+</div>
+</section>
+<!-- Share Your Moments Highlight Box -->
+<section class="relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-[#2a2418] to-background-dark p-8 md:p-12 text-center">
+<div class="absolute -top-12 -right-12 size-40 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">add_a_photo</span>
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Share Your Yala Moments</h2>
+<p class="text-gray-300 max-w-lg mb-8">
+                         Have you captured something incredible? Share your photos with us for a chance to be featured in our upcoming "Explorer’s Corner".
+                     </p>
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-background-dark transition-all">
+                         Upload Your Photo
+                         <span class="material-symbols-outlined text-lg">upload</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Inspiration Quote -->
+<div class="w-full bg-background-dark py-20 px-6">
+<blockquote class="text-center max-w-4xl mx-auto">
+<p class="text-3xl md:text-5xl font-display font-medium italic text-gray-400 leading-tight">
+                     "Every image tells a story from the wild, where nature writes the script and we are merely the witnesses."
+                 </p>
+</blockquote>
+</div>
+<!-- Final CTA Section -->
+<div class="relative w-full py-24 px-6 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Safari jeep silhouette against a dramatic sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQDyuFBMBiN_oGNIzTWU8a4zZ73GMa0y4QNEl4OOVSF_Sx8C2rq9uSSyBx-DYpDpdcul8-KQ8DiP4ma8jOHnli0jBkjCOdWyfuY_GdvDfpPayZGsLd8jN_TrUnDESzVLyQ76tDpzy-mjkthOCn87vjSu_IkkYi0E6EMg6IIUvr-utj_7G4seIVBMMxGwAambr05ktMnKkoN9ixxznbia7tuh1fe2UVLMc5Qzneg5geIjvEfOkG9SqECfQUXR4x6D50YISObs32n-4m');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40 z-10"></div>
+<div class="relative z-20 max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl text-left">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Witness the Magic <span class="text-primary">In Person</span>
+</h2>
+<p class="text-xl text-gray-300 mb-8 font-light">
+                        Don't just look at the pictures. Feel the ground tremble and hear the jungle breathe. Your adventure awaits.
+                    </p>
+</div>
+<div class="flex flex-col gap-4 w-full md:w-auto min-w-[300px]">
+<button class="w-full py-4 px-6 rounded-lg bg-primary hover:bg-primary/90 text-background-dark text-lg font-bold shadow-lg transition-transform hover:-translate-y-1">
+                        Book Your Yala Safari Now
+                    </button>
+<button class="w-full py-4 px-6 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-lg font-bold transition-transform hover:-translate-y-1">
+                        Learn Wildlife Photography
+                    </button>
+<button class="w-full py-3 px-6 text-primary hover:text-white text-base font-semibold text-center transition-colors">
+                        Explore Safari Packages
+                    </button>
+</div>
+</div>
+</div>
+<!-- Footer Preview -->
+<footer class="bg-[#12100d] border-t border-[#393328] py-12 px-6">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-white/50">
+<span class="text-sm">© 2023 YalaSriLanka. All rights reserved.</span>
+</div>
+<div class="flex gap-8">
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Terms of Use</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Sitemap</a>
+</div>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/5 hover:bg-primary hover:text-background-dark flex items-center justify-center transition-all text-white" href="#">
+<svg aria-hidden="true" class="size-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="size-10 rounded-full bg-white/5 hover:bg-primary hover:text-background-dark flex items-center justify-center transition-all text-white" href="#">
+<svg aria-hidden="true" class="size-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h-.165zm-3.77 14.765a6.002 6.002 0 005.23 2.536 6.002 6.002 0 005.23-2.536 6.002 6.002 0 00-5.23-9.596 6.002 6.002 0 00-5.23 9.596z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
