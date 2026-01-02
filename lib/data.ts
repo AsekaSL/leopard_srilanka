@@ -1843,3 +1843,18 @@ export const prices: PriceRange[] = [
     PriceRange.PRICE_RANGE_150,
     PriceRange.PRICE_RANGE_200
 ]
+
+export const pakagesId: string[] = [
+    "private-inclusive-morning-safari",
+    "private-inclusive-afternoon-safari",
+    "private-inclusive-halfday-safari",
+    "private-inclusive-full-day-safari",
+    "shared-inclusive-morning-safari",
+    "shared-inclusive-afternoon-safari",
+    "shared-inclusive-halfday-safari",
+    "shared-inclusive-full-day-safari",
+    "private-jeep-only-morning-safari",
+    "private-jeep-only-full-day-safari",
+    "shared-jeep-only-morning-safari",
+    "shared-jeep-only-full-day-safari"
+]

@@ -1,16 +1,25 @@
 'use client';
 
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { packagesData, pakagesId } from '@/lib/data';
+import { Duration, PackageCategory } from '@/types';
+import { useState, useEffect, use } from 'react';
 
-export default function SafariCalculatorPage() {
+type Props = {
+    params: Promise<{ id: string }>;
+};
+
+export default function SafariCalculatorPage({ params }: Props) {
+    const { id } = use(params); 
+
+    const packageDetail = packagesData[id];
+
     // State
     const [park, setPark] = useState('yala');
     const [date, setDate] = useState('');
-    const [adults, setAdults] = useState(2);
-    const [children, setChildren] = useState(1); // 5-11 yrs
+    const [adults, setAdults] = useState(1);
+    const [children, setChildren] = useState(0); // 5-11 yrs
     const [infants, setInfants] = useState(0); // <5 yrs
-    const [includeBreakfast, setIncludeBreakfast] = useState(false);
+    const [includeBreakfast, setIncludeBreakfast] = useState( packageDetail.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || packageDetail.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? true : false);
     const [includeLunch, setIncludeLunch] = useState(false);
 
     // Pricing Constants
@@ -44,7 +53,7 @@ export default function SafariCalculatorPage() {
     const handleGuestChange = (type: 'adults' | 'children' | 'infants', operation: 'add' | 'remove') => {
         if (type === 'adults') {
             if (operation === 'add') setAdults(prev => Math.min(prev + 1, 6)); // Jeep max 6 usually
-            if (operation === 'remove') setAdults(prev => Math.max(prev + 1, 1)); // Min 1 adult
+            if (operation === 'remove') setAdults(prev => Math.max(prev - 1, 1)); // Min 1 adult
         } else if (type === 'children') {
             if (operation === 'add') setChildren(prev => Math.min(prev + 1, 5));
             if (operation === 'remove') setChildren(prev => Math.max(prev - 1, 0));
@@ -97,13 +106,17 @@ export default function SafariCalculatorPage() {
                                     <label className="text-gray-600 dark:text-[#b7b19e] text-sm font-medium">Select Park Location</label>
                                     <div className="relative">
                                         <select
-                                            value={park}
+                                            value={packageDetail.id}
                                             onChange={(e) => setPark(e.target.value)}
                                             className="w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white px-4 focus:ring-1 focus:ring-primary focus:border-primary transition-all appearance-none"
                                         >
-                                            <option value="yala">Yala National Park</option>
-                                            <option value="wilpattu">Wilpattu National Park</option>
-                                            <option value="udawalawe">Udawalawe National Park</option>
+                                            {
+                                                pakagesId.map((park) => (
+                                                    <option key={park} value={park}>
+                                                        {park.split('-').join(' ').replace(/\b\w/g, (char) => char.toUpperCase())}
+                                                    </option>
+                                                ))
+                                            }
                                         </select>
                                         <span className="material-symbols-outlined absolute right-4 top-3 text-gray-400 dark:text-[#b7b19e] pointer-events-none">expand_more</span>
                                     </div>
@@ -280,7 +293,7 @@ export default function SafariCalculatorPage() {
                                     <div className="flex items-center justify-between">
                                         <div className="flex flex-col">
                                             <span className="text-gray-900 dark:text-white font-medium text-sm">Include Breakfast</span>
-                                            <span className="text-gray-500 dark:text-[#b7b19e] text-xs">${MEAL_BREAKFAST} per person</span>
+                                            <span className="text-gray-500 dark:text-[#b7b19e] text-xs">{ packageDetail.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || packageDetail.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Meal already included': `${MEAL_BREAKFAST} per person`}</span>
                                         </div>
                                         <label className="inline-flex items-center cursor-pointer">
                                             <input
@@ -294,27 +307,31 @@ export default function SafariCalculatorPage() {
                                     </div>
 
                                     {/* Toggle Item */}
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex flex-col">
-                                            <span className="text-gray-900 dark:text-white font-medium text-sm">Include Lunch</span>
-                                            <span className="text-gray-500 dark:text-[#b7b19e] text-xs">${MEAL_LUNCH} per person</span>
+                                    {
+                                        packageDetail.durationCategory != Duration.MORNING &&
+                                        <div className="flex items-center justify-between">
+                                                <div className="flex flex-col">
+                                                    <span className="text-gray-900 dark:text-white font-medium text-sm">Include Lunch</span>
+                                                    <span className="text-gray-500 dark:text-[#b7b19e] text-xs">{MEAL_LUNCH} per person</span>
+                                                </div>
+                                                <label className="inline-flex items-center cursor-pointer">
+                                                    <input
+                                                    checked={includeLunch}
+                                                    onChange={() => setIncludeLunch(!includeLunch)}
+                                                    type="checkbox"
+                                                    className="sr-only peer"
+                                                />
+                                                <div className="relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                            </label>
                                         </div>
-                                        <label className="inline-flex items-center cursor-pointer">
-                                            <input
-                                                checked={includeLunch}
-                                                onChange={() => setIncludeLunch(!includeLunch)}
-                                                type="checkbox"
-                                                className="sr-only peer"
-                                            />
-                                            <div className="relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                                        </label>
-                                    </div>
+                                    }
+                                    
                                 </div>
 
                                 {/* Breakdown */}
                                 <div className="space-y-3 pb-6 border-b border-gray-100 dark:border-[#383429] mb-6">
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-gray-500 dark:text-[#b7b19e]">Private Jeep (Half Day)</span>
+                                        <span className="text-gray-500 dark:text-[#b7b19e]">{`${packageDetail.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY || packageDetail.packageCategory === PackageCategory.PRIVATE_INCLUSIVE ? 'Private' : 'Shared'} Jeep ( ${packageDetail.durationCategory && packageDetail.durationCategory.split(' ')[0]} )`}</span>
                                         <span className="text-gray-900 dark:text-white font-medium">{formatCurrency(JEEP_PRICE)}</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
