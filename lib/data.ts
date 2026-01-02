@@ -120,17 +120,17 @@ export const packagesData: Record<string, PackageDetail> = {
             parkFeeNote: "Included"
         },
         pricingPerPerson: [
-            { label: "1_person", price: 100 },
-            { label: "2_persons", price: 142 },
-            { label: "3_persons", price: 192 },
-            { label: "4_persons", price: 242 },
-            { label: "5_persons", price: 292 },
-            { label: "6_persons", price: 342 },
-            { label: "children_5_11", price: 26 },
-            { label: "infants_under_5", price: 0 },
+            { label: "1 person", price: 100 },
+            { label: "2 persons", price: 142 },
+            { label: "3 persons", price: 192 },
+            { label: "4 persons", price: 242 },
+            { label: "5 persons", price: 292 },
+            { label: "6 persons", price: 342 },
+            { label: "children age 5 to 11", price: 26 },
+            { label: "infants under 5", price: 0 },
         ],
         gallery: [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuBcSSVyrux9zqpLxcX20NBcMlqlYoPERlb2uebaDaD0uvn7_aGWQey410zuUZT6a9xhbfMn1-eR_UTbME5RKZ2w-xFsqXLdUxifYXjZjDg1OoGs2Qf2HFeNb9cHk4zatk_ULfnBs7OJsQRarbDKnZhzqrNsMKdcQJBxtir-nF5RYaxfiqAq8v2evQU_NzPK2anZcJ1xYNRaIpXzKPkUDUuO8EWQmhWL5nP7DRZXfUHTC_w9rv0YW0oDd8jVO_PwHPpkP2FSvi9qKJjO"
+            "https://leopardyala.com/wp-content/uploads/2025/10/pexels-hsapir-1109898.jpg"
         ]
     },
     "private-inclusive-afternoon-safari": {
@@ -211,17 +211,17 @@ export const packagesData: Record<string, PackageDetail> = {
             parkFeeNote: "All park entrance fees included"
         },
         pricingPerPerson: [
-            { label: "1_person", price: 100 },
-            { label: "2_persons", price: 142 },
-            { label: "3_persons", price: 192 },
-            { label: "4_persons", price: 242 },
-            { label: "5_persons", price: 292 },
-            { label: "6_persons", price: 342 },
-            { label: "children_5_11", price: 26 },
-            { label: "infants_under_5", price: 0 }
+            { label: "1 person", price: 100 },
+            { label: "2 persons", price: 142 },
+            { label: "3 persons", price: 192 },
+            { label: "4 persons", price: 242 },
+            { label: "5 persons", price: 292 },
+            { label: "6 persons", price: 342 },
+            { label: "children age 5 to 11", price: 26 },
+            { label: "infants under 5", price: 0 }
         ],
         gallery: [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuBcSSVyrux9zqpLxcX20NBcMlqlYoPERlb2uebaDaD0uvn7_aGWQey410zuUZT6a9xhbfMn1-eR_UTbME5RKZ2w-xFsqXLdUxifYXjZjDg1OoGs2Qf2HFeNb9cHk4zatk_ULfnBs7OJsQRarbDKnZhzqrNsMKdcQJBxtir-nF5RYaxfiqAq8v2evQU_NzPK2anZcJ1xYNRaIpXzKPkUDUuO8EWQmhWL5nP7DRZXfUHTC_w9rv0YW0oDd8jVO_PwHPpkP2FSvi9qKJjO"
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuATxZ5tkzTtgSGaxPpd1StmIopwhsKH3VXkFxt93zsWG_p5BhhSR-RH-LTP41AL7MUkqLN5HZXvsh3kbSRasE2MHK8PwUcwW9XY_CL4JXZ3MYHk8wYcYrGz-920CCb07M4_jVGv-RaoVMU7e9H6cr_KjqAQK335Irmhtw0z8TuW5awsPgUwYdTGpe3kzD4tDvTgj6k7L1-ldaPkH1gKb9h3giLM_B1SDlBAiFKSjqXOi7AezS-jsX_dYD9-d6V_HfFijuj3KmT2NFMq"
         ]
     },
     "private-inclusive-7hour-halfday-safari": {
@@ -299,18 +299,18 @@ export const packagesData: Record<string, PackageDetail> = {
             },
 
             pricingPerPerson: [
-                { label: "1_person", price: 140 },
-                { label: "2_persons", price: 175 },
-                { label: "3_persons", price: 225 },
-                { label: "4_persons", price: 275 },
-                { label: "5_persons", price: 325 },
-                { label: "6_persons", price: 375 },
-                { label: "children_5_11", price: 26 },
-                { label: "infants_under_5", price: 0 }
+                { label: "1 person", price: 140 },
+                { label: "2 persons", price: 175 },
+                { label: "3 persons", price: 225 },
+                { label: "4 persons", price: 275 },
+                { label: "5 persons", price: 325 },
+                { label: "6 persons", price: 375 },
+                { label: "children age 5 to 11", price: 26 },
+                { label: "infants under 5", price: 0 }
             ],
 
             gallery: [
-                "https://leopardyala.com/wp-content/uploads/2025/10/yala-sloth-bear.jpg"
+                "https://leopardyala.com/wp-content/uploads/2025/10/pexels-aabrewerphoto-13046138-2.webp"
             ]
     },
     "private-inclusive-full-day-safari": {
@@ -413,23 +413,23 @@ export const packagesData: Record<string, PackageDetail> = {
         serviceFee: 0.0,
         tax: 0.0,
         total: 190.0,
-        parkFeeNote: "All government fees and taxes included"
+        parkFeeNote: "Fees and taxes included"
     },
 
     pricingPerPerson: [
-        { label: "1_person", price: 190 },
-        { label: "2_persons", price: 230 },
-        { label: "3_persons", price: 280 },
-        { label: "4_persons", price: 330 },
-        { label: "5_persons", price: 380 },
-        { label: "6_persons", price: 430 },
-        { label: "children_5_11", price: 26 },
-        { label: "infants_under_5", price: 0 }
+        { label: "1 person", price: 190 },
+        { label: "2 persons", price: 230 },
+        { label: "3 persons", price: 280 },
+        { label: "4 persons", price: 330 },
+        { label: "5 persons", price: 380 },
+        { label: "6 persons", price: 430 },
+        { label: "Children age 5 to 11", price: 26 },
+        { label: "Infants under 5", price: 0 }
     ],
 
     gallery: [
-        "https://leopardyala.com/wp-content/uploads/2025/10/yala-full-day-leopard.jpg",
-        "https://leopardyala.com/wp-content/uploads/2025/10/yala-elephant-herd.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAJW3N5GTfg-aJs_w0plAA78lDIf55P4FIYwy0XE7ZMRf8oca60ilR2E8z0IIpakuQf5Vh5HyV23VDTHWlxg5vWH1SaKWe6si8Pl4bc84ooE1ve0f3GqvgP6MEpZDv1UgD75EqIJirsPYnVpSriYGD0R3Ry0uuVY5PRYo5Hxo4K1WTrT4INR5xVNtWcpeT6zqzrj6j6jSqHFIm0OW4InnBKvdpQSqkti28ImnroS8OZqNxpdK19by7FfRE0-lS167YATVcB5FJzHADY"
     ]
     },
 
@@ -515,18 +515,18 @@ export const packagesData: Record<string, PackageDetail> = {
             serviceFee: 0.0,
             tax: 0.0,
             total: 190.0,
-            parkFeeNote: "All park entrance fees and taxes included"
+            parkFeeNote: "All Included"
         },
 
         pricingPerPerson: [
-            { label: "adult", price: 55 },
-            { label: "children_5_11", price: 26 },
-            { label: "infants_under_5", price: 0 }
+            { label: "Adult", price: 55 },
+            { label: "Children age 5 to 11", price: 26 },
+            { label: "Infants under 5", price: 0 }
         ],
 
         gallery: [
-            "https://leopardyala.com/wp-content/uploads/2025/10/yala-shared-jeep.jpg",
-            "https://leopardyala.com/wp-content/uploads/2025/10/yala-morning-birds.jpg"
+            "https://leopardyala.com/wp-content/uploads/2025/10/pexels-sachin-nihcas-1318516-7594669.jpg",
+            sithulpawwa.src
         ]
     },
     "shared-inclusive-afternoon-safari": {
@@ -604,18 +604,18 @@ export const packagesData: Record<string, PackageDetail> = {
         adult: 55.0,
         child: 26.0,
         infant: 0.0,
-        parkFeeNote: "All park entrance fees and taxes included"
+        parkFeeNote: "All Included"
     },
 
     pricingPerPerson: [
-        { label: "adult", price: 55 },
-        { label: "children_5_11", price: 26 },
-        { label: "infants_under_5", price: 0 }
+        { label: "Adult", price: 55 },
+        { label: "Children age 5 to 11", price: 26 },
+        { label: "Infants under 5", price: 0 }
     ],
 
     gallery: [
-        "https://leopardyala.com/wp-content/uploads/2025/10/yala-elephant-afternoon.jpg",
-        "https://leopardyala.com/wp-content/uploads/2025/10/yala-sunset-leopard.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuA4hCsbqfpG_2gWOvxfxTVY0-g46rna3vqj0wo5h7mijntACFLe524Cr-gvQL8YCwRPW430U3KK2oo6HqusFp_qSusc9OTOQuT5W6fa9l8IUma4RzMrtPWvOSNK_7veK667N3F20iqBHK-CR6scAWlHxToGHGCiN-c-qcPJeDqH30hyChmY6ilSYLsI-_wujJYFi8kXU5wPj4o4NfMfji9mgyspxYJpMW5h7zATk-LYHG4FqOdM1hwgMFt79OnA-K2x5QB8SCucEQ37",
+        magul_viharaya.src
     ]
     },
     "shared-half-day-safari": {
@@ -696,7 +696,7 @@ export const packagesData: Record<string, PackageDetail> = {
         serviceFee: 0,
         tax: 0,
         total: 60,
-        parkFeeNote: "All park entrance fees and government taxes are included"
+        parkFeeNote: "All Included"
     },
 
     pricingPerPerson: [
@@ -705,21 +705,21 @@ export const packagesData: Record<string, PackageDetail> = {
             price: 60
         },
         {
-            label: "Child",
+            label: "Child age 5 to 11",
             price: 26
         },
         {
-            label: "Infant_under_5",
+            label: "Infant under 5",
             price: 0
         }
 
     ],
 
     gallery: [
-        "/images/packages/shared-half-day-1.jpg",
-        "/images/packages/shared-half-day-2.jpg",
-        "/images/packages/shared-half-day-3.jpg",
-        "/images/packages/shared-half-day-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAJW3N5GTfg-aJs_w0plAA78lDIf55P4FIYwy0XE7ZMRf8oca60ilR2E8z0IIpakuQf5Vh5HyV23VDTHWlxg5vWH1SaKWe6si8Pl4bc84ooE1ve0f3GqvgP6MEpZDv1UgD75EqIJirsPYnVpSriYGD0R3Ry0uuVY5PRYo5Hxo4K1WTrT4INR5xVNtWcpeT6zqzrj6j6jSqHFIm0OW4InnBKvdpQSqkti28ImnroS8OZqNxpdK19by7FfRE0-lS167YATVcB5FJzHADY",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuATxZ5tkzTtgSGaxPpd1StmIopwhsKH3VXkFxt93zsWG_p5BhhSR-RH-LTP41AL7MUkqLN5HZXvsh3kbSRasE2MHK8PwUcwW9XY_CL4JXZ3MYHk8wYcYrGz-920CCb07M4_jVGv-RaoVMU7e9H6cr_KjqAQK335Irmhtw0z8TuW5awsPgUwYdTGpe3kzD4tDvTgj6k7L1-ldaPkH1gKb9h3giLM_B1SDlBAiFKSjqXOi7AezS-jsX_dYD9-d6V_HfFijuj3KmT2NFMq",
+        patanangala_Beach.src
     ]
     },
     "shared-full-day-safari": {
@@ -824,7 +824,7 @@ export const packagesData: Record<string, PackageDetail> = {
         serviceFee: 0,
         tax: 0,
         total: 85,
-        parkFeeNote: "All park entrance fees and government taxes are included"
+        parkFeeNote: "All Included"
     },
     pricingPerPerson: [
         {
@@ -832,22 +832,22 @@ export const packagesData: Record<string, PackageDetail> = {
             price: 85
         },
         {
-            label: "Child",
+            label: "Child age 5 to 11",
             price: 26
         },
         {
-            label: "Infant_under_5",
+            label: "Infant under 5",
             price: 0
         }
 
     ],
 
     gallery: [
-        "/images/packages/shared-full-day-1.jpg",
-        "/images/packages/shared-full-day-2.jpg",
-        "/images/packages/shared-full-day-3.jpg",
-        "/images/packages/shared-full-day-4.jpg",
-        "/images/packages/shared-full-day-5.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDb7P_JoomDKCzH0nnjkFpbJXkQ4qqKVi7nHaA9o-qsRkKDvVdstHq8iA9-FiI0CfHDz5JkGLmOdqjWGIMyLpcj4BuijcVxtsgA2U82zt16-5HUXvmcDajO9_zpO-qV7b3jjYVwmvrqj3TSl40v4MCeDOzvN-NQoLHGFbrqkBmwEfKrHebiO_EZrMi5KBkb3UitBdpE8sVzaCOSCjo8SJ_DWFei4_Pwt80EaKnn0TPW945PHSPu-QBn8NDsBejrJ3JGHpn-zvMleKEZ",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuATxZ5tkzTtgSGaxPpd1StmIopwhsKH3VXkFxt93zsWG_p5BhhSR-RH-LTP41AL7MUkqLN5HZXvsh3kbSRasE2MHK8PwUcwW9XY_CL4JXZ3MYHk8wYcYrGz-920CCb07M4_jVGv-RaoVMU7e9H6cr_KjqAQK335Irmhtw0z8TuW5awsPgUwYdTGpe3kzD4tDvTgj6k7L1-ldaPkH1gKb9h3giLM_B1SDlBAiFKSjqXOi7AezS-jsX_dYD9-d6V_HfFijuj3KmT2NFMq",
+        patanangala_Beach.src,
+        yala_beach.src,
+        Sanctuary.src
     ]
     },
 
@@ -919,18 +919,18 @@ export const packagesData: Record<string, PackageDetail> = {
 
     price: {
         jeep: 50,
-        serviceFee: 0,
+        serviceFee: 25,
         tax: 0,
-        total: 50,
+        total: 75,
         parkFeeNote:
-        "Park entrance tickets must be purchased separately at the gate (payable in LKR or USD)"
+        "Tickets must be purchased"
     },
 
     gallery: [
-        "/images/packages/private-jeep-morning-1.jpg",
-        "/images/packages/private-jeep-morning-2.jpg",
-        "/images/packages/private-jeep-morning-3.jpg",
-        "/images/packages/private-jeep-morning-4.jpg"
+        "https://leopardyala.com/wp-content/uploads/2025/10/pexels-sachin-nihcas-1318516-7594669.jpg",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAJW3N5GTfg-aJs_w0plAA78lDIf55P4FIYwy0XE7ZMRf8oca60ilR2E8z0IIpakuQf5Vh5HyV23VDTHWlxg5vWH1SaKWe6si8Pl4bc84ooE1ve0f3GqvgP6MEpZDv1UgD75EqIJirsPYnVpSriYGD0R3Ry0uuVY5PRYo5Hxo4K1WTrT4INR5xVNtWcpeT6zqzrj6j6jSqHFIm0OW4InnBKvdpQSqkti28ImnroS8OZqNxpdK19by7FfRE0-lS167YATVcB5FJzHADY",
+        kirinda_rajamaha_viharaya.src
     ]
     },
     "private-jeep-only-afternoon-safari": {
@@ -1014,18 +1014,17 @@ export const packagesData: Record<string, PackageDetail> = {
 
     price: {
         jeep: 50,
-        serviceFee: 0,
+        serviceFee: 30,
         tax: 0,
         total: 50,
         parkFeeNote:
-        "Park entrance tickets must be purchased separately at the gate (cash in LKR recommended)"
+        "Tickets must be purchased"
     },
 
     gallery: [
-        "/images/packages/private-jeep-afternoon-1.jpg",
-        "/images/packages/private-jeep-afternoon-2.jpg",
-        "/images/packages/private-jeep-afternoon-3.jpg",
-        "/images/packages/private-jeep-afternoon-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBIE-zc_aV0U0lmAmLrsHx6P2yX524Zf2WQ6Jn8Tix093E0P9EjdEi3gykij-ggdqWDLTxJSANjpri8Qk0zQOTZicw4ugQpSawxQWY7cG7vo7Fj-trY3733gwudS6TAi2SYTnHsL3ZhWXMJUzsoCk8RQKgX_szL5GfwOl3L0sgH8C3tb7tvcAN-PtP6EjLfgXrpmaQSzVuP9OHJkdpfqJdnrbmoAQJ9Yqylil3zf1gxwZUVNyjMGOcgFiJiBKckRsMGle-miwm6Fo7b",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz",
+        thissa_lake.src,
     ]
     },
     "private-jeep-only-7hr-safari": {
@@ -1104,14 +1103,13 @@ export const packagesData: Record<string, PackageDetail> = {
         tax: 0,
         total: 55,
         parkFeeNote:
-        "Entrance fees are paid separately at the gate (cash in LKR recommended, approx. LKR 12,000–15,000 per foreign adult)."
+        "Tickets must be purchased"
     },
 
     gallery: [
-        "/images/packages/private-jeep-7hr-1.jpg",
-        "/images/packages/private-jeep-7hr-2.jpg",
-        "/images/packages/private-jeep-7hr-3.jpg",
-        "/images/packages/private-jeep-7hr-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBT0q13f-PHx5NADQjFD7MIeLChdEl2kGpagF01FwUfDplzyWbpzSORWQLcdbbzRvCt7UHzg4BObUtiXoJL5aTcnHC_KX33hBGT_RfOffZDBsBh2pQoigk5MHP31F2EnruxJ_7zXeE703w2sF_GE7_Pf99g2MlCIX7ViHfst7WIFtOULiI-unL23gKfxRlil9ZCFIr1fN3GiuNgA3Hc6WVOJnI5OzZpRHciVgw2NZV_RPC6fDb3XNFFmCHelSm2gJfwMOFkqHIrBVK6",
+        patanangala_Beach.src,
+        thissa_lake.src,
     ]
     },
     "private-jeep-only-full-day": {
@@ -1205,14 +1203,12 @@ export const packagesData: Record<string, PackageDetail> = {
             tax: 0,
             total: 100,
             parkFeeNote:
-            "Entrance fees are paid separately at the gate (approx. LKR 13,000–14,000 per foreign adult, including VAT and service charges)."
+            "Tickets must be purchased"
         },
 
     gallery: [
-        "/images/packages/private-jeep-fullday-1.jpg",
-        "/images/packages/private-jeep-fullday-2.jpg",
-        "/images/packages/private-jeep-fullday-3.jpg",
-        "/images/packages/private-jeep-fullday-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDb7P_JoomDKCzH0nnjkFpbJXkQ4qqKVi7nHaA9o-qsRkKDvVdstHq8iA9-FiI0CfHDz5JkGLmOdqjWGIMyLpcj4BuijcVxtsgA2U82zt16-5HUXvmcDajO9_zpO-qV7b3jjYVwmvrqj3TSl40v4MCeDOzvN-NQoLHGFbrqkBmwEfKrHebiO_EZrMi5KBkb3UitBdpE8sVzaCOSCjo8SJ_DWFei4_Pwt80EaKnn0TPW945PHSPu-QBn8NDsBejrJ3JGHpn-zvMleKEZ",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBT0q13f-PHx5NADQjFD7MIeLChdEl2kGpagF01FwUfDplzyWbpzSORWQLcdbbzRvCt7UHzg4BObUtiXoJL5aTcnHC_KX33hBGT_RfOffZDBsBh2pQoigk5MHP31F2EnruxJ_7zXeE703w2sF_GE7_Pf99g2MlCIX7ViHfst7WIFtOULiI-unL23gKfxRlil9ZCFIr1fN3GiuNgA3Hc6WVOJnI5OzZpRHciVgw2NZV_RPC6fDb3XNFFmCHelSm2gJfwMOFkqHIrBVK6",
     ]
     },
 
@@ -1296,14 +1292,13 @@ export const packagesData: Record<string, PackageDetail> = {
         tax: 0,
         total: 15,
         parkFeeNote:
-        "Entrance fees are paid separately at the gate (approx. LKR 12,000 per foreign adult including taxes and service fees)."
+        "Tickets must be purchased"
     },
 
     gallery: [
-        "/images/packages/shared-jeep-morning-1.jpg",
-        "/images/packages/shared-jeep-morning-2.jpg",
-        "/images/packages/shared-jeep-morning-3.jpg",
-        "/images/packages/shared-jeep-morning-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBIE-zc_aV0U0lmAmLrsHx6P2yX524Zf2WQ6Jn8Tix093E0P9EjdEi3gykij-ggdqWDLTxJSANjpri8Qk0zQOTZicw4ugQpSawxQWY7cG7vo7Fj-trY3733gwudS6TAi2SYTnHsL3ZhWXMJUzsoCk8RQKgX_szL5GfwOl3L0sgH8C3tb7tvcAN-PtP6EjLfgXrpmaQSzVuP9OHJkdpfqJdnrbmoAQJ9Yqylil3zf1gxwZUVNyjMGOcgFiJiBKckRsMGle-miwm6Fo7b",
+        sithulpawwa.src,
+        magul_viharaya.src
     ]
     },
     "shared-jeep-only-afternoon": {
@@ -1386,14 +1381,12 @@ export const packagesData: Record<string, PackageDetail> = {
         tax: 0,
         total: 15,
         parkFeeNote:
-        "Entrance fees are paid separately at the DWC gate (approx. LKR 12,000 – 14,000 per foreign adult including taxes)."
+        "Tickets must be purchased"
     },
 
     gallery: [
-        "/images/packages/shared-jeep-afternoon-1.jpg",
-        "/images/packages/shared-jeep-afternoon-2.jpg",
-        "/images/packages/shared-jeep-afternoon-3.jpg",
-        "/images/packages/shared-jeep-afternoon-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuATxZ5tkzTtgSGaxPpd1StmIopwhsKH3VXkFxt93zsWG_p5BhhSR-RH-LTP41AL7MUkqLN5HZXvsh3kbSRasE2MHK8PwUcwW9XY_CL4JXZ3MYHk8wYcYrGz-920CCb07M4_jVGv-RaoVMU7e9H6cr_KjqAQK335Irmhtw0z8TuW5awsPgUwYdTGpe3kzD4tDvTgj6k7L1-ldaPkH1gKb9h3giLM_B1SDlBAiFKSjqXOi7AezS-jsX_dYD9-d6V_HfFijuj3KmT2NFMq",
+        magul_viharaya.src
     ]
     },
     "shared-jeep-only-half-day": {
@@ -1468,14 +1461,12 @@ export const packagesData: Record<string, PackageDetail> = {
             tax: 0,
             total: 20,
             parkFeeNote:
-            "Entrance fees are paid separately at the DWC gate (approx. LKR 13,000 - 15,000 per foreign adult including taxes)."
+            "Tickets must be purchased"
         },
 
         gallery: [
-            "/images/packages/shared-jeep-halfday-1.jpg",
-            "/images/packages/shared-jeep-halfday-2.jpg",
-            "/images/packages/shared-jeep-halfday-3.jpg",
-            "/images/packages/shared-jeep-halfday-4.jpg"
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuCYZWmPd7gLUmam_PaUKMIyZGUc1Zmt0K5uFOgqEtavGRuOrDDe2ybYyOyYDHl8Pjf157wQ6IO5QBd3FSZmHdJlwE1NWE68sg4aR3tPDPfwC5d2FluHi9Ty5u9jDoLSqDEpFngUAKLG0lrf0esN7CO60tlBf1pO-DQaFgY_7zRVt7byq2ognUMfD2XYm46EJ5HqUlX8Yxot1Ml_XjkZj0n5-h4yV95NyYqpN-ZVFMBB3pEVVtaBpL2bjLxgwgeFo7WCiHUt5Ds_58Sf",
+            patanangala_Beach.src
         ]
     },
     "shared-jeep-only-full-day": {
@@ -1565,14 +1556,12 @@ export const packagesData: Record<string, PackageDetail> = {
         tax: 0,
         total: 26,
         parkFeeNote:
-        "Entrance fees are paid separately at the DWC gate (approx. LKR 13,000 - 14,500 per foreign adult including taxes and 15% VAT)."
+        "Ticket is included in the price"
     },
 
     gallery: [
-        "/images/packages/shared-jeep-fullday-1.jpg",
-        "/images/packages/shared-jeep-fullday-2.jpg",
-        "/images/packages/shared-jeep-fullday-3.jpg",
-        "/images/packages/shared-jeep-fullday-4.jpg"
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAq3awyX_tXw1z-IS3cCe1rDSGXTn-GOCn5MbpvuVGCrX8zPu7y6HjocOqKkqnNVol837eKWPZ6ngh3JlkkmPysx4dj_gVQSD0f-e36snrKBHBQufUfS4YaZpbL0q5a6qLK6teDMT8z7eLXdjWeQCGI225oVnqdKpIVuWDPIEqzVEuhfyQQOHRX7bwYMYYHibXYhj-0oJcBlM2Sb7u9cUE66EZvL5QTNrdLWQX7lYWvscrH0Vz1M-coKzUk1_u8SYZsANjkGny77S9K",
+        Sanctuary.src,
     ]
     },
 

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { packagesData } from "@/lib/data";
 import { Metadata } from "next";
+import { PackageCategory } from "@/types";
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -92,11 +93,47 @@ export default async function PackageDetailPage({ params }: Props) {
                             </p>
                         </div>
 
+                        {/* Table */}
+                        {
+                            pkg.pricingPerPerson && 
+                            <div className="flex-1">
+                                <div className="bg-surface-dark rounded-xl overflow-hidden border border-border-dark">
+                                    <div className="overflow-x-auto">
+                                        <table className="w-full text-left text-sm">
+                                            <thead className="bg-black/20 text-gray-400 uppercase text-xs font-bold">
+                                                <tr>
+                                                    
+                                                    <th className="px-6 py-4">Person Type</th>
+                                                    <th className="px-6 py-4">Price (from)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-border-dark">
+                                                {
+                                                    pkg.pricingPerPerson && pkg.pricingPerPerson.map((price) => (
+                                                        <tr key={price.label} className="hover:bg-white/5 transition-colors">
+                                                            <td className="px-6 py-4 text-gray-400">{price.label}</td>
+                                                            <td className="px-6 py-4 text-primary font-bold">$ {price.price}</td>
+                                                        </tr>
+                                                    ))
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div className="px-6 py-4 bg-primary/5 border-t border-border-dark">
+                                        <p className="text-xs text-primary/80 flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-base">info</span>
+                                            Price varies based on group size. Best value for groups of 4+.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
                         {/* Itinerary Timeline */}
                         {pkg.itinerary.length > 0 && (
                             <div className="flex flex-col gap-6">
                                 <h3 className="text-2xl font-bold text-white">Itinerary Timeline</h3>
-                                <div className="relative pl-4 border-l border-border-dark ml-2 space-y-8">
+                                <div className="relative  border-l border-border-dark ml-3 space-y-8">
                                     {pkg.itinerary.map((item, index) => (
                                         <TimelineItem key={index} item={item} />
                                     ))}
@@ -140,37 +177,40 @@ export default async function PackageDetailPage({ params }: Props) {
                                     <p className="text-sm mb-4">Our fleet consists of modified Toyota Hilux and Land Cruiser safari jeeps, designed for maximum visibility and comfort on rugged terrain.</p>
                                     <div className="flex gap-4 overflow-x-auto pb-2">
                                         {/* Placeholder generic jeep images since we don't have vehicle specific ones in data yet */}
-                                        <div className="w-24 h-24 shrink-0 rounded-lg bg-gray-800 border border-border-dark overflow-hidden relative">
-                                            <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz" alt="Jeep interior" fill className="object-cover" />
-                                        </div>
-                                        <div className="w-24 h-24 shrink-0 rounded-lg bg-gray-800 border border-border-dark overflow-hidden relative">
-                                            <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJW3N5GTfg-aJs_w0plAA78lDIf55P4FIYwy0XE7ZMRf8oca60ilR2E8z0IIpakuQf5Vh5HyV23VDTHWlxg5vWH1SaKWe6si8Pl4bc84ooE1ve0f3GqvgP6MEpZDv1UgD75EqIJirsPYnVpSriYGD0R3Ry0uuVY5PRYo5Hxo4K1WTrT4INR5xVNtWcpeT6zqzrj6j6jSqHFIm0OW4InnBKvdpQSqkti28ImnroS8OZqNxpdK19by7FfRE0-lS167YATVcB5FJzHADY" alt="Jeep exterior" fill className="object-cover" />
-                                        </div>
+                                        {
+                                            pkg.gallery.map((img) => (
+                                                <div key={img} className="w-24 h-24 shrink-0 rounded-lg bg-gray-800 border border-border-dark overflow-hidden relative">
+                                                    <Image src={img} alt="Jeep interior" fill className="object-cover" />
+                                                </div>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </DetailsAccordion>
                         </div>
+
+                        
                     </div>
 
                     {/* Right Column: Sticky Pricing Card */}
                     <div className="relative">
                         <div className="sticky top-24 flex flex-col gap-6 rounded-2xl border border-border-dark bg-surface-dark/80 p-6 md:p-8 backdrop-blur-xl shadow-2xl">
-                            <h3 className="text-xl font-bold text-white mb-2">Pricing Breakdown</h3>
+                            <h3 className="text-xl font-bold text-white mb-2">Pricing Breakdown( {pkg.pricingPerPerson ? 'Per Person' : 'Per Vehicle'} )</h3>
                             <div className="space-y-4 pb-6 border-b border-border-dark">
                                 <div className="flex justify-between items-center text-sm">
-                                    <span className="text-gray-400">Jeep Rental (Private)</span>
-                                    <span className="text-white font-medium">${ pkg.price.jeep && pkg.price.jeep.toFixed(2)}</span>
+                                    <span className="text-gray-400">{pkg.pricingPerPerson ? `Person Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})` : `Jeep Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})`}</span>
+                                    <span className="text-white font-medium">${ pkg.pricingPerPerson ? (pkg.pricingPerPerson && pkg.pricingPerPerson[0].price.toFixed(2)) : (pkg.price.jeep && pkg.price.jeep.toFixed(2)) }</span>
                                 </div>
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">Service Charge</span>
                                     <span className="text-white font-medium">${pkg.price.serviceFee && pkg.price.serviceFee.toFixed(2)}</span>
                                 </div>
-                                {pkg.price.tax && pkg.price.tax > 0 && (
+                                {/* {pkg.price.tax && pkg.price.tax > 0 && (
                                     <div className="flex justify-between items-center text-sm">
                                         <span className="text-gray-400">Tax (VAT)</span>
                                         <span className="text-white font-medium">${pkg.price.tax.toFixed(2)}</span>
                                     </div>
-                                )}
+                                )} */}
                                 <div className="bg-background-dark/50 p-3 rounded-lg flex justify-between items-center text-sm border border-border-dark/50">
                                     <div className="flex flex-col">
                                         <span className="text-gray-400 text-xs">Park Entrance Fee</span>
@@ -181,16 +221,13 @@ export default async function PackageDetailPage({ params }: Props) {
                             </div>
                             <div className="flex justify-between items-end pb-2">
                                 <div className="flex flex-col">
-                                    <span className="text-gray-400 text-sm">Total for Jeep</span>
+                                    <span className="text-gray-400 text-sm">Total for {pkg.pricingPerPerson ? "Per Person" : "Jeep"}</span>
                                     <span className="text-xs text-gray-500">(Excl. park fees)</span>
                                 </div>
-                                <span className="text-3xl font-black text-white">${pkg.price.total && pkg.price.total.toFixed(2)}</span>
+                                <span className="text-3xl font-black text-white">${ pkg.pricingPerPerson ? (pkg.pricingPerPerson[0].price.toFixed(2 ) ) : pkg.price.total && pkg.price.total.toFixed(2) }</span>
                             </div>
                             <div className="flex flex-col gap-3">
                                 <button className="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-background-dark text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]">
-                                    Book This Package
-                                </button>
-                                <button className="flex w-full items-center justify-center rounded-lg h-12 bg-transparent border border-border-dark text-white hover:bg-border-dark/30 text-base font-bold transition-all">
                                     Customize Trip
                                 </button>
                             </div>
