@@ -70,9 +70,9 @@ export interface PackageItineraryItem {
     icon: string;
 }
 
-interface PricingPerPerson {
-  label: string;
-  price: number;
+export interface PricingPerPerson {
+    label: string;
+    price: number;
 }
 
 export interface PackageDetail {
@@ -84,6 +84,8 @@ export interface PackageDetail {
     duration: string;
     jeepType: string;
     packageCategory?: PackageCategory;
+    durationCategory?: Duration;
+    priceRange?: PriceRange;
     capacity: string;
     meals: string;
     itinerary: PackageItineraryItem[];
@@ -110,14 +112,33 @@ export interface Tab {
 }
 
 export enum PackageCategory {
-    PRIVATE_INCLUSIVE,
-    SHARED_INCLUSIVE,
-    PRIVATE_JEEP_ONLY,
-    SHARED_JEEP_ONLY,
+    CATEGORY_ALL = 'Category',
+    PRIVATE_INCLUSIVE = 'Private Inclusive',
+    SHARED_INCLUSIVE = 'Shared Inclusive',
+    PRIVATE_JEEP_ONLY = 'Private Jeep Only',
+    SHARED_JEEP_ONLY = 'Shared Jeep Only',
 }
 
 export enum Badge {
-    RECOMMENDED,
-    NEW,
-    POPULAR,
+    RECOMMENDED = 'Recommended',
+    NEW = 'New',
+    POPULAR = 'MOST POPULAR',
+    BEST_VALUE = 'BEST VALUE',
+    TOP_SELLER = 'TOP SELLER'
+}
+
+export enum Duration {
+    DURATION_ALL = 'Duration',
+    MORNING = 'Morning - 5 Hours',
+    AFTERNOON = 'Afternoon - 5 Hours',
+    HALFDAY = 'Halfday - 7 Hours',
+    FULLDAY = 'Fullday - 13 Hours',
+}
+
+export enum PriceRange {
+    PRICE_RANGE_ALL = 'Price Range',
+    PRICE_RANGE_50 = '0 - 50',
+    PRICE_RANGE_100 = '51 - 100',
+    PRICE_RANGE_150 = '101 - 150',
+    PRICE_RANGE_200 = '151 - 200',
 }

@@ -1,4 +1,4 @@
-import { Badge, Blog, Destination, Feature, NavLink, PackageCategory, PackageDetail, Service, Tab } from "@/types";
+import { Badge, Blog, Destination, Duration, Feature, NavLink, PackageCategory, PackageDetail, PriceRange, Service, Tab } from "@/types";
 import sithulpawwa from '@/public/assests/sithulpawwa.jpg'
 import magul_viharaya from '@/public/assests/Magul_viharaya.jpg'
 import patanangala_Beach from '@/public/assests/Patanangala Beach.jpg'
@@ -69,6 +69,8 @@ export const packagesData: Record<string, PackageDetail> = {
         heroImage: "https://leopardyala.com/wp-content/uploads/2025/10/pexels-hsapir-1109898.jpg",
         description: "A dawn expedition designed to maximize leopard and sloth bear sightings during Yala’s most active hours. Ideal for photographers and serious wildlife enthusiasts.",
         duration: "5 Hours (05:00 AM – 11:00 AM)",
+        durationCategory: Duration.MORNING,
+        priceRange: PriceRange.PRICE_RANGE_100,
         jeepType: "Private 4x4 Safari Jeep",
         packageCategory: PackageCategory.PRIVATE_INCLUSIVE,
         capacity: "Max 6 Guests",
@@ -138,8 +140,11 @@ export const packagesData: Record<string, PackageDetail> = {
         heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuATxZ5tkzTtgSGaxPpd1StmIopwhsKH3VXkFxt93zsWG_p5BhhSR-RH-LTP41AL7MUkqLN5HZXvsh3kbSRasE2MHK8PwUcwW9XY_CL4JXZ3MYHk8wYcYrGz-920CCb07M4_jVGv-RaoVMU7e9H6cr_KjqAQK335Irmhtw0z8TuW5awsPgUwYdTGpe3kzD4tDvTgj6k7L1-ldaPkH1gKb9h3giLM_B1SDlBAiFKSjqXOi7AezS-jsX_dYD9-d6V_HfFijuj3KmT2NFMq",
         description: "A relaxed yet thrilling afternoon safari focused on Yala’s giants and golden-hour predators. Witness majestic elephant herds at waterholes, crocodiles basking in the sun, and leopards awakening for their evening patrol. Perfect for photographers and travelers who value comfort, exclusivity, and unforgettable sunset light.",
         duration: "4.5 Hours (01:30 PM – 06:00 PM)",
+        durationCategory: Duration.AFTERNOON,
+        priceRange: PriceRange.PRICE_RANGE_100,
         jeepType: "Private Open-Air 4x4 Safari Jeep",
         packageCategory: PackageCategory.PRIVATE_INCLUSIVE,
+        badge: Badge.POPULAR,
         capacity: "Max 6 Guests",
         meals: "Afternoon Snacks & Refreshments",
         itinerary:[
@@ -226,6 +231,8 @@ export const packagesData: Record<string, PackageDetail> = {
         heroImage: "https://leopardyala.com/wp-content/uploads/2025/10/pexels-aabrewerphoto-13046138-2.webp",
         description: "Engineered for serious wildlife enthusiasts and photographers, this extended 7-hour safari covers Yala’s peak predator hours and the quiet mid-morning window. As most jeeps exit the park, you gain rare access to peaceful tracking conditions—ideal for witnessing elusive sloth bears, leopard behavior, and undisturbed wildlife interactions.",
         duration: "7 Hours (05:00 AM – 12:30 PM)",
+        durationCategory: Duration.HALFDAY,
+        priceRange: PriceRange.PRICE_RANGE_150,
         jeepType: "Private Premium 4x4 Safari Jeep",
         packageCategory: PackageCategory.PRIVATE_INCLUSIVE,
         capacity: "Max 6 Guests",
@@ -318,7 +325,9 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "13 Hours (05:00 AM – 06:30 PM)",
     jeepType: "Private Premium 4x4 Safari Jeep",
     packageCategory: PackageCategory.PRIVATE_INCLUSIVE,
-    badge: Badge.POPULAR,
+    priceRange: PriceRange.PRICE_RANGE_200,
+    durationCategory: Duration.FULLDAY,
+    badge: Badge.TOP_SELLER,
     capacity: "Max 6 Guests",
     meals: "Picnic Breakfast, Hot Picnic Lunch & Afternoon Fruits",
 
@@ -437,6 +446,8 @@ export const packagesData: Record<string, PackageDetail> = {
         duration: "6 Hours (05:00 AM – 11:00 AM)",
         jeepType: "Shared Open-Air 4x4 Safari Jeep",
         packageCategory: PackageCategory.SHARED_INCLUSIVE,
+        durationCategory: Duration.MORNING,
+        priceRange: PriceRange.PRICE_RANGE_100,
         capacity: "Max 6 Guests",
         meals: "Picnic Breakfast",
 
@@ -530,6 +541,9 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "4.5 Hours (01:30 PM – 06:00 PM)",
     jeepType: "Shared Open-Air 4x4 Safari Jeep",
     packageCategory: PackageCategory.SHARED_INCLUSIVE,
+    priceRange: PriceRange.PRICE_RANGE_100,
+    durationCategory: Duration.AFTERNOON,
+    badge: Badge.BEST_VALUE,
     capacity: "Max 6 Guests",
     meals: "Afternoon Snacks & Fruits",
 
@@ -616,6 +630,8 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "7 Hours (05:00 AM – 12:30 PM)",
     jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.SHARED_INCLUSIVE,
+    durationCategory: Duration.HALFDAY,
+    priceRange: PriceRange.PRICE_RANGE_100,
     capacity: "Maximum 6 Guests",
     meals: "Picnic Breakfast & Unlimited Bottled Water",
 
@@ -718,9 +734,11 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "13 Hours (05:00 AM – 06:30 PM)",
     jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.SHARED_INCLUSIVE,
+    durationCategory: Duration.FULLDAY,
+    priceRange: PriceRange.PRICE_RANGE_100,
     capacity: "Maximum 6 Guests",
     meals: "Picnic Breakfast, Hot Picnic Lunch, Fruits & Unlimited Bottled Water",
-    badge: Badge.POPULAR,
+    badge: Badge.TOP_SELLER,
 
     itinerary: [
         {
@@ -847,6 +865,8 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "5 Hours (05:00 AM – 10:30 AM)",
     jeepType: "Private Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.PRIVATE_JEEP_ONLY,
+    durationCategory: Duration.MORNING,
+    priceRange: PriceRange.PRICE_RANGE_50,
     capacity: "Up to 6 Passengers",
     meals: "Not Included",
 
@@ -925,6 +945,9 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "5 Hours (01:30 PM – 06:30 PM)",
     jeepType: "Private Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.PRIVATE_JEEP_ONLY,
+    durationCategory: Duration.AFTERNOON,
+    badge: Badge.POPULAR,
+    priceRange: PriceRange.PRICE_RANGE_50,
     capacity: "Up to 6 Passengers",
     meals: "Not Included",
 
@@ -1017,6 +1040,8 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "7 Hours (05:00 AM – 12:00 PM)",
     jeepType: "Private Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.PRIVATE_JEEP_ONLY,
+    durationCategory: Duration.HALFDAY,
+    priceRange: PriceRange.PRICE_RANGE_100,
     capacity: "Up to 6 Passengers",
     meals: "Not Included",
 
@@ -1101,6 +1126,8 @@ export const packagesData: Record<string, PackageDetail> = {
         duration: "14 Hours (05:00 AM – 07:00 PM)",
         jeepType: "Private Open 4x4 Safari Jeep (TATA / Mahindra)",
         packageCategory: PackageCategory.PRIVATE_JEEP_ONLY,
+        durationCategory: Duration.FULLDAY,
+        priceRange: PriceRange.PRICE_RANGE_100,
         capacity: "Up to 6 Passengers",
         meals: "Not Included",
 
@@ -1155,7 +1182,7 @@ export const packagesData: Record<string, PackageDetail> = {
             icon: "reply"
             }
         ],
-        badge: Badge.POPULAR,
+        badge: Badge.TOP_SELLER,
 
         inclusions: [
             "Private 4x4 Safari Jeep (Full Day, Up to 6 Guests)",
@@ -1202,7 +1229,9 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "5 Hours (05:00 AM – 11:00 AM)",
     jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.SHARED_JEEP_ONLY,
+    durationCategory: Duration.MORNING,
     capacity: "Up to 6 Passengers",
+    priceRange: PriceRange.PRICE_RANGE_50,
     meals: "Not Included",
 
     itinerary: [
@@ -1289,6 +1318,9 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "5 Hours (02:00 PM – 06:30 PM)",
     jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.SHARED_JEEP_ONLY,
+    durationCategory: Duration.AFTERNOON,
+    badge: Badge.BEST_VALUE,
+    priceRange: PriceRange.PRICE_RANGE_50,
     capacity: "Up to 6 Passengers",
     meals: "Not Included",
 
@@ -1376,6 +1408,8 @@ export const packagesData: Record<string, PackageDetail> = {
         duration: "7 Hours (05:00 AM – 12:00 PM)",
         jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
         packageCategory: PackageCategory.SHARED_JEEP_ONLY,
+        durationCategory: Duration.HALFDAY,
+        priceRange: PriceRange.PRICE_RANGE_100,
         capacity: "Up to 6 Passengers",
         meals: "Not Included",
 
@@ -1456,9 +1490,11 @@ export const packagesData: Record<string, PackageDetail> = {
     duration: "14 Hours (05:00 AM – 07:00 PM)",
     jeepType: "Shared Open 4x4 Safari Jeep (TATA / Mahindra)",
     packageCategory: PackageCategory.SHARED_JEEP_ONLY,
+    durationCategory: Duration.FULLDAY,
+    priceRange: PriceRange.PRICE_RANGE_100,
     capacity: "Up to 6 Passengers",
     meals: "Not Included",
-    badge: Badge.POPULAR,
+    badge: Badge.TOP_SELLER,
 
     itinerary: [
         {
@@ -1794,3 +1830,27 @@ export const tabs: Tab[] = [
   { id: PackageCategory.PRIVATE_JEEP_ONLY, label: "Private Jeep-Only" },
   { id: PackageCategory.SHARED_JEEP_ONLY, label: "Shared Jeep-Only" },
 ];
+
+export const categories: PackageCategory[] = [
+    PackageCategory.CATEGORY_ALL,
+    PackageCategory.PRIVATE_INCLUSIVE,
+    PackageCategory.SHARED_INCLUSIVE,
+    PackageCategory.PRIVATE_JEEP_ONLY,
+    PackageCategory.SHARED_JEEP_ONLY,
+];
+
+export const durations: Duration[] = [
+    Duration.DURATION_ALL,
+    Duration.MORNING,
+    Duration.AFTERNOON,
+    Duration.HALFDAY,
+    Duration.FULLDAY
+]
+
+export const prices: PriceRange[] = [
+    PriceRange.PRICE_RANGE_ALL,
+    PriceRange.PRICE_RANGE_50,
+    PriceRange.PRICE_RANGE_100,
+    PriceRange.PRICE_RANGE_150,
+    PriceRange.PRICE_RANGE_200
+]
