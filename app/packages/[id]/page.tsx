@@ -95,14 +95,14 @@ export default async function PackageDetailPage({ params }: Props) {
 
                         {/* Table */}
                         {
-                            pkg.pricingPerPerson && 
+                            pkg.pricingPerPerson &&
                             <div className="flex-1">
                                 <div className="bg-surface-dark rounded-xl overflow-hidden border border-border-dark">
                                     <div className="overflow-x-auto">
                                         <table className="w-full text-left text-sm">
                                             <thead className="bg-black/20 text-gray-400 uppercase text-xs font-bold">
                                                 <tr>
-                                                    
+
                                                     <th className="px-6 py-4">Person Type</th>
                                                     <th className="px-6 py-4">Price (from)</th>
                                                 </tr>
@@ -189,7 +189,7 @@ export default async function PackageDetailPage({ params }: Props) {
                             </DetailsAccordion>
                         </div>
 
-                        
+
                     </div>
 
                     {/* Right Column: Sticky Pricing Card */}
@@ -199,7 +199,7 @@ export default async function PackageDetailPage({ params }: Props) {
                             <div className="space-y-4 pb-6 border-b border-border-dark">
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">{pkg.pricingPerPerson ? `Person Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})` : `Jeep Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})`}</span>
-                                    <span className="text-white font-medium">${ pkg.pricingPerPerson ? (pkg.pricingPerPerson && pkg.pricingPerPerson[0].price.toFixed(2)) : (pkg.price.jeep && pkg.price.jeep.toFixed(2)) }</span>
+                                    <span className="text-white font-medium">${pkg.pricingPerPerson ? (pkg.pricingPerPerson && pkg.pricingPerPerson[0].price.toFixed(2)) : (pkg.price.jeep && pkg.price.jeep.toFixed(2))}</span>
                                 </div>
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">Service Charge</span>
@@ -224,12 +224,14 @@ export default async function PackageDetailPage({ params }: Props) {
                                     <span className="text-gray-400 text-sm">Total for {pkg.pricingPerPerson ? "Per Person" : "Jeep"}</span>
                                     <span className="text-xs text-gray-500">(Excl. park fees)</span>
                                 </div>
-                                <span className="text-3xl font-black text-white">${ pkg.pricingPerPerson ? (pkg.pricingPerPerson[0].price.toFixed(2 ) ) : pkg.price.total && pkg.price.total.toFixed(2) }</span>
+                                <span className="text-3xl font-black text-white">${pkg.pricingPerPerson ? (pkg.pricingPerPerson[0].price.toFixed(2)) : pkg.price.total && pkg.price.total.toFixed(2)}</span>
                             </div>
                             <div className="flex flex-col gap-3">
-                                <button className="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-background-dark text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]">
-                                    Customize Trip
-                                </button>
+                                <Link href={`/safari-calculator/${pkg.id}`}>
+                                    <button className="flex cursor-pointer w-full items-center justify-center rounded-lg h-12 bg-primary text-background-dark text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]">
+                                        Customize Trip
+                                    </button>
+                                </Link>
                             </div>
                             <div className="flex items-center gap-2 justify-center mt-2">
                                 <span className="material-symbols-outlined text-green-500 text-sm">verified_user</span>
