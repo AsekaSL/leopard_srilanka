@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { packagesData } from "@/components/data/packages";
+import { packagesData } from "@/lib/data";
 import { Metadata } from "next";
 
 type Props = {
@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const packageDetail = packagesData[id];
 
     if (!packageDetail) {
+        console.log(id)
         return {
             title: "Package Not Found",
         };
@@ -158,13 +159,13 @@ export default async function PackageDetailPage({ params }: Props) {
                             <div className="space-y-4 pb-6 border-b border-border-dark">
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">Jeep Rental (Private)</span>
-                                    <span className="text-white font-medium">${pkg.price.jeep.toFixed(2)}</span>
+                                    <span className="text-white font-medium">${ pkg.price.jeep && pkg.price.jeep.toFixed(2)}</span>
                                 </div>
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">Service Charge</span>
-                                    <span className="text-white font-medium">${pkg.price.serviceFee.toFixed(2)}</span>
+                                    <span className="text-white font-medium">${pkg.price.serviceFee && pkg.price.serviceFee.toFixed(2)}</span>
                                 </div>
-                                {pkg.price.tax > 0 && (
+                                {pkg.price.tax && pkg.price.tax > 0 && (
                                     <div className="flex justify-between items-center text-sm">
                                         <span className="text-gray-400">Tax (VAT)</span>
                                         <span className="text-white font-medium">${pkg.price.tax.toFixed(2)}</span>
@@ -183,7 +184,7 @@ export default async function PackageDetailPage({ params }: Props) {
                                     <span className="text-gray-400 text-sm">Total for Jeep</span>
                                     <span className="text-xs text-gray-500">(Excl. park fees)</span>
                                 </div>
-                                <span className="text-3xl font-black text-white">${pkg.price.total.toFixed(2)}</span>
+                                <span className="text-3xl font-black text-white">${pkg.price.total && pkg.price.total.toFixed(2)}</span>
                             </div>
                             <div className="flex flex-col gap-3">
                                 <button className="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-background-dark text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]">

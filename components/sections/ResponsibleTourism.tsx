@@ -1,4 +1,5 @@
 import Image from "next/image";
+import yala_safari from "@/public/assests/yala-safari.jpg";
 
 export default function ResponsibleTourism() {
     return (
@@ -10,7 +11,7 @@ export default function ResponsibleTourism() {
                         <div className="absolute top-4 -left-4 w-full h-full border-2 border-primary/30 rounded-2xl z-0" />
                         <Image
                             alt="Responsible tourism"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5b5JeMrfezKUjBkj1CYgboRJ00d_2Q7bxhHiUWGgT-0xDcks9D5eBngaClt2LlYwvmgFq37bBg4zw330sAbjhtbs_1C89oupmoS0Cv_pYuYsJ5Oj-74q1lMZXYNqJfwGnfgjuAfeW-rtV2IzaQ2zjzgk8OZPDW5kqq6xF9ZQZ3XDJZS3bzKoxDN5s6oixkPCmVHN1ddvWBgQcch2TKoEpUHuc5eRtdWSAKlFPOQHHHPCLP1DpLXrCcsMhF6IrU6Buw4xtewOrOk3s"
+                            src={yala_safari}
                             width={600}
                             height={400}
                             className="relative z-10 w-full rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-700"

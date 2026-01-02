@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Button from "../ui/Button";
+import homeHero from '@/public/home_hero.png'
+import Link from "next/link";
 
 export default function HeroSection() {
     return (
@@ -9,9 +11,9 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#181611] z-10" />
                 <Image
                     alt="Leopard close up"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxR-itjoyIm8_mh-9lX06oiCevJW5wv51z7daTUq6C2jVUkSMkUxZW3njMRCX0e90MTJsGJ0r5i3UgR8sNLSAwgTuIwcp693JHIskE79DOhvXjKpw315qPqss6l3b1y9tYstdQmwcHL0TXeMWDR2jfdlRlts5xtyEF2q0TGKUvzXBZ7VuxTI1Kt_GDCZQeCfc4ehlzPh-ukh_BqFDADKBu7VxON2QzKG_wg5Dlu7p1sSssktYYLq6__Yl4s4BzEpJGjsduj3RFpRh4"
+                    src={homeHero}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                     priority
                 />
             </div>
@@ -45,12 +47,16 @@ export default function HeroSection() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
-                    <Button variant="primary" size="lg" icon="arrow_forward">
-                        Book Your Safari
-                    </Button>
-                    <Button variant="secondary" size="lg">
-                        View Packages
-                    </Button>
+                    <Link href='/packages' className="w-full sm:w-auto">
+                        <Button variant="primary" size="lg" icon="arrow_forward" className="w-full sm:w-auto">
+                            Book Your Safari
+                        </Button>
+                    </Link>
+                    <Link href='/packages' className="w-full sm:w-auto">
+                        <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+                            View Packages
+                        </Button>
+                    </Link>
                 </div>
             </div>
 
