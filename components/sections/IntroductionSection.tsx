@@ -1,19 +1,11 @@
 import Image from "next/image";
 import FeatureCard from "../ui/FeatureCard";
 import { Feature } from "@/types";
+import { expertiseFeatures } from "@/lib/data";
+import img from '@/public/assests/home_img_1.jpg'
+import Link from "next/link";
 
-const expertiseFeatures: Feature[] = [
-    {
-        icon: "school",
-        title: "Expert Guides",
-        description: "Trained naturalists with deep knowledge.",
-    },
-    {
-        icon: "camera_alt",
-        title: "Photography Ready",
-        description: "Bean bags and optimal positioning provided.",
-    },
-];
+
 
 export default function IntroductionSection() {
     return (
@@ -43,18 +35,20 @@ export default function IntroductionSection() {
 
                         {/* Feature Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {expertiseFeatures.map((feature, index) => (
+                            {expertiseFeatures.map((feature : Feature, index : number) => (
                                 <FeatureCard key={index} feature={feature} variant="outlined" />
                             ))}
                         </div>
 
                         {/* CTA Link */}
-                        <button className="text-primary font-bold hover:text-white transition-colors flex items-center gap-2 group">
-                            Read Our Full Story
-                            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                                arrow_forward
-                            </span>
-                        </button>
+                        <Link href='/about'>
+                            <button className="text-primary font-bold hover:text-white transition-colors flex items-center gap-2 group cursor-pointer">
+                                Read Our Full Story
+                                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+                                    arrow_forward
+                                </span>
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Image with Quote Card */}
@@ -62,7 +56,7 @@ export default function IntroductionSection() {
                         <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
                             <Image
                                 alt="Elephant in the wild"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm621ln3D_S_YbDF-CQMv7WXFOBzV4dWgumzoEw-hlJuP2xnCGHBueqfCV9jvwec-6V-ldeQFqhxtpk57b2k3qf0QabG5VkDXn8tcwi-UlnyCq5QhwEizfvNUf1XLKsiwpaZihjwk3BiEKA9-TdNiYxYvCqIN_S3kgundR393SsApGmoZ1dykokb05wSrnxo5eT_iIuqKDf0o-Yf2IopMp52xyCwylSyH0wdFS255rgrfViuaJNl4UsGstfywHuxThvQV4nD92QAqm"
+                                src={img}
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
                             />

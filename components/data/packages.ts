@@ -1,35 +1,76 @@
+import { PackageCategory, PackageDetail } from "@/types";
 
-export interface PackageItineraryItem {
-    time: string;
-    title: string;
-    description: string;
-    icon: string;
-}
-
-export interface PackageDetail {
-    id: string;
-    title: string;
-    subtitle: string;
-    heroImage: string;
-    description: string;
-    duration: string;
-    jeepType: string;
-    capacity: string;
-    meals: string;
-    itinerary: PackageItineraryItem[];
-    inclusions: string[];
-    exclusions: string[];
-    price: {
-        jeep: number;
-        serviceFee: number;
-        tax: number;
-        total: number;
-        parkFeeNote: string;
-    };
-    gallery: string[];
-}
 
 export const packagesData: Record<string, PackageDetail> = {
+    "private-inclusive-morning-safari": {
+            id: "private-morning-safari",
+            title: "Private All-Inclusive Morning Safari",
+            subtitle: "The Golden Hour Predator Quest",
+            heroImage: "https://leopardyala.com/wp-content/uploads/2025/10/pexels-hsapir-1109898.jpg",
+            description: "A dawn expedition designed to maximize leopard and sloth bear sightings during Yala’s most active hours. Ideal for photographers and serious wildlife enthusiasts.",
+            duration: "5 Hours (05:00 AM – 11:00 AM)",
+            jeepType: "Private 4x4 Safari Jeep",
+            packageCategory: PackageCategory.PRIVATE_INCLUSIVE,
+            capacity: "Max 6 Guests",
+            meals: "Breakfast & Lunch Picnic",
+            itinerary: [
+                {
+                    time: "05:00 AM",
+                    title: "Hotel Pickup",
+                    description: "Pickup from nearby hotels.",
+                    icon: "directions_car"
+                },
+                {
+                    time: "06:00 AM",
+                    title: "Gate Entry",
+                    description: "Enter Yala at gate opening.",
+                    icon: "confirmation_number"
+                },
+                {
+                    time: "08:30 AM",
+                    title: "Breakfast Stop",
+                    description: "Breakfast by river or beach.",
+                    icon: "bakery_dining"
+                },
+                {
+                    time: "11:00 AM",
+                    title: "Return",
+                    description: "Drop-off at hotel.",
+                    icon: "flag"
+                }
+            ],
+            inclusions: [
+                "Private Safari Jeep",
+                "Experienced Driver/Tracker",
+                "Unlimited Water",
+                "Breakfast"
+            ],
+            exclusions: [
+                "Park Entrance Fees",
+                "Meals",
+                "Personal Expenses"
+            ],
+            price: {
+                jeep: 100.00,
+                serviceFee: 0.00,
+                tax: 0.00,
+                total: 100.00,
+                parkFeeNote: "Included"
+            },
+            pricingPerPerson: [
+                { label: "1_person", price: 100 },
+                { label: "2_persons", price: 142 },
+                { label: "3_persons", price: 192 },
+                { label: "4_persons", price: 242 },
+                { label: "5_persons", price: 292 },
+                { label: "6_persons", price: 342 },
+                { label: "children_5_11", price: 26 },
+                { label: "infants_under_5", price: 0 },
+            ],
+            gallery: [
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuBcSSVyrux9zqpLxcX20NBcMlqlYoPERlb2uebaDaD0uvn7_aGWQey410zuUZT6a9xhbfMn1-eR_UTbME5RKZ2w-xFsqXLdUxifYXjZjDg1OoGs2Qf2HFeNb9cHk4zatk_ULfnBs7OJsQRarbDKnZhzqrNsMKdcQJBxtir-nF5RYaxfiqAq8v2evQU_NzPK2anZcJ1xYNRaIpXzKPkUDUuO8EWQmhWL5nP7DRZXfUHTC_w9rv0YW0oDd8jVO_PwHPpkP2FSvi9qKJjO"
+            ]
+        },
     "luxury-safari": {
         id: "luxury-safari",
         title: "The Golden Shadow Expedition",
