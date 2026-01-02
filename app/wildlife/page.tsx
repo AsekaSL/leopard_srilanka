@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import wildlifeHero from "@/public/wildlife_hero.png";
+import elephant from "@/public/assests/home_img_1.jpg";
 
 export const metadata: Metadata = {
     title: "Wildlife Guide - The Big Five & Beyond | Leopard Sri Lanka",
@@ -105,7 +106,7 @@ export default function WildlifePage() {
                             <div className="aspect-[4/3] md:aspect-[3/4] lg:aspect-square w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-800 relative group">
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
                                 <Image
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPA-6KIw17bZkgZZrkk2X3Fi-uErZkPaPtiJCEW7ZhWBQvniFI50FC9jPZlLfy55SjiFP4tMU4xHfNrXL5x4jT2OEoWscGCSz6GEk6R_5h1RhRIbvbh2li0aWheBh1N8HLo-_3_mMNuvOD_05WUagAUy9oTNxebvfTOaXbHY_7wGA3z1-fXwtCxHvecnyXIVE5N_dyxX-f0Lioh2ADVuqTp41nQBMTuXrileUlVcTiAUw9YjzmdT3jtMg4pEZw68R1UfNQMYESR-NN"
+                                    src={elephant}
                                     alt="Large elephant walking on a dirt road in national park"
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -158,7 +159,7 @@ export default function WildlifePage() {
                             <div className="aspect-[4/3] md:aspect-[3/4] lg:aspect-square w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-800 relative group">
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
                                 <Image
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0zCTusu5fR5W1Ffs1P7lPf7PNDiV8lnF3lyzBlwMxVitLArpH0Xb8_QBHHhbFcbXWNPXIJT6fm9TBm4pd1msL32zHfcmfoZ8A5hODZh940vyR5_fuxacDIb1zwFculvsAGW2gwTmT-d37fimzPs3vGK7WK9Glc6jnQez9YPlEYaJw-9oe3Q9YjgTW6EgDLjN4ITJBZiINSz5Bwgkh-tCahjDNzMOlS9o0_Ql0FcvvXxJzt35Z4jiojAzOqoAi0zaMhxla3Aoia7p"
+                                    src="https://leopardyala.com/wp-content/uploads/2025/10/pexels-aabrewerphoto-13046138-2.webp"
                                     alt="A black sloth bear walking in grassy field"
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
