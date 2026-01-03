@@ -1,13 +1,21 @@
-import Image from "next/image";
-import { Metadata } from "next";
-import contactHero from "@/public/contact_hero.png";
+'use client'
 
-export const metadata: Metadata = {
-    title: "Contact & Booking - Leopard Sri Lanka",
-    description: "Curating unforgettable encounters with the wild. Reach out to design your bespoke Sri Lankan safari experience.",
-};
+import Image from "next/image";
+import contactHero from "@/public/contact_hero.png";
+import { durations } from "@/lib/data";
+import { useState } from "react";
+
 
 export default function ContactPage() {
+
+
+    const [selectedDuration, setSelectedDuration] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [country, setCountry] = useState('');
+    const [guestCount, setGuestCount] = useState(1);
+
+
     return (
         <div className="bg-background-light dark:bg-background-dark text-[#171611] dark:text-white font-display overflow-x-hidden antialiased">
 
@@ -112,12 +120,12 @@ export default function ContactPage() {
                                     {/* Name */}
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Full Name</label>
-                                        <input className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text" />
+                                        <input onChange={(e) => setName(e.target.value)} value={name} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text" />
                                     </div>
                                     {/* Email */}
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Email Address</label>
-                                        <input className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email" />
+                                        <input onChange={(e) => setEmail(e.target.value)} value={email} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email" />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -125,7 +133,7 @@ export default function ContactPage() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Country of Residence</label>
                                         <div className="relative">
-                                            <select className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
+                                            <select onChange={(e) => setCountry(e.target.value)} value={country} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
                                                 <option>Select Country</option>
                                                 <option>United States</option>
                                                 <option>United Kingdom</option>
@@ -146,11 +154,11 @@ export default function ContactPage() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Number of Guests</label>
                                         <div className="flex items-center h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-2">
-                                            <button className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
+                                            <button onClick={() => setGuestCount(guestCount < 1 ? 0 : guestCount - 1)} className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
                                                 <span className="material-symbols-outlined text-lg">remove</span>
                                             </button>
-                                            <input className="flex-1 bg-transparent text-center text-[#171611] dark:text-white font-medium focus:outline-none" readOnly type="number" defaultValue="2" />
-                                            <button className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
+                                            <input className="flex-1 bg-transparent text-center text-[#171611] dark:text-white font-medium focus:outline-none" readOnly type="number" value={guestCount} onChange={(e) => setGuestCount(guestCount)} />
+                                            <button onClick={() => setGuestCount(guestCount + 1)} className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
                                                 <span className="material-symbols-outlined text-lg">add</span>
                                             </button>
                                         </div>
@@ -158,11 +166,12 @@ export default function ContactPage() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Safari Type</label>
                                         <div className="relative">
-                                            <select className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
-                                                <option>Full Day Safari</option>
-                                                <option>Morning Safari</option>
-                                                <option>Evening Safari</option>
-                                                <option>Photography Tour</option>
+                                            <select onChange={(e) => setSelectedDuration(e.target.value)} value={selectedDuration} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
+                                                {
+                                                    durations.map((duration, i) => (
+                                                        <option value={duration} key={i}>{duration}</option>
+                                                    ) )
+                                                }
                                             </select>
                                             <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xl">expand_more</span>
                                         </div>

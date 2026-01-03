@@ -1,18 +1,18 @@
+'use client'
 import blogHero from '@/public/blog_hero.png'
 import Image from "next/image";
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Yala National Park Blog – Latest Sightings, Stories & Guides",
-    description: "Dive deeper into the wild with Yala's latest discoveries, stories, and guides. Expert insights for the modern explorer.",
-};
+import { featuredCard } from '@/lib/data';
+import { useRouter } from 'next/navigation';
+import elepant from '@/public/assests/home_img_1.jpg'
 
 export default function BlogPage() {
+    const router = useRouter();
     return (
         <div className="bg-background-dark text-white font-display antialiased overflow-x-hidden">
 
             {/* Hero Section */}
-            <section className="relative min-h-[600px] flex items-center justify-center px-4 overflow-hidden">
+            <section className="relative min-h-[650px] flex items-center justify-center px-4 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181611] via-[#181611]/60 to-transparent z-10" />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#181611]/30 to-transparent z-10" />
@@ -59,14 +59,18 @@ export default function BlogPage() {
             <section className="py-8 px-6 bg-background-dark">
                 <div className="max-w-[1200px] mx-auto">
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                        {['Sightings', 'Species', 'Photography', 'Conservation', 'Stories', 'Planning', 'Culture'].map((category, index) => (
-                            <div key={index} className="group flex flex-col items-center justify-center p-6 bg-surface-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-surface-dark/80 transition-all cursor-pointer">
-                                <span className="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">
-                                    {['visibility', 'pets', 'photo_camera', 'nature_people', 'auto_stories', 'map', 'temple_buddhist'][index]}
-                                </span>
-                                <span className="text-sm font-bold text-center text-white">{category}</span>
-                            </div>
-                        ))}
+                        
+                            {['Sightings', 'Species', 'Photography', 'Conservation', 'Stories', 'Planning', 'Culture'].map((category, index) => (
+                                <div onClick={() => router.push(`/visitor-guide`)} key={index} className="group flex flex-col items-center justify-center p-6 bg-surface-dark border border-border-dark rounded-xl hover:border-primary/50 hover:bg-surface-dark/80 transition-all cursor-pointer">
+                                    
+                                    <span className="material-symbols-outlined text-primary text-3xl mb-3 group-hover:scale-110 transition-transform">
+                                        {['visibility', 'pets', 'photo_camera', 'nature_people', 'auto_stories', 'map', 'temple_buddhist'][index]}
+                                    </span>
+                                    
+                                    <span className="text-sm font-bold text-center text-white">{category}</span>
+                                </div>
+                            ))}
+                        
                     </div>
                 </div>
             </section>
@@ -81,56 +85,34 @@ export default function BlogPage() {
                             <h3 className="text-2xl font-bold text-white">Featured Stories</h3>
                             <a href="#" className="text-primary text-sm font-bold hover:underline">View All</a>
                         </div>
-
-                        {/* Large Featured Card 1 */}
-                        <article className="group relative flex flex-col md:flex-row bg-surface-dark border border-border-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all">
-                            <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
-                                <Image
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYiNHe38tflIypPz4SRczSuXn82XFDPEbH62ljGieQ63r_Ovx1N3Wl4Ak0Hyhcni6_zwqNIPTw0nAU1u1U7jyr7Agc09DwtErasgpjfM-sVp6fAOCpXLjIFmIf9VUhNXDSi3OjB_4tYf2-9RghxvA3vGbKLMvIivecPdDci-215Gv8TTVTQkrMZQoiijX8QL2KHOtfs-vJ2auZZskFn1Pyeso4jL7iCJMcKI8Oi72OGfgkiYF8ayCSJAsP4G9bD_6LqWZaTB_3AC5"
-                                    alt="Elephant herd crossing a dirt road in Yala"
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="flex-1 p-6 flex flex-col justify-center">
-                                <div className="flex items-center gap-3 mb-3">
-                                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Conservation</span>
-                                    <span className="text-xs text-gray-500">Oct 12, 2023</span>
-                                </div>
-                                <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-white">The Return of the Tuskers: A Season to Remember</h2>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-2 font-sans">
-                                    Recent months have seen unprecedented sightings of iconic tuskers returning to Block 1. We explore the migratory patterns driving this return.
-                                </p>
-                                <div className="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform cursor-pointer">
-                                    Read Full Story <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        {/* Large Featured Card 2 */}
-                        <article className="group relative flex flex-col md:flex-row bg-surface-dark border border-border-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all">
-                            <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
-                                <Image
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuANdQRV9H8zBySObpxMqsncTk_l_mz1o0IQQpl-RSPLBkUe7RjO-NWqqJfYmE-Dy9TYPOOmIoovynNMZWqS6drh5gjYvFXFO6NJo5QgUOu4iJJ1ygN9g_bA8nHCw4BlthOYLCS-jpsh-VUXzzgTH_Qi7FfvqG4z_agBdNgNDQh-FEciGC93jfSWEKz2P-tDVJPpKnCUhVpohkkP2DreX78BZBXWO7xpR9qXdh5oieGhM1kFZqXCsbzKToPZI5ZCTGVqDJLfBu21M0-i"
-                                    alt="Close up of a green bee-eater bird on a branch"
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="flex-1 p-6 flex flex-col justify-center">
-                                <div className="flex items-center gap-3 mb-3">
-                                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Photography</span>
-                                    <span className="text-xs text-gray-500">Sep 28, 2023</span>
-                                </div>
-                                <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-white">Mastering Golden Hour: Capturing Yala's Birds</h2>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-2 font-sans">
-                                    The light in Yala transforms dramatically between 5 PM and 6 PM. Learn how to adjust your ISO and shutter speed for perfect avian portraits.
-                                </p>
-                                <div className="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform cursor-pointer">
-                                    Read Full Guide <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-                                </div>
-                            </div>
-                        </article>
+                        {/* Large Featured Cards */}
+                        {
+                            featuredCard.map((card, index) => (
+                                <article key={index} className="group relative flex flex-col md:flex-row bg-surface-dark border border-border-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all">
+                                        <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
+                                            <Image
+                                                src={card.image}
+                                                alt={card.alt}
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
+                                        <div className="flex-1 p-6 flex flex-col justify-center">
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <span className="text-xs font-bold text-primary uppercase tracking-wider">{card.slug}</span>
+                                                <span className="text-xs text-gray-500">{card.date}</span>
+                                            </div>
+                                            <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-white">{card.title}</h2>
+                                            <p className="text-gray-400 text-sm mb-4 line-clamp-2 font-sans">
+                                                {card.description}
+                                            </p>
+                                            <div onClick={() => router.push('/gallery')} className="inline-flex items-center text-primary font-bold text-sm hover:translate-x-1 transition-transform cursor-pointer">
+                                                Read Full Story <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                            ))
+                        }
                     </div>
 
                     {/* Latest Sightings Feed (Right 1/3) */}
@@ -173,8 +155,8 @@ export default function BlogPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { name: "The Sri Lankan Leopard", desc: "The apex predator of the island. Understand their territories and behavior.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDePn-sqjTmFgAEznnzNrCBl6nEi8UB9xsgud7EHFVT3m-qEBPRqgRd9cM-oFlgpPMLM4SigMAdwbk6Aq6wsM8XV6E8iq2H0yh5V3qbfx_aejmyYvxtQOSGV6u0pP_iQoeeWFE_B0umNBRgZ_anzX-Iqbf5sVviWjkTRjytmKc3znTAM2cbutvUmVEk2EEw96gNTS7h_dQyRFBENDmdeXDS9o20drznPPS0S8qfYpgodATyQk3rLHMefy1y2J24y06TG9XuJFIgLpP5" },
-                            { name: "Asian Elephants", desc: "Nomads of the scrub jungle. Tracking the gentle giants of Yala.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBPEJTspNgjJgaIDmbz6S7lCx4gKQrql57drRlCCnA5MxIlP9ZqZwhTvWfBAqTMJnGqPEJGWJW2dszmVBBQ-Puc6-6EG0pOYQ0Yx5L5xpaGOvpFGE8SauAGzPgSucK1xYwtygDCy_NaVm0rhlOpkUlZS-5iNUxSB4VkU2WWVFoWKSY7DcE4iCdgLeaUYEWHds3eeoUiTbklYvsBwgkNGum52MBTrBLR1L58LujDV0nDlSRklcxFldKZy2uDa_cpufEYApsFCW_mNSSh" },
-                            { name: "The Elusive Sloth Bear", desc: "Why they are harder to spot than leopards and where to look.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAb8K_1nZ85AAYkwUyERGDBtSqRQGPNU1GYW2WyQwzPhMUIptOymzPP_EtQm3p3T_WixahYQrRDn7CYBajVSUfRtxLOQ6K03KKMuAyS1paxS--c9g7w4FQfa-kJnRpDbtbOJeNcvzbEVWqY8FACC7ipDA753snHEzd24o80YzEte9lfG-Dipaidn43GP5aYkfz-irOvYUCI-rJgb6P0PAm7Zrf0U9Rp0e81j71kv_GLpIF7BSupeMoiG3h6BqFv6l2iQcqtQXMgq_0O" },
+                            { name: "Asian Elephants", desc: "Nomads of the scrub jungle. Tracking the gentle giants of Yala.", img: elepant.src },
+                            { name: "The Elusive Sloth Bear", desc: "Why they are harder to spot than leopards and where to look.", img: "https://leopardyala.com/wp-content/uploads/2025/10/pexels-aabrewerphoto-13046138-2.webp" },
                             { name: "Reptiles & Amphibians", desc: "From mugger crocodiles to land monitors, the ancient rulers of the water.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtZzR9r0y7x7KFRcSZY7r92DghKp7sFKoInrzXOFkL7R3SCZR4SczfhamAZDiZnvtQHOv3g7w9fsd2JJ9tzmZL65x8eNmFu8-KU0E_x7k4v11Y4cvG4T6ad5w85345-gs1J4k4LVm7MTesZzZf1ZqjDiYZ3HZwjp2CBIPM5y4IW6rjy4hSywg2YdITw9Jq8uPje9IRw-zXR-0nlEZSARpKw7xI9W3H1A2C6BSO472SysuDUkpSxYIMvhCQN8bMWHGSvHpjNp2ajpzX" }
                         ].map((item, index) => (
                             <div key={index} className="group cursor-pointer">
@@ -201,7 +183,7 @@ export default function BlogPage() {
                         <div className="absolute -inset-4 bg-primary/20 rounded-xl blur-lg"></div>
                         <div className="relative rounded-lg shadow-2xl w-full h-80 overflow-hidden">
                             <Image
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0ZKM1RMadjYd_wdsQmXWl0X2J1XzZYtnuJYNqyGzmdNioqwbuKzuCu2YQnknQKYwiM0LGU1ev8QPNP2bAm5BVH1sOdXvpHYh1LKtpI26oqe5EWh1B8IfiuyOyWuEX5RcgfTrH78ODJRhlthdtW4tYmcYCWMS_iGsZLVphuwyJCGHU8U-JLUISjR9pQIw_ggUNFtXQ9YqJQAWoge9CurfVXQl_5VMNmLyLj1GCQx0367HAo2Kz-_Sv_Dt9XKDk7tHHUTOgry-S5gs"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzU8vcK5ng-o8ZuzmebE2_mT7DBsaRe-PjzagroWLN5Tq8Ocu29RL8zI0y8uVGLt3RrMXeMcB9xbJYkK6egZvcgIKGreGukYx2PWgU47oJ5MUT70VjZOWUjzXsC1la31JcpCshyHj793nMd6pjMoAVYZyfV2j0X6FUjOmFd7CjWhCGXeEowdx5aZwqvF-WW3fCwmrIgmZEUCn-C9MjxAPTwvUSTExqxKiZD48b5S7eQ8ej9UT-y0SLmGi98PpcseKm92qVXfurO3fz"
                                 alt="Photographer in safari jeep"
                                 fill
                                 className="object-cover"
@@ -222,7 +204,7 @@ export default function BlogPage() {
                                 </li>
                             ))}
                         </ul>
-                        <button className="bg-primary hover:bg-[#d99a1e] text-[#181611] px-6 py-3 rounded-lg font-bold transition-colors flex items-center gap-2">
+                        <button onClick={ () => router.push('/visitor-guide')} className="bg-primary cursor-pointer hover:bg-[#d99a1e] text-[#181611] px-6 py-3 rounded-lg font-bold transition-colors flex items-center gap-2">
                             View All Photography Guides
                             <span className="material-symbols-outlined text-sm">arrow_forward</span>
                         </button>

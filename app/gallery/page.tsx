@@ -13,7 +13,7 @@ export default function GalleryPage() {
         <div className="bg-background-dark text-white font-display antialiased overflow-x-hidden">
 
             {/* Hero Section */}
-            <div className="relative w-full h-[70vh] min-h-[500px] flex items-end justify-start overflow-hidden group">
+            <div className="relative w-full h-[70vh] min-h-[650px] flex items-end justify-start overflow-hidden group">
                 <div className="absolute inset-0 z-0 transition-transform duration-[20s] ease-linear group-hover:scale-110">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181611] to-transparent z-10" />
                     <div className="absolute inset-0 bg-black/20 z-10" />

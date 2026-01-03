@@ -142,3 +142,12 @@ export enum PriceRange {
     PRICE_RANGE_150 = '101 - 150',
     PRICE_RANGE_200 = '151 - 200',
 }
+
+export interface FeaturedCard {
+    title: string;
+    slug: string;
+    description: string;
+    image: string;
+    alt: string;
+    date: string;
+}
