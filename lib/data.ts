@@ -1,4 +1,4 @@
-import { Badge, Blog, Destination, Duration, Feature, NavLink, PackageCategory, PackageDetail, PriceRange, Service, Tab } from "@/types";
+import { Badge, Blog, Destination, Duration, Feature, FeaturedCard, NavLink, PackageCategory, PackageDetail, PriceRange, Service, Tab } from "@/types";
 import sithulpawwa from '@/public/assests/sithulpawwa.jpg'
 import magul_viharaya from '@/public/assests/Magul_viharaya.jpg'
 import patanangala_Beach from '@/public/assests/Patanangala Beach.jpg'
@@ -1857,4 +1857,23 @@ export const pakagesId: string[] = [
     "private-jeep-only-full-day-safari",
     "shared-jeep-only-morning-safari",
     "shared-jeep-only-full-day-safari"
+]
+
+export const featuredCard: FeaturedCard[] = [
+    {
+        title: "The Return of the Tuskers: A Season to Remember",
+        slug: "Conservation",
+        description: "Recent months have seen unprecedented sightings of iconic tuskers returning to Block 1. We explore the migratory patterns driving this return.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAgYiNHe38tflIypPz4SRczSuXn82XFDPEbH62ljGieQ63r_Ovx1N3Wl4Ak0Hyhcni6_zwqNIPTw0nAU1u1U7jyr7Agc09DwtErasgpjfM-sVp6fAOCpXLjIFmIf9VUhNXDSi3OjB_4tYf2-9RghxvA3vGbKLMvIivecPdDci-215Gv8TTVTQkrMZQoiijX8QL2KHOtfs-vJ2auZZskFn1Pyeso4jL7iCJMcKI8Oi72OGfgkiYF8ayCSJAsP4G9bD_6LqWZaTB_3AC5",
+        alt: "Elephant herd crossing a dirt road in Yala",
+        date: "Oct 12, 2023"
+    },
+    {
+        title: "Mastering Golden Hour: Capturing Yala's Birds",
+        slug: "Photography",
+        description: "The light in Yala transforms dramatically between 5 PM and 6 PM. Learn how to adjust your ISO and shutter speed for perfect avian portraits.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuANdQRV9H8zBySObpxMqsncTk_l_mz1o0IQQpl-RSPLBkUe7RjO-NWqqJfYmE-Dy9TYPOOmIoovynNMZWqS6drh5gjYvFXFO6NJo5QgUOu4iJJ1ygN9g_bA8nHCw4BlthOYLCS-jpsh-VUXzzgTH_Qi7FfvqG4z_agBdNgNDQh-FEciGC93jfSWEKz2P-tDVJPpKnCUhVpohkkP2DreX78BZBXWO7xpR9qXdh5oieGhM1kFZqXCsbzKToPZI5ZCTGVqDJLfBu21M0-i",
+        alt: "Close up of a green bee-eater bird on a branch",
+        date: "Sep 28, 2023"
+    }
 ]
