@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { tw, colors } from "@/lib/theme";
 
 interface ButtonProps {
     variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -26,10 +27,10 @@ export default function Button({
     const baseStyles = "font-bold rounded-lg transition-all duration-200 flex items-center justify-center gap-2";
 
     const variantStyles = {
-        primary: "bg-primary hover:bg-yellow-500 text-[#181611] shadow-[0_0_20px_rgba(236,178,19,0.3)] hover:scale-105 transform cursor-pointer",
+        primary: `${tw.bgPrimary} hover:bg-yellow-500 ${tw.textDark} shadow-[0_0_20px_rgba(236,178,19,0.3)] hover:scale-105 transform cursor-pointer`,
         secondary: "bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white cursor-pointer",
-        outline: "border border-border-dark bg-[#27241c] text-white hover:bg-primary hover:text-black hover:border-primary cursor-pointer",
-        ghost: "text-primary hover:text-white cursor-pointer",
+        outline: `border ${tw.borderDark} ${tw.bgSurfaceDark} text-white ${tw.bgPrimaryHover} hover:text-black ${tw.hoverBorderPrimary} cursor-pointer`,
+        ghost: `${tw.textPrimary} hover:text-white cursor-pointer`,
     };
 
     const sizeStyles = {

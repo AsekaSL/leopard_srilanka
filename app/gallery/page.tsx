@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import galleryHero from '@/public/gallery_hero.png'
+import { tw, colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
     title: "Yala National Park Photo & Video Gallery",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
     return (
-        <div className="bg-background-dark text-white font-display antialiased overflow-x-hidden">
+        <div className={`${tw.bgBackgroundDark} text-white font-display antialiased overflow-x-hidden`}>
 
             {/* Hero Section */}
             <div className="relative w-full h-[70vh] min-h-[650px] flex items-end justify-start overflow-hidden group">
@@ -27,7 +28,7 @@ export default function GalleryPage() {
                 </div>
                 <div className="relative z-20 w-full max-w-[1280px] mx-auto px-6 lg:px-10 pb-16">
                     <div className="max-w-3xl animate-fade-in-up">
-                        <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full border border-primary/20 backdrop-blur-sm">
+                        <span className={`inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider ${tw.textPrimary} uppercase ${tw.bgPrimary}/10 rounded-full border ${tw.borderPrimary}/20 backdrop-blur-sm`}>
                             Immersion in the Wild
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-4 text-white drop-shadow-xl">
@@ -47,7 +48,7 @@ export default function GalleryPage() {
             {/* Introduction */}
             <div className="layout-container flex flex-col items-center py-12 px-6">
                 <div className="max-w-[800px] text-center">
-                    <span className="material-symbols-outlined text-4xl text-primary mb-4 opacity-80">photo_camera</span>
+                    <span className={`material-symbols-outlined text-4xl ${tw.textPrimary} mb-4 opacity-80`}>photo_camera</span>
                     <p className="text-xl md:text-2xl font-display font-medium text-gray-200 leading-relaxed">
                         "Discover the raw beauty of Yala through our curated collection of high-quality images and videos. From the elusive leopards to the majestic elephants, immerse yourself in the stories of the wild."
                     </p>
@@ -55,7 +56,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Sticky Category Navigation */}
-            <div className="sticky top-16 z-40 bg-background-dark/95 border-b border-[#393328] backdrop-blur-sm shadow-lg">
+            <div className={`sticky top-16 z-40 ${tw.bgBackgroundDark}/95 border-b border-[#393328] backdrop-blur-sm shadow-lg`}>
                 <div className="max-w-[1280px] mx-auto overflow-x-auto no-scrollbar">
                     <div className="flex px-6 lg:px-10 min-w-max gap-8 md:gap-10">
                         {['All', 'Leopards', 'Elephants', 'Birds', 'Landscapes', 'Videos'].map((item) => (
@@ -65,7 +66,7 @@ export default function GalleryPage() {
                                 className="relative py-4 text-gray-400 hover:text-white font-medium text-sm tracking-wide transition-colors group"
                             >
                                 {item}
-                                <span className="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-primary rounded-t-sm transition-colors" />
+                                <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:${tw.bgPrimary} rounded-t-sm transition-colors`} />
                             </Link>
                         ))}
                     </div>
@@ -82,7 +83,7 @@ export default function GalleryPage() {
                             <h2 className="text-3xl font-bold text-white mb-2">Leopards of Yala</h2>
                             <p className="text-gray-400 text-sm">The highest density of leopards in the world.</p>
                         </div>
-                        <button className="hidden md:flex items-center text-primary text-sm font-bold hover:underline">
+                        <button className={`hidden md:flex items-center ${tw.textPrimary} text-sm font-bold hover:underline`}>
                             View All Leopards <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
                         </button>
                     </div>
@@ -97,7 +98,7 @@ export default function GalleryPage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                             <div className="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
-                                <span className="text-primary text-xs font-bold uppercase tracking-wider mb-1 block">Panthera pardus kotiya</span>
+                                <span className={`${tw.textPrimary} text-xs font-bold uppercase tracking-wider mb-1 block`}>Panthera pardus kotiya</span>
                                 <h3 className="text-xl font-bold text-white">The Prince of the Jungle</h3>
                             </div>
                         </div>
@@ -240,13 +241,13 @@ export default function GalleryPage() {
                                         className="object-cover opacity-80 group-hover:opacity-60 transition-opacity"
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="size-14 rounded-full bg-primary/90 text-background-dark flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                                        <div className={`size-14 rounded-full ${tw.bgPrimary}/90 ${tw.textDark} flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl`}>
                                             <span className="material-symbols-outlined text-3xl">play_arrow</span>
                                         </div>
                                     </div>
                                     <div className="absolute bottom-3 right-3 bg-black/70 px-2 py-0.5 rounded text-xs font-mono">{video.duration}</div>
                                 </div>
-                                <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">{video.title}</h3>
+                                <h3 className={`text-lg font-bold text-white ${tw.hoverTextPrimary} transition-colors`}>{video.title}</h3>
                                 <p className="text-sm text-gray-400">{video.desc}</p>
                             </div>
                         ))}
@@ -254,15 +255,15 @@ export default function GalleryPage() {
                 </section>
 
                 {/* Share Your Moments Highlight Box */}
-                <section className="relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-[#2a2418] to-background-dark p-8 md:p-12 text-center">
-                    <div className="absolute -top-12 -right-12 size-40 bg-primary/10 rounded-full blur-3xl"></div>
+                <section className={`relative overflow-hidden rounded-2xl border ${tw.borderPrimary}/20 bg-gradient-to-br from-[#2a2418] to-[${colors.backgroundDark}] p-8 md:p-12 text-center`}>
+                    <div className={`absolute -top-12 -right-12 size-40 ${tw.bgPrimary}/10 rounded-full blur-3xl`}></div>
                     <div className="relative z-10 flex flex-col items-center">
-                        <span className="material-symbols-outlined text-5xl text-primary mb-4">add_a_photo</span>
+                        <span className={`material-symbols-outlined text-5xl ${tw.textPrimary} mb-4`}>add_a_photo</span>
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Share Your Yala Moments</h2>
                         <p className="text-gray-300 max-w-lg mb-8">
                             Have you captured something incredible? Share your photos with us for a chance to be featured in our upcoming "Explorer’s Corner".
                         </p>
-                        <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-background-dark transition-all">
+                        <button className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg border ${tw.borderPrimary} ${tw.textPrimary} font-bold hover:bg-[#ecb213] ${tw.hoverTextDark} transition-all`}>
                             Upload Your Photo
                             <span className="material-symbols-outlined text-lg">upload</span>
                         </button>
@@ -271,7 +272,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Inspiration Quote */}
-            <div className="w-full bg-background-dark py-20 px-6">
+            <div className={`w-full ${tw.bgBackgroundDark} py-20 px-6`}>
                 <blockquote className="text-center max-w-4xl mx-auto">
                     <p className="text-3xl md:text-5xl font-display font-medium italic text-gray-400 leading-tight">
                         "Every image tells a story from the wild, where nature writes the script and we are merely the witnesses."
@@ -293,14 +294,14 @@ export default function GalleryPage() {
                 <div className="relative z-20 max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="max-w-xl text-left">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            Witness the Magic <span className="text-primary">In Person</span>
+                            Witness the Magic <span className={tw.textPrimary}>In Person</span>
                         </h2>
                         <p className="text-xl text-gray-300 mb-8 font-light">
                             Don't just look at the pictures. Feel the ground tremble and hear the jungle breathe. Your adventure awaits.
                         </p>
                     </div>
                     <div className="flex flex-col gap-4 w-full md:w-auto min-w-[300px]">
-                        <button className="w-full py-4 px-6 rounded-lg bg-primary hover:bg-primary/90 text-background-dark text-lg font-bold shadow-lg transition-transform hover:-translate-y-1">
+                        <button className={`w-full py-4 px-6 rounded-lg ${tw.bgPrimary} hover:bg-[#ecb213]/90 ${tw.textDark} text-lg font-bold shadow-lg transition-transform hover:-translate-y-1`}>
                             Book Your Yala Safari Now
                         </button>
                         <button className="w-full py-4 px-6 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-lg font-bold transition-transform hover:-translate-y-1">

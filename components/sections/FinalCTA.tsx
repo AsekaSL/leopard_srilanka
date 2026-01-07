@@ -2,6 +2,7 @@
 import Image from "next/image";
 import final_img from '@/public/assests/final_img.jpg'
 import { useRouter } from "next/navigation";
+import { tw, colors } from "@/lib/theme";
 
 export default function FinalCTA() {
     const router = useRouter();
@@ -14,7 +15,7 @@ export default function FinalCTA() {
                     src={final_img}
                     className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 bg-[#181611]/80 z-10" />
+                <div className={`absolute inset-0 bg-[${colors.backgroundDark}]/80 z-10`} />
             </div>
 
             {/* Content */}
@@ -26,7 +27,7 @@ export default function FinalCTA() {
                     Limited slots available for the upcoming season. Secure your jeep today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onClick={() => router.push('/packages')} className="bg-primary cursor-pointer hover:bg-yellow-500 text-[#181611] text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-transform hover:-translate-y-1">
+                    <button onClick={() => router.push('/packages')} className={`${tw.bgPrimary} cursor-pointer hover:bg-yellow-500 ${tw.textDark} text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-transform hover:-translate-y-1`}>
                         Book Now
                     </button>
                     <button onClick={() => router.push('/contact')} className="bg-transparent cursor-pointer border-2 border-white hover:bg-white hover:text-black text-white text-lg font-bold py-4 px-10 rounded-lg transition-colors">

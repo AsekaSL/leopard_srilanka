@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { tw } from "@/lib/theme";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -31,7 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${plusJakarta.variable} bg-background-dark font-display text-white antialiased overflow-x-hidden`}>
+      <body className={`${plusJakarta.variable} ${tw.bgDark} font-display text-white antialiased overflow-x-hidden`}>
         <Navbar />
         {children}
         <Footer />

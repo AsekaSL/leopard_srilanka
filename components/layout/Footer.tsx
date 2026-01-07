@@ -18,7 +18,7 @@ export const navLinks: NavLink[] = [
 
 export default function Footer() {
     return (
-        <footer className="bg-[#110f0b] border-t border-border-dark pt-16 pb-8">
+        <footer className="bg-[#110f0b] border-t border-[#393428] pt-16 pb-8">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-12">
                     {/* Company Info */}
@@ -53,7 +53,7 @@ export default function Footer() {
                             {
                                 navLinks.map((link) => (
                                     <li key={link.label}>
-                                        <Link href={link.href} className="hover:text-primary transition-colors">
+                                        <Link href={link.href} className="hover:text-[#ecb213] transition-colors">
                                             {link.label}
                                         </Link>
                                     </li>
@@ -69,7 +69,7 @@ export default function Footer() {
                             {
                                 services.map((link) => (
                                     <li key={link.label}>
-                                        <Link href={link.href} className="hover:text-primary transition-colors">
+                                        <Link href={link.href} className="hover:text-[#ecb213] transition-colors">
                                             {link.label}
                                         </Link>
                                     </li>
@@ -86,7 +86,7 @@ export default function Footer() {
                             {
                                 blogs.map((blog) => (
                                     <li key={blog.label}>
-                                        <Link href={blog.href} className="hover:text-primary transition-colors">
+                                        <Link href={blog.href} className="hover:text-[#ecb213] transition-colors">
                                             {blog.label}
                                         </Link>
                                     </li>
@@ -100,7 +100,7 @@ export default function Footer() {
                         <h4 className="text-white font-bold mb-6">Contact Us</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li className="flex items-start gap-3">
-                                <span className="material-symbols-outlined text-primary text-sm mt-0.5">
+                                <span className="material-symbols-outlined text-[#ecb213] text-sm mt-0.5">
                                     location_on
                                 </span>
                                 <span>
@@ -110,11 +110,11 @@ export default function Footer() {
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <span className="material-symbols-outlined text-primary text-sm">call</span>
+                                <span className="material-symbols-outlined text-[#ecb213] text-sm">call</span>
                                 <span>+94 78 860 8781</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <span className="material-symbols-outlined text-primary text-sm">mail</span>
+                                <span className="material-symbols-outlined text-[#ecb213] text-sm">mail</span>
                                 <span>hello@leopardyalaSrilanka.com</span>
                             </li>
                         </ul>
@@ -125,12 +125,12 @@ export default function Footer() {
                             </p>
                             <form className="flex flex-col gap-2">
                                 <input
-                                    className="bg-[#181611] border border-border-dark text-white text-sm rounded-lg focus:ring-primary focus:border-primary p-3 w-full"
+                                    className="bg-[#181611] border border-[#393428] text-white text-sm rounded-lg focus:ring-[#ecb213] focus:border-[#ecb213] p-3 w-full"
                                     placeholder="Your email address"
                                     type="email"
                                 />
                                 <button
-                                    className="bg-primary hover:bg-yellow-500 text-[#181611] font-bold text-sm py-3 px-4 rounded-lg transition-colors"
+                                    className="bg-[#ecb213] hover:bg-yellow-500 text-[#181611] font-bold text-sm py-3 px-4 rounded-lg transition-colors"
                                     type="button"
                                 >
                                     Subscribe
@@ -143,7 +143,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="border-t border-[#393428] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-600 text-xs">
                         © 2023 Leopard Sri Lanka. All rights reserved.
                     </p>

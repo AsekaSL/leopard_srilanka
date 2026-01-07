@@ -1,5 +1,6 @@
 import ReviewCard from "../ui/ReviewCard";
 import { Review } from "@/types";
+import { colors } from "@/lib/theme";
 
 const reviews: Review[] = [
     {
@@ -30,7 +31,7 @@ const reviews: Review[] = [
 
 export default function ReviewsSection() {
     return (
-        <div className="py-20 bg-[#181611]">
+        <div className={`py-20 bg-[${colors.backgroundDark}]`}>
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center mb-16">

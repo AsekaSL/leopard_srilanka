@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Destination } from "@/types";
+import { tw } from "@/lib/theme";
 
 interface DestinationCardProps {
     destination: Destination;
@@ -19,7 +20,7 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
                 <h3 className="text-2xl font-bold text-white mb-2">{destination.name}</h3>
                 <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300 opacity-0 group-hover:opacity-100">
                     <p className="text-gray-300 text-sm mb-2">{destination.description}</p>
-                    <p className="text-primary text-xs font-bold uppercase">
+                    <p className={`${tw.textPrimary} text-xs font-bold uppercase`}>
                         Best Season: {destination.season}
                     </p>
                 </div>

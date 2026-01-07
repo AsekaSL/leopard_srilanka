@@ -4,6 +4,7 @@ import { Feature } from "@/types";
 import { expertiseFeatures } from "@/lib/data";
 import img from '@/public/assests/home_img_1.jpg'
 import Link from "next/link";
+import { tw } from "@/lib/theme";
 
 
 
@@ -15,7 +16,7 @@ export default function IntroductionSection() {
                     {/* Text Content */}
                     <div className="flex-1 space-y-8">
                         <div className="space-y-4">
-                            <span className="text-primary font-bold uppercase tracking-wider text-sm">
+                            <span className={`${tw.textPrimary} font-bold uppercase tracking-wider text-sm`}>
                                 Our Story
                             </span>
                             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
@@ -42,7 +43,7 @@ export default function IntroductionSection() {
 
                         {/* CTA Link */}
                         <Link href='/about'>
-                            <button className="text-primary font-bold hover:text-white transition-colors flex items-center gap-2 group cursor-pointer">
+                            <button className={`${tw.textPrimary} font-bold hover:text-white transition-colors flex items-center gap-2 group cursor-pointer`}>
                                 Read Our Full Story
                                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                                     arrow_forward
@@ -69,7 +70,7 @@ export default function IntroductionSection() {
                                         "An encounter you'll carry with you forever."
                                     </p>
                                     <div className="flex items-center gap-2 mt-2">
-                                        <div className="flex text-primary text-sm">
+                                        <div className={`flex ${tw.textPrimary} text-sm`}>
                                             {[...Array(5)].map((_, i) => (
                                                 <span
                                                     key={i}
