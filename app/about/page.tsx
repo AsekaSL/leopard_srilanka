@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { tw, colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
     title: "About Us - Leopard Sri Lanka",
@@ -24,12 +25,12 @@ export default function AboutPage() {
                 </div>
 
                 <div className="relative z-10 container mx-auto px-4 md:px-10 text-center flex flex-col items-center gap-6 max-w-4xl mt-20">
-                    <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs md:text-sm animate-fade-in">
+                    <span className={`${tw.textPrimary} font-bold tracking-[0.2em] uppercase text-xs md:text-sm animate-fade-in`}>
                         Discover The Wild
                     </span>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight drop-shadow-lg">
                         In Pursuit of the<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">
+                        <span className={`text-transparent bg-clip-text bg-gradient-to-r from-[${colors.primary}] to-yellow-200`}>
                             Spotted Prince
                         </span>
                     </h1>
@@ -37,7 +38,7 @@ export default function AboutPage() {
                         Experience the untamed beauty of Yala through the eyes of experts who know every shadow of the jungle.
                     </p>
                     <div className="mt-8 flex flex-col md:flex-row gap-4">
-                        <button className="bg-primary hover:bg-yellow-400 transition-colors text-background-dark font-bold py-3 px-8 rounded-lg text-sm md:text-base">
+                        <button className={`${tw.bgPrimary} hover:bg-yellow-400 transition-colors ${tw.textDark} font-bold py-3 px-8 rounded-lg text-sm md:text-base`}>
                             Start Your Journey
                         </button>
                     </div>
@@ -55,7 +56,7 @@ export default function AboutPage() {
                 {/* Story Section */}
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className="space-y-6 order-2 lg:order-1">
-                        <div className="w-12 h-1 bg-primary rounded-full mb-4" />
+                        <div className={`w-12 h-1 ${tw.bgPrimary} rounded-full mb-4`} />
                         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                             Born from a passion for Yala
                         </h2>
@@ -67,7 +68,7 @@ export default function AboutPage() {
                                 Unlike mass tourism operators, we believe in the power of patience and the thrill of the chase. We don't just drive through the park; we track, listen, and wait, allowing the jungle to reveal itself on its own terms.
                             </p>
                         </div>
-                        <button className="group flex items-center gap-2 text-primary font-bold mt-4 hover:text-white transition-colors">
+                        <button className={`group flex items-center gap-2 ${tw.textPrimary} font-bold mt-4 hover:text-white transition-colors`}>
                             Read Our History
                             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
                         </button>
@@ -79,7 +80,7 @@ export default function AboutPage() {
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent" />
+                        <div className={`absolute inset-0 bg-gradient-to-t from-[${colors.backgroundDark}]/80 to-transparent`} />
                     </div>
                 </section>
 
@@ -87,15 +88,15 @@ export default function AboutPage() {
                 <section className="border-y border-white/10 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
                         <div className="px-4 py-4">
-                            <p className="text-5xl font-bold text-primary mb-2">15+</p>
+                            <p className={`text-5xl font-bold ${tw.textPrimary} mb-2`}>15+</p>
                             <p className="text-white/60 text-sm uppercase tracking-widest font-medium">Years Experience</p>
                         </div>
                         <div className="px-4 py-4">
-                            <p className="text-5xl font-bold text-primary mb-2">1,200+</p>
+                            <p className={`text-5xl font-bold ${tw.textPrimary} mb-2`}>1,200+</p>
                             <p className="text-white/60 text-sm uppercase tracking-widest font-medium">Safaris Conducted</p>
                         </div>
                         <div className="px-4 py-4">
-                            <p className="text-5xl font-bold text-primary mb-2">40+</p>
+                            <p className={`text-5xl font-bold ${tw.textPrimary} mb-2`}>40+</p>
                             <p className="text-white/60 text-sm uppercase tracking-widest font-medium">Species Protected</p>
                         </div>
                     </div>
@@ -105,8 +106,8 @@ export default function AboutPage() {
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Mission */}
                     <div className="bg-surface-dark/50 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors group">
-                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <span className="material-symbols-outlined text-primary group-hover:text-background-dark">flag</span>
+                        <div className={`w-12 h-12 rounded-full ${tw.bgPrimary}/10 flex items-center justify-center mb-6 hover:bg-[#d99a1e] transition-colors`}>
+                            <span className={`material-symbols-outlined ${tw.textPrimary} ${tw.hoverTextDark}`}>flag</span>
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                         <p className="text-gray-400 leading-relaxed">
@@ -115,8 +116,8 @@ export default function AboutPage() {
                     </div>
                     {/* Vision */}
                     <div className="bg-surface-dark/50 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors group">
-                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <span className="material-symbols-outlined text-primary group-hover:text-background-dark">visibility</span>
+                        <div className={`w-12 h-12 rounded-full ${tw.bgPrimary}/10 flex items-center justify-center mb-6 hover:bg-[#d99a1e] transition-colors`}>
+                            <span className={`material-symbols-outlined ${tw.textPrimary} ${tw.hoverTextDark}`}>visibility</span>
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                         <p className="text-gray-400 leading-relaxed">
@@ -134,15 +135,15 @@ export default function AboutPage() {
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent" />
+                        <div className={`absolute inset-0 bg-gradient-to-t from-[${colors.backgroundDark}]/80 to-transparent`} />
                         {/* Floating Quote Card */}
-                        <div className="absolute bottom-6 left-6 right-6 bg-background-dark/90 backdrop-blur p-4 rounded-lg border-l-4 border-primary">
+                        <div className={`absolute bottom-6 left-6 right-6 ${tw.bgBackgroundDark}/90 backdrop-blur p-4 rounded-lg border-l-4 ${tw.borderPrimary}`}>
                             <p className="text-white/90 italic text-sm">"The jungle speaks to those who know how to listen. Every broken twig tells a story."</p>
-                            <p className="text-primary text-xs font-bold mt-2 uppercase tracking-wide">- Head Tracker, Nimal</p>
+                            <p className={`${tw.textPrimary} text-xs font-bold mt-2 uppercase tracking-wide`}>- Head Tracker, Nimal</p>
                         </div>
                     </div>
                     <div className="space-y-6">
-                        <div className="w-12 h-1 bg-primary rounded-full mb-4" />
+                        <div className={`w-12 h-1 ${tw.bgPrimary} rounded-full mb-4`} />
                         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                             Unmatched Local Expertise
                         </h2>
@@ -154,7 +155,7 @@ export default function AboutPage() {
                                 We pride ourselves on our ethical approach to tracking. We interpret animal behavior to predict movement, positioning our vehicles for the perfect viewing angle without causing distress to the wildlife.
                             </p>
                         </div>
-                        <button className="group flex items-center gap-2 text-primary font-bold mt-4 hover:text-white transition-colors">
+                        <button className={`group flex items-center gap-2 ${tw.textPrimary} font-bold mt-4 hover:text-white transition-colors`}>
                             Meet The Team
                             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
                         </button>
@@ -167,7 +168,7 @@ export default function AboutPage() {
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 <div className="container mx-auto px-4 md:px-10 lg:px-20">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Conservation First</span>
+                        <span className={`${tw.textPrimary} font-bold tracking-widest uppercase text-sm mb-3 block`}>Conservation First</span>
                         <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Guardians of the Wild</h2>
                         <p className="text-gray-400 text-lg">
                             We are visitors in their home. Our "Responsible Tourism" framework ensures that every safari contributes to the protection of Sri Lanka's precious biodiversity.
@@ -176,19 +177,19 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         {/* Rule 1 */}
                         <div className="flex flex-col items-center text-center p-6 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                            <span className="material-symbols-outlined text-4xl text-primary mb-4">no_flash</span>
+                            <span className={`material-symbols-outlined text-4xl ${tw.textPrimary} mb-4`}>no_flash</span>
                             <h4 className="text-xl font-bold text-white mb-2">Silent Observation</h4>
                             <p className="text-sm text-gray-400">We prohibit flash photography and loud noises to prevent stressing the animals.</p>
                         </div>
                         {/* Rule 2 */}
                         <div className="flex flex-col items-center text-center p-6 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                            <span className="material-symbols-outlined text-4xl text-primary mb-4">distance</span>
+                            <span className={`material-symbols-outlined text-4xl ${tw.textPrimary} mb-4`}>distance</span>
                             <h4 className="text-xl font-bold text-white mb-2">Strict Distance</h4>
                             <p className="text-sm text-gray-400">We maintain a respectful distance, ensuring animals can behave naturally.</p>
                         </div>
                         {/* Rule 3 */}
                         <div className="flex flex-col items-center text-center p-6 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                            <span className="material-symbols-outlined text-4xl text-primary mb-4">recycling</span>
+                            <span className={`material-symbols-outlined text-4xl ${tw.textPrimary} mb-4`}>recycling</span>
                             <h4 className="text-xl font-bold text-white mb-2">Leave No Trace</h4>
                             <p className="text-sm text-gray-400">Our operations are plastic-free, and we ensure the park remains pristine.</p>
                         </div>
@@ -205,13 +206,13 @@ export default function AboutPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="bg-background-dark border-t border-white/10 py-20">
+            <section className={`${tw.bgBackgroundDark} border-t border-white/10 py-20`}>
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Answer the Call?</h2>
                     <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
                         Join us for an unforgettable journey into the heart of Yala. Spots are limited to ensure an exclusive experience.
                     </p>
-                    <button className="bg-primary hover:bg-yellow-400 transition-colors text-background-dark font-bold text-lg py-4 px-10 rounded-lg shadow-[0_0_20px_rgba(236,178,19,0.3)]">
+                    <button className={`${tw.bgPrimary} hover:bg-yellow-400 transition-colors ${tw.textDark} font-bold text-lg py-4 px-10 rounded-lg shadow-[0_0_20px_rgba(236,178,19,0.3)]`}>
                         Book Your Safari Now
                     </button>
                 </div>

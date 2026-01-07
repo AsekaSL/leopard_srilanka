@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import wildlifeHero from "@/public/wildlife_hero.png";
 import elephant from "@/public/assests/home_img_1.jpg";
+import { tw, colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
     title: "Wildlife Guide - The Big Five & Beyond | Leopard Sri Lanka",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function WildlifePage() {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-[#171611] dark:text-white font-display overflow-x-hidden antialiased">
+        <div className={` bg-[#181611] text-[#171611] dark:text-white font-display overflow-x-hidden antialiased`}>
 
             {/* Hero Section */}
             <div className="relative w-full">
@@ -28,7 +29,7 @@ export default function WildlifePage() {
                     </div>
 
                     <div className="relative z-20 flex flex-col gap-4 text-center max-w-[800px] px-4">
-                        <span className="text-primary text-sm font-bold uppercase tracking-widest">Wildlife of Yala</span>
+                        <span className={`${tw.textPrimary} text-sm font-bold uppercase tracking-widest`}>Wildlife of Yala</span>
                         <h1 className="text-white drop-shadow-lg text-5xl font-black leading-tight tracking-tight md:text-7xl">
                             The Big Five & Beyond
                         </h1>
@@ -40,22 +41,22 @@ export default function WildlifePage() {
             </div>
 
             {/* Sticky Category Navigation (Chips) */}
-            <div className="sticky top-16 z-40 w-full border-b border-border-dark bg-[#171611]/95 backdrop-blur shadow-lg">
+            <div className={`sticky top-16 z-40 w-full border-b ${tw.borderDark} bg-[#171611]/95 backdrop-blur shadow-lg`}>
                 <div className="flex justify-center py-4">
                     <div className="flex gap-3 px-4 overflow-x-auto no-scrollbar max-w-[1200px]">
-                        <a href="#leopard" className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 cursor-pointer hover:bg-opacity-90 transition-all">
+                        <a href="#leopard" className={`flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full ${tw.bgPrimary} px-5 cursor-pointer hover:bg-opacity-90 transition-all`}>
                             <p className="text-[#171611] text-sm font-bold leading-normal">Leopards</p>
                         </a>
-                        <a href="#elephant" className="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-border-dark hover:border-primary/50 px-5 cursor-pointer transition-all">
+                        <a href="#elephant" className={`group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full ${tw.bgSurfaceDark} border ${tw.borderDark} hover:border-primary/50 px-5 cursor-pointer transition-all`}>
                             <p className="text-gray-300 group-hover:text-white text-sm font-medium leading-normal">Elephants</p>
                         </a>
-                        <a href="#bear" className="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-border-dark hover:border-primary/50 px-5 cursor-pointer transition-all">
+                        <a href="#bear" className={`group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full ${tw.bgSurfaceDark} border ${tw.borderDark} hover:border-primary/50 px-5 cursor-pointer transition-all`}>
                             <p className="text-gray-300 group-hover:text-white text-sm font-medium leading-normal">Sloth Bears</p>
                         </a>
-                        <a href="#crocodile" className="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-border-dark hover:border-primary/50 px-5 cursor-pointer transition-all">
+                        <a href="#crocodile" className={`group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full ${tw.bgSurfaceDark} border ${tw.borderDark} hover:border-primary/50 px-5 cursor-pointer transition-all`}>
                             <p className="text-gray-300 group-hover:text-white text-sm font-medium leading-normal">Crocodiles</p>
                         </a>
-                        <a href="#birds" className="group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-border-dark hover:border-primary/50 px-5 cursor-pointer transition-all">
+                        <a href="#birds" className={`group flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full ${tw.bgSurfaceDark} border ${tw.borderDark} hover:border-primary/50 px-5 cursor-pointer transition-all`}>
                             <p className="text-gray-300 group-hover:text-white text-sm font-medium leading-normal">Birdlife</p>
                         </a>
                     </div>
@@ -69,7 +70,7 @@ export default function WildlifePage() {
                     {/* Section 1: Leopard */}
                     <section id="leopard" className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 scroll-mt-32">
                         <div className="flex flex-col gap-6 flex-1 text-left">
-                            <div className="flex items-center gap-2 text-primary">
+                            <div className={`flex items-center gap-2 ${tw.textPrimary}`}>
                                 <span className="material-symbols-outlined text-xl">visibility</span>
                                 <span className="text-xs font-bold uppercase tracking-wider">Most Sought After</span>
                             </div>
@@ -77,8 +78,8 @@ export default function WildlifePage() {
                             <p className="text-[#b7b19e] text-base md:text-lg font-normal leading-relaxed">
                                 The apex predator of the island, <em>Panthera pardus kotiya</em>. Yala National Park boasts one of the highest leopard densities in the world, offering a unique opportunity to see these elusive cats stalking through the scrub jungle or resting on rocky outcrops.
                             </p>
-                            <div className="flex items-center gap-4 mt-2 p-4 rounded-lg bg-surface-dark border border-border-dark w-fit">
-                                <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <div className={`flex items-center gap-4 mt-2 p-4 rounded-lg ${tw.bgSurfaceDark} border ${tw.borderDark} w-fit`}>
+                                <div className={`flex items-center justify-center size-10 rounded-full ${tw.textPrimary}`} style={{ backgroundColor: `${colors.primary}10` }}>
                                     <span className="material-symbols-outlined">calendar_month</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -114,7 +115,7 @@ export default function WildlifePage() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-6 flex-1 text-left md:text-right md:items-end">
-                            <div className="flex items-center gap-2 text-primary">
+                            <div className={`flex items-center gap-2 ${tw.textPrimary}`}>
                                 <span className="text-xs font-bold uppercase tracking-wider">Gentle Giants</span>
                                 <span className="material-symbols-outlined text-xl">nature</span>
                             </div>
@@ -122,8 +123,8 @@ export default function WildlifePage() {
                             <p className="text-[#b7b19e] text-base md:text-lg font-normal leading-relaxed">
                                 Majestic giants roaming the dry zones. Witness the gathering of herds at waterholes as they bathe, play, and protect their young. These intelligent creatures are the heart of the Sri Lankan wilderness, creating paths that other animals follow.
                             </p>
-                            <div className="flex items-center flex-row-reverse gap-4 mt-2 p-4 rounded-lg bg-surface-dark border border-border-dark w-fit text-right">
-                                <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <div className={`flex items-center flex-row-reverse gap-4 mt-2 p-4 rounded-lg ${tw.bgSurfaceDark} border ${tw.borderDark} w-fit text-right`}>
+                                <div className={`flex items-center justify-center size-10 rounded-full ${tw.textPrimary}`} style={{ backgroundColor: `${colors.primary}10` }}>
                                     <span className="material-symbols-outlined">schedule</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -137,7 +138,7 @@ export default function WildlifePage() {
                     {/* Section 3: Sloth Bear */}
                     <section id="bear" className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 scroll-mt-32">
                         <div className="flex flex-col gap-6 flex-1 text-left">
-                            <div className="flex items-center gap-2 text-primary">
+                            <div className={`flex items-center gap-2 ${tw.textPrimary}`}>
                                 <span className="material-symbols-outlined text-xl">forest</span>
                                 <span className="text-xs font-bold uppercase tracking-wider">Rare & Elusive</span>
                             </div>
@@ -145,8 +146,8 @@ export default function WildlifePage() {
                             <p className="text-[#b7b19e] text-base md:text-lg font-normal leading-relaxed">
                                 With their shaggy black coats and long claws, Sloth Bears are a unique sight. They are often found feasting on Palu berries during the fruit season. Though generally shy, seeing a mother with cubs on her back is a sight to behold.
                             </p>
-                            <div className="flex items-center gap-4 mt-2 p-4 rounded-lg bg-surface-dark border border-border-dark w-fit">
-                                <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <div className={`flex items-center gap-4 mt-2 p-4 rounded-lg ${tw.bgSurfaceDark} border ${tw.borderDark} w-fit`}>
+                                <div className={`flex items-center justify-center size-10 rounded-full ${tw.textPrimary}`} style={{ backgroundColor: `${colors.primary}10` }}>
                                     <span className="material-symbols-outlined">nutrition</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -182,7 +183,7 @@ export default function WildlifePage() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-6 flex-1 text-left md:text-right md:items-end">
-                            <div className="flex items-center gap-2 text-primary">
+                            <div className={`flex items-center gap-2 ${tw.textPrimary}`}>
                                 <span className="text-xs font-bold uppercase tracking-wider">Ancient Reptiles</span>
                                 <span className="material-symbols-outlined text-xl">water_drop</span>
                             </div>
@@ -190,8 +191,8 @@ export default function WildlifePage() {
                             <p className="text-[#b7b19e] text-base md:text-lg font-normal leading-relaxed">
                                 These prehistoric predators can be seen basking on the muddy banks of the park's lagoons. While they seem lethargic in the sun, they are lightning-fast ambush predators in the water, essential to the aquatic ecosystem.
                             </p>
-                            <div className="flex items-center flex-row-reverse gap-4 mt-2 p-4 rounded-lg bg-surface-dark border border-border-dark w-fit text-right">
-                                <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <div className={`flex items-center flex-row-reverse gap-4 mt-2 p-4 rounded-lg ${tw.bgSurfaceDark} border ${tw.borderDark} w-fit text-right`}>
+                                <div className={`flex items-center justify-center size-10 rounded-full ${tw.textPrimary}`} style={{ backgroundColor: `${colors.primary}10` }}>
                                     <span className="material-symbols-outlined">wb_sunny</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -205,7 +206,7 @@ export default function WildlifePage() {
                     {/* Section 5: Birdlife */}
                     <section id="birds" className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 scroll-mt-32">
                         <div className="flex flex-col gap-6 flex-1 text-left">
-                            <div className="flex items-center gap-2 text-primary">
+                            <div className={`flex items-center gap-2 ${tw.textPrimary}`}>
                                 <span className="material-symbols-outlined text-xl">flight</span>
                                 <span className="text-xs font-bold uppercase tracking-wider">Avian Paradise</span>
                             </div>
@@ -213,8 +214,8 @@ export default function WildlifePage() {
                             <p className="text-[#b7b19e] text-base md:text-lg font-normal leading-relaxed">
                                 A paradise for ornithologists, Sri Lanka hosts over 400 species. From the dancing Peacocks and the endemic Junglefowl to migratory flamingos and eagles, the skies and trees are alive with color and song.
                             </p>
-                            <div className="flex items-center gap-4 mt-2 p-4 rounded-lg bg-surface-dark border border-border-dark w-fit">
-                                <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <div className={`flex items-center gap-4 mt-2 p-4 rounded-lg ${tw.bgSurfaceDark} border ${tw.borderDark} w-fit`}>
+                                <div className={`flex items-center justify-center size-10 rounded-full ${tw.textPrimary}`} style={{ backgroundColor: `${colors.primary}10` }}>
                                     <span className="material-symbols-outlined">flutter_dash</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -240,11 +241,11 @@ export default function WildlifePage() {
             </div>
 
             {/* Call to Action Footer Area */}
-            <div className="w-full bg-surface-dark border-t border-border-dark py-20 px-6">
+            <div className={`w-full ${tw.bgSurfaceDark} border-t ${tw.borderDark} py-20 px-6`}>
                 <div className="flex flex-col items-center justify-center text-center gap-6 max-w-2xl mx-auto">
                     <h3 className="text-white text-3xl font-bold">Ready to witness the wild?</h3>
                     <p className="text-[#b7b19e] text-lg">Book your premium safari experience today and see these magnificent creatures in their natural habitat.</p>
-                    <Link href="/packages" className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-yellow-500 transition-colors text-[#171611] text-base font-bold leading-normal tracking-[0.015em] mt-4">
+                    <Link href="/packages" className={`flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 ${tw.bgPrimary} hover:bg-yellow-500 transition-colors text-[#171611] text-base font-bold leading-normal tracking-[0.015em] mt-4`}>
                         Book Your Safari
                     </Link>
                 </div>

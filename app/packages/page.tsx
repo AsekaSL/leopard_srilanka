@@ -7,6 +7,7 @@ import { Duration, PackageCategory, PriceRange } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { tw, colors } from "@/lib/theme";
 
 export default function PackagesPage() {
 
@@ -17,12 +18,12 @@ export default function PackagesPage() {
     filteredPackagesData = (price != PriceRange.PRICE_RANGE_ALL) ? filteredPackagesData.filter((pck) => pck.priceRange === price) : filteredPackagesData
 
     return (
-        <div className="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white font-display overflow-x-hidden">
+        <div className={`bg-[#f8f7f6] dark:bg-[#181611] text-[#111811] dark:text-white font-display overflow-x-hidden`}>
             {/* Hero Section */}
             <section className="relative h-[85vh] min-h-[650px] w-full flex items-center justify-center overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background-dark/50 to-background-dark z-10"></div>
+                    <div className="absolute inset-0 z-10" style={{ background: `linear-gradient(to bottom, ${colors.backgroundDark}30, ${colors.backgroundDark}80, ${colors.backgroundDark})` }}></div>
                     <Image
                         alt="Leopard resting on a tree branch in Yala National Park"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIE-zc_aV0U0lmAmLrsHx6P2yX524Zf2WQ6Jn8Tix093E0P9EjdEi3gykij-ggdqWDLTxJSANjpri8Qk0zQOTZicw4ugQpSawxQWY7cG7vo7Fj-trY3733gwudS6TAi2SYTnHsL3ZhWXMJUzsoCk8RQKgX_szL5GfwOl3L0sgH8C3tb7tvcAN-PtP6EjLfgXrpmaQSzVuP9OHJkdpfqJdnrbmoAQJ9Yqylil3zf1gxwZUVNyjMGOcgFiJiBKckRsMGle-miwm6Fo7b"
@@ -32,15 +33,15 @@ export default function PackagesPage() {
                     />
                 </div>
                 <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
-                    <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-primary/20">Official 2026 Packages</span>
+                    <span className={`inline-block py-1 px-3 rounded-full ${tw.textPrimary} text-xs font-bold uppercase tracking-wider mb-6 border`} style={{ backgroundColor: `${colors.primary}20`, borderColor: `${colors.primary}20` }}>Official 2026 Packages</span>
                     <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
-                        Experience <span className="text-primary">The Wild</span>
+                        Experience <span className={tw.textPrimary}>The Wild</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
                         The world’s premier destination for Leopard & Elephant encounters. Explore our curated 2026 safari tiers designed for every traveler.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a className="flex items-center justify-center h-12 px-8 bg-primary text-background-dark font-bold rounded-lg hover:bg-white transition-colors cursor-pointer" onClick={() => window.scrollTo({top: 500, behavior: 'smooth', })}>
+                        <a className={`flex items-center justify-center h-12 px-8 ${tw.bgPrimary} ${tw.textDark} font-bold rounded-lg hover:bg-white transition-colors cursor-pointer`} onClick={() => window.scrollTo({top: 500, behavior: 'smooth', })}>
                             View 2026 Packages
                         </a>
                         <a className="flex items-center justify-center h-12 px-8 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-lg hover:bg-white/20 transition-colors" href="#contact">
@@ -56,7 +57,7 @@ export default function PackagesPage() {
                 {/* Filters */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 bg-[#211d11]/90 backdrop-blur-md p-4 rounded-xl border border-[#383429] shadow-xl">
                     <div className="flex flex-wrap gap-3">
-                        <button className="flex h-9 items-center gap-2 rounded-lg bg-primary px-4 text-[#171611] text-sm font-bold transition-transform active:scale-95">
+                        <button className={`flex h-9 items-center gap-2 rounded-lg ${tw.bgPrimary} px-4 text-[#171611] text-sm font-bold transition-transform active:scale-95`}>
                             All Packages
                         </button>
                         <Dropdown selectedOption={category} setSelectedOption={setCategory} options={categories} />
@@ -66,7 +67,7 @@ export default function PackagesPage() {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-400">
                         <span>Sort by:</span>
-                        <button className="flex items-center gap-1 text-white font-medium hover:text-primary transition-colors">
+                        <button className={`flex items-center gap-1 text-white font-medium ${tw.hoverTextPrimary} transition-colors`}>
                             Recommended <span className="material-symbols-outlined text-[18px]">sort</span>
                         </button>
                     </div>
@@ -83,7 +84,7 @@ export default function PackagesPage() {
                                     {/* Content */}
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <span className="bg-primary/10 text-primary p-2 rounded-lg">
+                                            <span className={`${tw.textPrimary} p-2 rounded-lg`} style={{ backgroundColor: `${colors.primary}10` }}>
                                                 <span className="material-symbols-outlined">diamond</span>
                                             </span>
                                             <h2 className="text-3xl font-bold">Private All-Inclusive</h2>
@@ -94,28 +95,28 @@ export default function PackagesPage() {
                                         {/* Feature List */}
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                                             <div className="flex items-start gap-3">
-                                                <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                 <div>
                                                     <h4 className="font-bold text-white">Zero Queues</h4>
                                                     <p className="text-sm text-gray-400">Tickets pre-purchased</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start gap-3">
-                                                <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                 <div>
                                                     <h4 className="font-bold text-white">Private Guide</h4>
                                                     <p className="text-sm text-gray-400">Dedicated tracker</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start gap-3">
-                                                <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                 <div>
                                                     <h4 className="font-bold text-white">Hotel Pickup</h4>
                                                     <p className="text-sm text-gray-400">From Tissamaharama area</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start gap-3">
-                                                <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                 <div>
                                                     <h4 className="font-bold text-white">Refreshments</h4>
                                                     <p className="text-sm text-gray-400">Water & fruit basket</p>
@@ -144,13 +145,13 @@ export default function PackagesPage() {
                     ((category === PackageCategory.CATEGORY_ALL || category === PackageCategory.SHARED_INCLUSIVE) && Object.values(filteredPackagesData).filter((pck) => pck.packageCategory === PackageCategory.SHARED_INCLUSIVE).length > 0) && (
                         <>
                             {/* SECTION B: Shared All-Inclusive */}
-                            <section className="py-10 bg-background-dark" id="shared-all">
+                            <section className={`py-10 ${tw.bgDark}`} id="shared-all">
                                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                                     <div className="flex flex-col lg:flex-row-reverse gap-12">
                                         {/* Content */}
                                         <div className="flex-1">
                                             <div className="flex items-center gap-3 mb-4">
-                                                <span className="bg-primary/10 text-primary p-2 rounded-lg">
+                                                <span className={`${tw.textPrimary} p-2 rounded-lg`} style={{ backgroundColor: `${colors.primary}10` }}>
                                                     <span className="material-symbols-outlined">groups</span>
                                                 </span>
                                                 <h2 className="text-3xl font-bold">Shared All-Inclusive</h2>
@@ -209,7 +210,7 @@ export default function PackagesPage() {
                                         {/* Content */}
                                         <div className="flex-1">
                                             <div className="flex items-center gap-3 mb-4">
-                                                <span className="bg-primary/10 text-primary p-2 rounded-lg">
+                                                <span className={`${tw.textPrimary} p-2 rounded-lg`} style={{ backgroundColor: `${colors.primary}10` }}>
                                                     <span className="material-symbols-outlined">directions_car</span>
                                                 </span>
                                                 <h2 className="text-3xl font-bold">Private Jeep Hire Only</h2>
@@ -220,28 +221,28 @@ export default function PackagesPage() {
                                             {/* Feature List */}
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                                                 <div className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                    <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                     <div>
                                                         <h4 className="font-bold text-white">Zero Queues</h4>
                                                         <p className="text-sm text-gray-400">Tickets pre-purchased</p>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                    <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                     <div>
                                                         <h4 className="font-bold text-white">Private Guide</h4>
                                                         <p className="text-sm text-gray-400">Dedicated tracker</p>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                    <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                     <div>
                                                         <h4 className="font-bold text-white">Hotel Pickup</h4>
                                                         <p className="text-sm text-gray-400">From Tissamaharama area</p>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                                    <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>check_circle</span>
                                                     <div>
                                                         <h4 className="font-bold text-white">Refreshments</h4>
                                                         <p className="text-sm text-gray-400">Water & fruit basket</p>
@@ -270,13 +271,13 @@ export default function PackagesPage() {
                     ((category === PackageCategory.CATEGORY_ALL || category === PackageCategory.SHARED_JEEP_ONLY) && Object.values(filteredPackagesData).filter((pck) => pck.packageCategory === PackageCategory.SHARED_JEEP_ONLY).length > 0) && (
                        <>
                             {/* SECTION D: Shared Jeep Only */}
-                            <section className="py-10 bg-background-dark" id="shared-all">
+                            <section className={`py-10 ${tw.bgDark}`} id="shared-all">
                                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                                     <div className="flex flex-col lg:flex-row-reverse gap-12">
                                         {/* Content */}
                                         <div className="flex-1">
                                             <div className="flex items-center gap-3 mb-4">
-                                                <span className="bg-primary/10 text-primary p-2 rounded-lg">
+                                                <span className={`${tw.textPrimary} p-2 rounded-lg`} style={{ backgroundColor: `${colors.primary}10` }}>
                                                     <span className="material-symbols-outlined">event_seat</span>
                                                 </span>
                                                 <h2 className="text-3xl font-bold">Shared Jeep Seat Only</h2>
@@ -328,10 +329,10 @@ export default function PackagesPage() {
                 
 
                 {/* Comparison CTA */}
-                <div className="mt-20 p-8 rounded-2xl bg-surface-dark border border-[#383429] text-center">
+                <div className={`mt-20 p-8 rounded-2xl ${tw.bgSurfaceDark} border border-[#383429] text-center`}>
                     <h2 className="text-2xl font-bold text-white mb-2">Not sure which package to choose?</h2>
                     <p className="text-gray-400 mb-6 max-w-2xl mx-auto">Compare our different safari tiers including Private All-Inclusive, Shared Options, and Jeep-Only hires to find the perfect fit for your budget.</p>
-                    <Link href="/yala-safari-packages" className="inline-flex h-12 px-8 items-center justify-center rounded-lg bg-primary text-[#171611] text-sm font-bold hover:bg-primary/90 transition-colors">
+                    <Link href="/yala-safari-packages" className={`inline-flex h-12 px-8 items-center justify-center rounded-lg ${tw.bgPrimary} text-[#171611] text-sm font-bold ${tw.bgPrimaryHover} transition-colors`}>
                         Compare Safari Tiers
                     </Link>
                 </div>

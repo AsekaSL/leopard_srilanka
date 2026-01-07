@@ -1,4 +1,5 @@
 "use client";
+import { tw, colors } from "@/lib/theme";
 
 interface FAQItemProps {
     question: string;
@@ -7,7 +8,7 @@ interface FAQItemProps {
 
 export default function FAQItem({ question, answer }: FAQItemProps) {
     return (
-        <details className="group bg-[#181611] rounded-lg p-4 cursor-pointer">
+        <details className={`group bg-[${colors.backgroundDark}] rounded-lg p-4 cursor-pointer`}>
             <summary className="flex justify-between items-center font-medium text-white list-none">
                 <span>{question}</span>
                 <span className="transition group-open:rotate-180">

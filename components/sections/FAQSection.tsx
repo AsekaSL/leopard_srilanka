@@ -1,5 +1,6 @@
 import FAQItem from "../ui/FAQItem";
 import { FAQ } from "@/types";
+import { tw } from "@/lib/theme";
 
 const faqs: FAQ[] = [
     {
@@ -21,7 +22,7 @@ const faqs: FAQ[] = [
 
 export default function FAQSection() {
     return (
-        <div className="bg-surface-dark py-16 border-y border-border-dark">
+        <div className={`${tw.bgSurfaceDark} py-16 border-y ${tw.borderDark}`}>
             <div className="container mx-auto px-4 max-w-3xl">
                 <h2 className="text-2xl font-bold text-white mb-8 text-center">
                     Frequently Asked Questions

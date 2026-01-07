@@ -4,6 +4,7 @@ import Image from "next/image";
 import contactHero from "@/public/contact_hero.png";
 import { durations } from "@/lib/data";
 import { useState } from "react";
+import { tw, colors } from "@/lib/theme";
 
 
 export default function ContactPage() {
@@ -17,7 +18,7 @@ export default function ContactPage() {
 
 
     return (
-        <div className="bg-background-light dark:bg-background-dark text-[#171611] dark:text-white font-display overflow-x-hidden antialiased">
+        <div className={`${tw.bgBackgroundLight} dark:${tw.bgBackgroundDark} text-[#171611] dark:text-white font-display overflow-x-hidden antialiased`}>
 
             {/* Hero Section */}
             <div className="relative w-full h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
@@ -32,7 +33,7 @@ export default function ContactPage() {
                     />
                 </div>
                 <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-4xl mx-auto space-y-4">
-                    <span className="text-primary text-sm font-bold tracking-wider uppercase">Bespoke Journeys</span>
+                    <span className={`${tw.textPrimary} text-sm font-bold tracking-wider uppercase`}>Bespoke Journeys</span>
                     <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
                         Contact & Booking
                     </h1>
@@ -56,8 +57,8 @@ export default function ContactPage() {
                         </div>
                         <div className="flex flex-col gap-4">
                             {/* Phone Card */}
-                            <div className="group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors cursor-pointer shadow-sm">
-                                <div className="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                            <div className={`group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:border-[#393428] hover:border-[${colors.primary}]/50 transition-colors cursor-pointer shadow-sm`}>
+                                <div className={`flex items-center justify-center size-12 rounded-full ${tw.bgPrimary}/10 ${tw.textPrimary} hover:bg-[#d99a1e] ${tw.hoverTextDark} transition-colors`}>
                                     <span className="material-symbols-outlined text-2xl">call</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -66,8 +67,8 @@ export default function ContactPage() {
                                 </div>
                             </div>
                             {/* WhatsApp Card */}
-                            <div className="group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors cursor-pointer shadow-sm">
-                                <div className="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                            <div className={`group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:${tw.borderDark} hover:border-[${colors.primary}]/50 transition-colors cursor-pointer shadow-sm`}>
+                                <div className={`flex items-center justify-center size-12 rounded-full ${tw.bgPrimary}/10 ${tw.textPrimary} hover:bg-[#d99a1e] ${tw.hoverTextDark} transition-colors`}>
                                     <span className="material-symbols-outlined text-2xl">chat</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -76,8 +77,8 @@ export default function ContactPage() {
                                 </div>
                             </div>
                             {/* Email Card */}
-                            <div className="group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:border-border-dark hover:border-primary/50 transition-colors cursor-pointer shadow-sm">
-                                <div className="flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                            <div className={`group flex items-center gap-5 p-5 rounded-xl bg-white dark:bg-[#26231c] border border-gray-200 dark:${tw.borderDark} hover:border-[${colors.primary}]/50 transition-colors cursor-pointer shadow-sm`}>
+                                <div className={`flex items-center justify-center size-12 rounded-full ${tw.bgPrimary}/10 ${tw.textPrimary} hover:bg-[#d99a1e] ${tw.hoverTextDark} transition-colors`}>
                                     <span className="material-symbols-outlined text-2xl">mail</span>
                                 </div>
                                 <div className="flex flex-col">
@@ -87,7 +88,7 @@ export default function ContactPage() {
                             </div>
                         </div>
                         {/* Map Preview */}
-                        <div className="relative w-full h-64 rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark mt-4 group">
+                        <div className={`relative w-full h-64 rounded-2xl overflow-hidden border border-gray-200 dark:${tw.borderDark} mt-4 group`}>
                             <div className="absolute inset-0 bg-gray-800">
                                 <Image
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSmN_107vcLAUjITiVg7j2inehASYZ0vyTL6DvEstauSIT5jG0bbesFkIL-0s7BIsD9IX1mrJw43kLU6Pj9moqZWdEg3NinISFvE2rmCj_z0OyeQq0M_SFDBLttZL7Lhfy3xKpvjXcSgLg7ITVDPk27J7x345_FqjSmpdPSllfk7YQHC7WI9TCk8XSUi3eouufpb30j2umlduYiVaIqDJx3B-rIQ4vUPzR5krWUa_hoGeArYpPMlDlMjtnLsgpcLxALhFCaBM6x--f"
@@ -102,7 +103,7 @@ export default function ContactPage() {
                                         <p className="text-white font-bold text-lg">Yala National Park</p>
                                         <p className="text-gray-300 text-sm">Main Lodge Entrance</p>
                                     </div>
-                                    <button className="size-10 rounded-full bg-primary text-background-dark flex items-center justify-center hover:scale-110 transition-transform">
+                                    <button className={`size-10 rounded-full ${tw.bgPrimary} ${tw.textDark} flex items-center justify-center hover:scale-110 transition-transform`}>
                                         <span className="material-symbols-outlined">near_me</span>
                                     </button>
                                 </div>
@@ -112,7 +113,7 @@ export default function ContactPage() {
 
                     {/* Right Column: Inquiry Form */}
                     <div className="lg:col-span-7">
-                        <div className="bg-white dark:bg-[#26231c] rounded-2xl p-8 lg:p-10 border border-gray-200 dark:border-border-dark shadow-xl">
+                        <div className={`bg-white dark:bg-[#26231c] rounded-2xl p-8 lg:p-10 border border-gray-200 dark:${tw.borderDark} shadow-xl`}>
                             <h3 className="text-2xl font-bold text-[#171611] dark:text-white mb-2">Send an Inquiry</h3>
                             <p className="text-gray-600 dark:text-[#b7b19e] text-sm mb-8">Fill out the form below and we will get back to you within 24 hours.</p>
                             <form className="space-y-6">
@@ -120,12 +121,12 @@ export default function ContactPage() {
                                     {/* Name */}
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Full Name</label>
-                                        <input onChange={(e) => setName(e.target.value)} value={name} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text" />
+                                        <input onChange={(e) => setName(e.target.value)} value={name} className={`w-full h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 ${tw.borderPrimary} transition-all`} placeholder="John Doe" type="text" />
                                     </div>
                                     {/* Email */}
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Email Address</label>
-                                        <input onChange={(e) => setEmail(e.target.value)} value={email} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="john@example.com" type="email" />
+                                        <input onChange={(e) => setEmail(e.target.value)} value={email} className={`w-full h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 ${tw.borderPrimary} transition-all`} placeholder="john@example.com" type="email" />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,7 +134,7 @@ export default function ContactPage() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Country of Residence</label>
                                         <div className="relative">
-                                            <select onChange={(e) => setCountry(e.target.value)} value={country} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
+                                            <select onChange={(e) => setCountry(e.target.value)} value={country} className={`w-full h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 ${tw.borderPrimary} appearance-none transition-all`}>
                                                 <option>Select Country</option>
                                                 <option>United States</option>
                                                 <option>United Kingdom</option>
@@ -146,19 +147,19 @@ export default function ContactPage() {
                                     {/* Date */}
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Planned Arrival</label>
-                                        <input className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all [color-scheme:dark]" type="date" />
+                                        <input className={`w-full h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 ${tw.borderPrimary} transition-all [color-scheme:dark]`} type="date" />
                                     </div>
                                 </div>
                                 {/* Guests & Type */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Number of Guests</label>
-                                        <div className="flex items-center h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-2">
-                                            <button onClick={() => setGuestCount(guestCount < 1 ? 0 : guestCount - 1)} className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
+                                        <div className={`flex items-center h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-2`}>
+                                            <button onClick={() => setGuestCount(guestCount < 1 ? 0 : guestCount - 1)} className={`size-8 flex items-center justify-center text-gray-500 ${tw.hoverTextPrimary} transition-colors`} type="button">
                                                 <span className="material-symbols-outlined text-lg">remove</span>
                                             </button>
                                             <input className="flex-1 bg-transparent text-center text-[#171611] dark:text-white font-medium focus:outline-none" readOnly type="number" value={guestCount} onChange={(e) => setGuestCount(guestCount)} />
-                                            <button onClick={() => setGuestCount(guestCount + 1)} className="size-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors" type="button">
+                                            <button onClick={() => setGuestCount(guestCount + 1)} className={`size-8 flex items-center justify-center text-gray-500 ${tw.hoverTextPrimary} transition-colors`} type="button">
                                                 <span className="material-symbols-outlined text-lg">add</span>
                                             </button>
                                         </div>
@@ -166,7 +167,7 @@ export default function ContactPage() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-[#171611] dark:text-white">Safari Type</label>
                                         <div className="relative">
-                                            <select onChange={(e) => setSelectedDuration(e.target.value)} value={selectedDuration} className="w-full h-12 bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary appearance-none transition-all">
+                                            <select onChange={(e) => setSelectedDuration(e.target.value)} value={selectedDuration} className={`w-full h-12 ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg px-4 text-[#171611] dark:text-white focus:outline-none focus:ring-1 ${tw.borderPrimary} appearance-none transition-all`} >
                                                 {
                                                     durations.map((duration, i) => (
                                                         <option value={duration} key={i}>{duration}</option>
@@ -180,11 +181,11 @@ export default function ContactPage() {
                                 {/* Message */}
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-[#171611] dark:text-white">Special Requests</label>
-                                    <textarea className="w-full bg-background-light dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg p-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary resize-none transition-all" placeholder="Tell us about your preferences..." rows={4}></textarea>
+                                    <textarea className={`w-full ${tw.bgBackgroundLight} dark:bg-[#1f1c16] border border-gray-300 dark:border-[#383429] rounded-lg p-4 text-[#171611] dark:text-white placeholder-gray-400 dark:placeholder-[#6b6659] focus:outline-none focus:ring-1 ${tw.borderPrimary} resize-none transition-all`} placeholder="Tell us about your preferences..." rows={4}></textarea>
                                 </div>
                                 {/* Submit Button */}
                                 <div className="pt-4">
-                                    <button className="w-full h-14 bg-primary text-[#171611] font-bold text-base rounded-lg hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(223,175,42,0.4)] hover:shadow-[0_0_30px_rgba(223,175,42,0.6)] flex items-center justify-center gap-2" type="button">
+                                    <button className={`w-full h-14 ${tw.bgPrimary} text-[#171611] font-bold text-base rounded-lg hover:bg-[#d99a1e]/90 transition-all shadow-[0_0_20px_rgba(223,175,42,0.4)] hover:shadow-[0_0_30px_rgba(223,175,42,0.6)] flex items-center justify-center gap-2`} type="button">
                                         <span>Request Booking</span>
                                         <span className="material-symbols-outlined text-xl">arrow_forward</span>
                                     </button>
@@ -197,11 +198,11 @@ export default function ContactPage() {
             </div>
 
             {/* FAQ / Extra Section */}
-            <div className="bg-white dark:bg-[#1a170e] py-16 border-t border-gray-200 dark:border-border-dark">
+            <div className={`bg-white dark:bg-[#1a170e] py-16 border-t border-gray-200 dark:${tw.borderDark}`}>
                 <div className="max-w-[960px] mx-auto px-4 sm:px-8 xl:px-20 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#171611] dark:text-white mb-8">Frequently Asked Questions</h2>
                     <div className="grid gap-4 text-left">
-                        <details className="group bg-background-light dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:border-border-dark open:border-primary/50 transition-colors">
+                        <details className={`group ${tw.bgBackgroundLight} dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:${tw.borderDark} open:border-[${colors.primary}]/50 transition-colors`}>
                             <summary className="flex justify-between items-center font-bold cursor-pointer list-none text-[#171611] dark:text-white">
                                 <span>What is the best time to visit Yala?</span>
                                 <span className="transition group-open:rotate-180">
@@ -212,7 +213,7 @@ export default function ContactPage() {
                                 Yala is great year-round, but the best time for spotting leopards is during the dry season from February to July when animals gather around water holes.
                             </div>
                         </details>
-                        <details className="group bg-background-light dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:border-border-dark open:border-primary/50 transition-colors">
+                        <details className={`group ${tw.bgBackgroundLight} dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:${tw.borderDark} open:border-[${colors.primary}]/50 transition-colors`}>
                             <summary className="flex justify-between items-center font-bold cursor-pointer list-none text-[#171611] dark:text-white">
                                 <span>Do you provide transportation from Colombo?</span>
                                 <span className="transition group-open:rotate-180">
@@ -223,7 +224,7 @@ export default function ContactPage() {
                                 Yes, we can arrange private luxury transfers from Colombo, Galle, or the airport directly to our lodge or the park entrance.
                             </div>
                         </details>
-                        <details className="group bg-background-light dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:border-border-dark open:border-primary/50 transition-colors">
+                        <details className={`group ${tw.bgBackgroundLight} dark:bg-[#26231c] rounded-lg p-4 border border-gray-200 dark:${tw.borderDark} open:border-[${colors.primary}]/50 transition-colors`}>
                             <summary className="flex justify-between items-center font-bold cursor-pointer list-none text-[#171611] dark:text-white">
                                 <span>Are children allowed on safaris?</span>
                                 <span className="transition group-open:rotate-180">

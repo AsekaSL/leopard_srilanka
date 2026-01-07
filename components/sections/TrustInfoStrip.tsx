@@ -1,5 +1,6 @@
 import FeatureCard from "../ui/FeatureCard";
 import { Feature } from "@/types";
+import { tw, colors } from "@/lib/theme";
 
 const trustFeatures: Feature[] = [
     {
@@ -26,9 +27,9 @@ const trustFeatures: Feature[] = [
 
 export default function TrustInfoStrip() {
     return (
-        <div className="bg-surface-dark border-y border-border-dark py-8 relative z-20">
+        <div className={`${tw.bgSurfaceDark} border-y border-[#393428] py-8 relative z-20`}>
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x-0 md:divide-x divide-border-dark/50">
+                <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x-0 md:divide-x divide-[#393428]/50`}>
                     {trustFeatures.map((feature, index) => (
                         <FeatureCard key={index} feature={feature} />
                     ))}

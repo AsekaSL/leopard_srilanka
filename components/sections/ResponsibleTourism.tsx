@@ -1,14 +1,15 @@
 import Image from "next/image";
 import yala_safari from "@/public/assests/yala-safari.jpg";
+import { tw, colors } from "@/lib/theme";
 
 export default function ResponsibleTourism() {
     return (
-        <div className="bg-surface-dark py-20">
+        <div className={`${tw.bgSurfaceDark} py-20`}>
             <div className="container mx-auto px-4">
                 <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
                     {/* Image */}
                     <div className="flex-1 relative">
-                        <div className="absolute top-4 -left-4 w-full h-full border-2 border-primary/30 rounded-2xl z-0" />
+                        <div className={`absolute top-4 -left-4 w-full h-full border-2 border-[${colors.primary}]/30 rounded-2xl z-0`} />
                         <Image
                             alt="Responsible tourism"
                             src={yala_safari}
@@ -20,7 +21,7 @@ export default function ResponsibleTourism() {
 
                     {/* Content */}
                     <div className="flex-1">
-                        <span className="text-primary font-bold uppercase tracking-wider text-sm">
+                        <span className={`${tw.textPrimary} font-bold uppercase tracking-wider text-sm`}>
                             Conservation First
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">

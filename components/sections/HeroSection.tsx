@@ -2,13 +2,14 @@ import Image from "next/image";
 import Button from "../ui/Button";
 import homeHero from '@/public/home_hero.png'
 import Link from "next/link";
+import { tw, colors } from "@/lib/theme";
 
 export default function HeroSection() {
     return (
         <div className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-16">
             {/* Background Image with Gradient Overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#181611] z-10" />
+                <div className={`absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[${colors.backgroundDark}] z-10`} />
                 <Image
                     alt="Leopard close up"
                     src={homeHero}
@@ -23,7 +24,7 @@ export default function HeroSection() {
             <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-10">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-2">
-                    <span className="material-symbols-outlined text-primary text-sm">
+                    <span className={`material-symbols-outlined ${tw.textPrimary} text-sm`}>
                         workspace_premium
                     </span>
                     <span className="text-xs font-semibold uppercase tracking-wider text-gray-200">
@@ -34,7 +35,7 @@ export default function HeroSection() {
                 {/* Main Heading */}
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight max-w-4xl drop-shadow-2xl">
                     Experience the Wild <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">
+                    <span className={`text-transparent bg-clip-text bg-gradient-to-r from-[#ecb213] to-yellow-200`}>
                         Like Never Before
                     </span>
                 </h1>

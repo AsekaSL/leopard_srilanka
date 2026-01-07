@@ -1,6 +1,7 @@
 'use client';
 
 import { packagesData, pakagesId } from '@/lib/data';
+import colors, { tw } from '@/lib/theme';
 import { Duration, PackageCategory } from '@/types';
 import { useState, useEffect, use } from 'react';
 
@@ -64,7 +65,7 @@ export default function SafariCalculatorPage({ params }: Props) {
     };
 
     return (
-        <div className="bg-background-light my-20 dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col">
+        <div className={`${tw.bgBackgroundLight} my-20 dark:${tw.bgBackgroundDark} text-slate-900 dark:text-white font-display min-h-screen flex flex-col`}>
 
             <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {/* Header & Progress */}
@@ -77,12 +78,12 @@ export default function SafariCalculatorPage({ params }: Props) {
                         {/* Progress Indicator */}
                         <div className="w-full md:w-64">
                             <div className="flex justify-between text-xs font-medium text-gray-500 dark:text-[#b7b19e] mb-2">
-                                <span className="text-primary dark:text-white">Trip Details</span>
+                                <span className={`${tw.textPrimary} dark:text-white`} >Trip Details</span>
                                 <span>Contact</span>
                                 <span>Payment</span>
                             </div>
                             <div className="h-2 w-full bg-gray-200 dark:bg-[#383429] rounded-full overflow-hidden">
-                                <div className="h-full bg-primary w-1/3 rounded-full"></div>
+                                <div className={`h-full ${tw.bgPrimary} w-1/3 rounded-full`}></div>
                             </div>
                             <div className="text-right mt-1 text-xs text-gray-500 dark:text-[#b7b19e]">Step 1 of 3</div>
                         </div>
@@ -96,7 +97,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                         {/* Section 1: Book Your Trip */}
                         <section className="bg-[#26241c] dark:bg-card-dark rounded-xl border border-gray-200 dark:border-[#383429] p-6 md:p-8 shadow-sm">
                             <div className="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-[#383429] pb-4">
-                                <span className="material-symbols-outlined text-primary">landscape</span>
+                                <span className={`material-symbols-outlined ${tw.textPrimary}`}>landscape</span>
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">Book Your Trip</h3>
                             </div>
 
@@ -108,7 +109,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                         <select
                                             value={packageDetail.id}
                                             onChange={(e) => setPark(e.target.value)}
-                                            className="w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white px-4 focus:ring-1 focus:ring-primary focus:border-primary transition-all appearance-none"
+                                            className={`w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white px-4 focus:ring-1 focus:ring-[${colors.primary}] focus:border-[${colors.primary}] transition-all appearance-none`}
                                         >
                                             {
                                                 pakagesId.map((park) => (
@@ -126,7 +127,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                     <label className="text-gray-600 dark:text-[#b7b19e] text-sm font-medium">Safari Date</label>
                                     <div className="relative">
                                         <input
-                                            className="w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white px-4 focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder-gray-400 dark:placeholder-[#b7b19e]"
+                                            className={`w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white px-4 focus:ring-1 focus:ring-[${colors.primary}] focus:border-[${colors.primary}] transition-all placeholder-gray-400 dark:placeholder-[#b7b19e]`}
                                             type="date"
                                             value={date}
                                             onChange={(e) => setDate(e.target.value)}
@@ -150,7 +151,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                         <span className="text-gray-900 dark:text-white font-bold">{adults}</span>
                                         <button
                                             onClick={() => handleGuestChange('adults', 'add')}
-                                            className="w-10 h-full flex items-center justify-center text-primary hover:bg-primary/10 rounded transition-colors"
+                                            className={`w-10 h-full flex items-center justify-center text-[${colors.primary}] hover:bg-[${colors.primary}]/10 rounded transition-colors`}
                                         >
                                             <span className="material-symbols-outlined text-sm">add</span>
                                         </button>
@@ -169,7 +170,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                         <span className="text-gray-900 dark:text-white font-bold">{children}</span>
                                         <button
                                             onClick={() => handleGuestChange('children', 'add')}
-                                            className="w-10 h-full flex items-center justify-center text-primary hover:bg-primary/10 rounded transition-colors"
+                                            className={`w-10 h-full flex items-center justify-center text-[${colors.primary}] hover:bg-[${colors.primary}]/10 rounded transition-colors`}
                                         >
                                             <span className="material-symbols-outlined text-sm">add</span>
                                         </button>
@@ -188,7 +189,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                         <span className="text-gray-500 dark:text-[#b7b19e] font-bold">{infants}</span>
                                         <button
                                             onClick={() => handleGuestChange('infants', 'add')}
-                                            className="w-10 h-full flex items-center justify-center text-primary hover:bg-primary/10 rounded transition-colors"
+                                            className={`w-10 h-full flex items-center justify-center text-[${colors.primary}] hover:bg-[${colors.primary}]/10 rounded transition-colors`}
                                         >
                                             <span className="material-symbols-outlined text-sm">add</span>
                                         </button>
@@ -200,7 +201,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                         {/* Section 2: Contact Details */}
                         <section className="bg-[#26241c] dark:bg-card-dark rounded-xl border border-gray-200 dark:border-[#383429] p-6 md:p-8 shadow-sm">
                             <div className="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-[#383429] pb-4">
-                                <span className="material-symbols-outlined text-primary">contact_page</span>
+                                <span className={`material-symbols-outlined text-[${colors.primary}]`}>contact_page</span>
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">Contact Details</h3>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -234,7 +235,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                     <div className="relative">
                                         <span className="material-symbols-outlined absolute left-4 top-3 text-gray-400 dark:text-[#b7b19e]">call</span>
                                         <input
-                                            className="w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white pl-12 pr-4 focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-400 dark:placeholder-[#b7b19e]/50 transition-all"
+                                            className={`w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white pl-12 pr-4 focus:ring-1 focus:ring-[${colors.primary}] focus:border-[${colors.primary}] placeholder-gray-400 dark:placeholder-[#b7b19e]/50 transition-all`}
                                             placeholder="+94 77 123 4567"
                                             type="tel"
                                         />
@@ -246,7 +247,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                     <div className="relative">
                                         <span className="material-symbols-outlined absolute left-4 top-3 text-gray-400 dark:text-[#b7b19e]">phone_iphone</span>
                                         <input
-                                            className="w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white pl-12 pr-4 focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-400 dark:placeholder-[#b7b19e]/50 transition-all"
+                                            className={`w-full h-12 bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white pl-12 pr-4 focus:ring-1 focus:ring-[${colors.primary}] focus:border-[${colors.primary}] placeholder-gray-400 dark:placeholder-[#b7b19e]/50 transition-all`}
                                             placeholder="Alternative number"
                                             type="tel"
                                         />
@@ -257,7 +258,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                             <div className="flex flex-col gap-2">
                                 <label className="text-gray-600 dark:text-[#b7b19e] text-sm font-medium">Special Notes / Dietary Requirements</label>
                                 <textarea
-                                    className="w-full bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white p-4 focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-400 dark:placeholder-[#b7b19e]/50 resize-none transition-all"
+                                    className={`w-full bg-[#383429] dark:bg-input-dark border border-gray-200 dark:border-transparent rounded-lg text-gray-900 dark:text-white p-4 focus:ring-1 focus:ring-[${colors.primary}] focus:border-[${colors.primary}] placeholder-gray-400 dark:placeholder-[#b7b19e]/50 resize-none transition-all`}
                                     placeholder="Any allergies, specific jeep requirements..."
                                     rows={3}
                                 ></textarea>
@@ -268,11 +269,11 @@ export default function SafariCalculatorPage({ params }: Props) {
                     {/* Right Column: Sticky Summary */}
                     <div className="lg:col-span-4 relative">
                         <div className="sticky top-24 flex flex-col gap-6">
-                            <div className="bg-[#26241c] dark:bg-card-dark rounded-xl border border-gray-200 dark:border-[#383429] p-6 shadow-2xl shadow-black/5 dark:shadow-black/50 overflow-hidden relative">
+                            <div className={`bg-[#26241c] dark:bg-card-dark rounded-xl border border-gray-200 dark:border-[#383429] p-6 shadow-2xl shadow-black/5 dark:shadow-black/50 overflow-hidden relative`}>
                                 {/* Decorative glow */}
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2 relative z-10">
-                                    <span className="material-symbols-outlined text-primary">receipt_long</span>
+                                    <span className={`material-symbols-outlined text-[${colors.primary}]`}>receipt_long</span>
                                     Amount to Be Paid
                                 </h3>
 
@@ -284,8 +285,8 @@ export default function SafariCalculatorPage({ params }: Props) {
                                             <span className="text-gray-900 dark:text-white font-medium text-sm">Park Entry Fees</span>
                                             <span className="text-gray-500 dark:text-[#b7b19e] text-xs">Tickets included automatically</span>
                                         </div>
-                                        <div className="relative w-11 h-6 bg-primary/20 rounded-full">
-                                            <div className="absolute top-[2px] right-[2px] bg-primary rounded-full h-5 w-5"></div>
+                                        <div className={`relative w-11 h-6 bg-[${colors.primary}]/20 rounded-full`}>
+                                            <div className={`absolute top-[2px] right-[2px] bg-[${colors.primary}] rounded-full h-5 w-5`}></div>
                                         </div>
                                     </div>
 
@@ -302,7 +303,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                                 type="checkbox"
                                                 className="sr-only peer"
                                             />
-                                            <div className="relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                            <div className={`relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#ecb213]`}></div>
                                         </label>
                                     </div>
 
@@ -321,7 +322,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                                     type="checkbox"
                                                     className="sr-only peer"
                                                 />
-                                                <div className="relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                                <div className="relative w-11 h-6 bg-gray-200 dark:bg-input-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#ecb213]"></div>
                                             </label>
                                         </div>
                                     }
@@ -352,7 +353,7 @@ export default function SafariCalculatorPage({ params }: Props) {
 
                                 {/* Payment Type */}
                                 <div className="bg-gray-50 dark:bg-input-dark p-1 rounded-lg grid grid-cols-2 gap-1 mb-6">
-                                    <button className="text-xs sm:text-sm font-bold bg-primary text-[#171611] py-2 rounded shadow-sm transition-all">
+                                    <button className={"text-xs sm:text-sm font-bold bg-[#ecb213] text-[#171611] py-2 rounded shadow-sm transition-all"}>
                                         Full Amount
                                     </button>
                                     <button className="text-xs sm:text-sm font-medium text-gray-500 dark:text-[#b7b19e] hover:text-gray-900 dark:hover:text-white py-2 rounded transition-all">
@@ -369,7 +370,7 @@ export default function SafariCalculatorPage({ params }: Props) {
                                 </div>
 
                                 {/* CTA */}
-                                <button className="w-full bg-primary hover:bg-yellow-500 text-[#171611] font-bold text-lg py-4 rounded-lg shadow-lg shadow-yellow-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
+                                <button className="w-full bg-[#ecb213] hover:bg-yellow-500 text-[#171611] font-bold text-lg py-4 rounded-lg shadow-lg shadow-yellow-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group">
                                     Proceed to Checkout
                                     <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
                                 </button>
@@ -382,7 +383,7 @@ export default function SafariCalculatorPage({ params }: Props) {
 
                             {/* Trust Signals / Support Card */}
                             <div className="bg-white/50 dark:bg-[#2a261a]/50 border border-gray-200 dark:border-[#383429] rounded-xl p-4 flex items-center gap-4">
-                                <div className="size-10 rounded-full bg-gray-100 dark:bg-input-dark flex items-center justify-center text-primary">
+                                <div className={"size-10 rounded-full bg-gray-100 dark:bg-input-dark flex items-center justify-center text-[#ecb213]"}>
                                     <span className="material-symbols-outlined">support_agent</span>
                                 </div>
                                 <div>

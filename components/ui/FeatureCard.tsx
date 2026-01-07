@@ -1,4 +1,5 @@
 import { Feature } from "@/types";
+import { tw } from "@/lib/theme";
 
 interface FeatureCardProps {
     feature: Feature;
@@ -8,8 +9,8 @@ interface FeatureCardProps {
 export default function FeatureCard({ feature, variant = "default" }: FeatureCardProps) {
     if (variant === "outlined") {
         return (
-            <div className="bg-surface-dark p-4 rounded-lg border border-border-dark flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary mt-1">
+            <div className={`${tw.bgSurfaceDark} p-4 rounded-lg border ${tw.borderDark} flex items-start gap-3`}>
+                <span className={`material-symbols-outlined ${tw.textPrimary} mt-1`}>
                     {feature.icon}
                 </span>
                 <div>
@@ -22,7 +23,7 @@ export default function FeatureCard({ feature, variant = "default" }: FeatureCar
 
     return (
         <div className="flex flex-col items-center gap-3 px-2">
-            <span className="material-symbols-outlined text-primary text-3xl">
+            <span className={`material-symbols-outlined ${tw.textPrimary} text-3xl`}>
                 {feature.icon}
             </span>
             <div className="flex flex-col text-center">

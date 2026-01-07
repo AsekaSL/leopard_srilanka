@@ -4,6 +4,7 @@ import Link from "next/link";
 import { packagesData } from "@/lib/data";
 import { Metadata } from "next";
 import { PackageCategory } from "@/types";
+import { tw, colors } from "@/lib/theme";
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -35,11 +36,11 @@ export default async function PackageDetailPage({ params }: Props) {
     }
 
     return (
-        <div className="bg-background-light dark:bg-background-dark font-display text-white antialiased overflow-x-hidden">
+        <div className={`${tw.bgBackgroundLight} dark:${tw.bgBackgroundDark} font-display text-white antialiased overflow-x-hidden`}>
             {/* Hero Section */}
             <div className="relative w-full h-[600px] md:h-[700px] flex items-end pb-12 md:pb-24">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background-dark/60 to-background-dark z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#181611]/30 via-[#181611]/60 to-[#181611] z-10" />
                     <Image
                         src={pkg.heroImage}
                         alt={pkg.title}
@@ -50,7 +51,7 @@ export default async function PackageDetailPage({ params }: Props) {
                 </div>
                 <div className="relative z-10 w-full px-6 md:px-10 lg:px-40 mx-auto max-w-7xl">
                     <div className="flex flex-col gap-4 max-w-3xl">
-                        <div className="flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-wider">
+                        <div className={`flex items-center gap-2 ${tw.textPrimary} text-sm font-bold uppercase tracking-wider`}>
                             <span className="material-symbols-outlined text-[20px]">location_on</span>
                             <span>Yala National Park, Sri Lanka</span>
                         </div>
@@ -61,10 +62,10 @@ export default async function PackageDetailPage({ params }: Props) {
                             {pkg.subtitle}
                         </p>
                         <div className="flex flex-wrap gap-4 mt-6">
-                            <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold transition-all hover:bg-yellow-400">
+                            <button className={`flex items-center justify-center rounded-lg h-12 px-8 ${tw.bgPrimary} ${tw.textDark} text-base font-bold transition-all hover:bg-yellow-400`}>
                                 Book This Package
                             </button>
-                            <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-surface-dark border border-border-dark text-white text-base font-bold hover:bg-border-dark transition-all">
+                            <button className={`flex items-center justify-center rounded-lg h-12 px-8 ${tw.bgSurfaceDark} border ${tw.borderDark} text-white text-base font-bold hover:bg-[#393428] transition-all`}>
                                 Calculate Safari Cost
                             </button>
                         </div>
@@ -97,7 +98,7 @@ export default async function PackageDetailPage({ params }: Props) {
                         {
                             pkg.pricingPerPerson &&
                             <div className="flex-1">
-                                <div className="bg-surface-dark rounded-xl overflow-hidden border border-border-dark">
+                                <div className={`${tw.bgSurfaceDark} rounded-xl overflow-hidden border ${tw.borderDark}`}>
                                     <div className="overflow-x-auto">
                                         <table className="w-full text-left text-sm">
                                             <thead className="bg-black/20 text-gray-400 uppercase text-xs font-bold">
@@ -107,20 +108,20 @@ export default async function PackageDetailPage({ params }: Props) {
                                                     <th className="px-6 py-4">Price (from)</th>
                                                 </tr>
                                             </thead>
-                                            <tbody className="divide-y divide-border-dark">
+                                            <tbody className={`divide-y divide-${tw.borderDark}`}>
                                                 {
                                                     pkg.pricingPerPerson && pkg.pricingPerPerson.map((price) => (
                                                         <tr key={price.label} className="hover:bg-white/5 transition-colors">
                                                             <td className="px-6 py-4 text-gray-400">{price.label}</td>
-                                                            <td className="px-6 py-4 text-primary font-bold">$ {price.price}</td>
+                                                            <td className={`px-6 py-4 ${tw.textPrimary} font-bold`}>$ {price.price}</td>
                                                         </tr>
                                                     ))
                                                 }
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div className="px-6 py-4 bg-primary/5 border-t border-border-dark">
-                                        <p className="text-xs text-primary/80 flex items-center gap-2">
+                                    <div className={`px-6 py-4 border-t ${tw.borderDark}`} style={{ backgroundColor: `${colors.primary}05` }}>
+                                        <p className="text-xs text-[#ecb213]/80 flex items-center gap-2">
                                             <span className="material-symbols-outlined text-base">info</span>
                                             Price varies based on group size. Best value for groups of 4+.
                                         </p>
@@ -133,7 +134,7 @@ export default async function PackageDetailPage({ params }: Props) {
                         {pkg.itinerary.length > 0 && (
                             <div className="flex flex-col gap-6">
                                 <h3 className="text-2xl font-bold text-white">Itinerary Timeline</h3>
-                                <div className="relative  border-l border-border-dark ml-3 space-y-8">
+                                <div className={`relative border-l ${tw.borderDark} ml-3 space-y-8`}>
                                     {pkg.itinerary.map((item, index) => (
                                         <TimelineItem key={index} item={item} />
                                     ))}
@@ -179,7 +180,7 @@ export default async function PackageDetailPage({ params }: Props) {
                                         {/* Placeholder generic jeep images since we don't have vehicle specific ones in data yet */}
                                         {
                                             pkg.gallery.map((img) => (
-                                                <div key={img} className="w-24 h-24 shrink-0 rounded-lg bg-gray-800 border border-border-dark overflow-hidden relative">
+                                                <div key={img} className={`w-24 h-24 shrink-0 rounded-lg bg-gray-800 border ${tw.borderDark} overflow-hidden relative`}>
                                                     <Image src={img} alt="Jeep interior" fill className="object-cover" />
                                                 </div>
                                             ))
@@ -194,9 +195,9 @@ export default async function PackageDetailPage({ params }: Props) {
 
                     {/* Right Column: Sticky Pricing Card */}
                     <div className="relative">
-                        <div className="sticky top-24 flex flex-col gap-6 rounded-2xl border border-border-dark bg-surface-dark/80 p-6 md:p-8 backdrop-blur-xl shadow-2xl">
+                        <div className={`sticky top-24 flex flex-col gap-6 rounded-2xl border ${tw.borderDark} ${tw.bgSurfaceDark}/80 p-6 md:p-8 backdrop-blur-xl shadow-2xl`}>
                             <h3 className="text-xl font-bold text-white mb-2">Pricing Breakdown( {pkg.pricingPerPerson ? 'Per Person' : 'Per Vehicle'} )</h3>
-                            <div className="space-y-4 pb-6 border-b border-border-dark">
+                            <div className={`space-y-4 pb-6 border-b ${tw.borderDark}`}>
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400">{pkg.pricingPerPerson ? `Person Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})` : `Jeep Rental (${pkg.packageCategory === PackageCategory.PRIVATE_INCLUSIVE || pkg.packageCategory === PackageCategory.PRIVATE_JEEP_ONLY ? 'Private' : 'Shared'})`}</span>
                                     <span className="text-white font-medium">${pkg.pricingPerPerson ? (pkg.pricingPerPerson && pkg.pricingPerPerson[0].price.toFixed(2)) : (pkg.price.jeep && pkg.price.jeep.toFixed(2))}</span>
@@ -211,7 +212,7 @@ export default async function PackageDetailPage({ params }: Props) {
                                         <span className="text-white font-medium">${pkg.price.tax.toFixed(2)}</span>
                                     </div>
                                 )} */}
-                                <div className="bg-background-dark/50 p-3 rounded-lg flex justify-between items-center text-sm border border-border-dark/50">
+                                <div className="p-3 rounded-lg flex justify-between items-center text-sm border" style={{ backgroundColor: `${colors.backgroundDark}/50`, borderColor: `${colors.borderDark}50` }}>
                                     <div className="flex flex-col">
                                         <span className="text-gray-400 text-xs">Park Entrance Fee</span>
                                         <span className="text-[10px] text-primary">*Payable at gate</span>
@@ -228,7 +229,7 @@ export default async function PackageDetailPage({ params }: Props) {
                             </div>
                             <div className="flex flex-col gap-3">
                                 <Link href={`/safari-calculator/${pkg.id}`}>
-                                    <button className="flex cursor-pointer w-full items-center justify-center rounded-lg h-12 bg-primary text-background-dark text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]">
+                                    <button className={`flex cursor-pointer w-full items-center justify-center rounded-lg h-12 ${tw.bgPrimary} ${tw.textDark} text-base font-bold shadow-[0_0_20px_rgba(223,175,42,0.3)] transition-all hover:shadow-[0_0_30px_rgba(223,175,42,0.5)] hover:scale-[1.02]`}>
                                         Customize Trip
                                     </button>
                                 </Link>
@@ -265,7 +266,7 @@ export default async function PackageDetailPage({ params }: Props) {
 
 function FeatureBox({ icon, title, value }: { icon: string; title: string; value: string }) {
     return (
-        <div className="flex flex-col gap-3 rounded-xl border border-border-dark bg-surface-dark p-5 hover:border-primary/50 transition-colors group">
+        <div className={`flex flex-col gap-3 rounded-xl border ${tw.borderDark} ${tw.bgSurfaceDark} p-5 hover:border-[${colors.primary}]/50 transition-colors group`}>
             <span className="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">
                 {icon}
             </span>
@@ -280,7 +281,7 @@ function FeatureBox({ icon, title, value }: { icon: string; title: string; value
 function TimelineItem({ item }: { item: { time: string; title: string; description: string; icon: string } }) {
     return (
         <div className="relative pl-8 group">
-            <div className="absolute -left-[21px] top-1 h-10 w-10 rounded-full bg-surface-dark border border-border-dark group-hover:border-primary transition-colors flex items-center justify-center z-10">
+            <div className={`absolute -left-[21px] top-1 h-10 w-10 rounded-full ${tw.bgSurfaceDark} border ${tw.borderDark} ${tw.hoverBorderPrimary} transition-colors flex items-center justify-center z-10`}>
                 <span className="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors text-sm">
                     {item.icon}
                 </span>
@@ -296,7 +297,7 @@ function TimelineItem({ item }: { item: { time: string; title: string; descripti
 
 function DetailsAccordion({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
     return (
-        <details className="group rounded-xl border border-border-dark bg-surface-dark open:bg-surface-dark/50" open={defaultOpen}>
+        <details className={`group rounded-xl border ${tw.borderDark} ${tw.bgSurfaceDark} open:${tw.bgSurfaceDark}/50`} open={defaultOpen}>
             <summary className="flex cursor-pointer items-center justify-between p-5 font-medium text-white transition-colors hover:text-primary list-none">
                 <span className="text-lg font-bold">{title}</span>
                 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>

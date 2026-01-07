@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Badge, Package, PackageDetail } from "@/types";
 import { useRouter } from "next/navigation";
+import { tw, colors } from "@/lib/theme";
 
 interface PackageCardProps {
     package: PackageDetail;
@@ -12,8 +13,8 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
     return (
         <div
             className={`group ${ pkg.badge === Badge.POPULAR
-                    ? "bg-gradient-to-br from-[#181611] to-[#2a261a] border border-primary/30 hover:border-primary"
-                    : "bg-[#181611] border border-border-dark hover:border-primary/50"
+                    ? `bg-gradient-to-br from-[#181611] to-[#2a271f}] border ${tw.borderPrimary}/30 ${tw.hoverBorderPrimary}`
+                    : `bg-[${colors.backgroundDark}] border border-[#393428] ${tw.hoverBorderPrimary}/50`
                 } rounded-xl overflow-hidden transition-all duration-300 flex flex-col`}
         >
             {/* Image */}
@@ -22,7 +23,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
                     <div
                         className={`absolute top-3 right-3 
                                 ${ pkg.badge === Badge.POPULAR
-                                ? "bg-primary text-[#181611]"
+                                ? `bg-[#ecb213] ${tw.textDark}`
                                 : "bg-black/60 backdrop-blur-sm text-white"
                             } px-2 py-1 rounded text-xs font-bold z-10`}
                     >
@@ -43,7 +44,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
                 <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-bold text-white">{pkg.title.split(" ").slice(2, 4).join(" ")}</h3>
                     <div className="text-right">
-                        <span className="block text-2xl font-bold text-primary">
+                        <span className={`block text-2xl font-bold ${tw.textPrimary}`}>
                             ${pkg.pricingPerPerson ? `${pkg.pricingPerPerson[0].price}` : `${pkg.price.jeep}`}
                         </span>
                         <span className="text-xs text-gray-500"> {pkg.pricingPerPerson ? "per person" : "per jeep"}</span>
@@ -57,7 +58,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
                 <div className="space-y-3 mb-6 flex-grow">
                     {pkg.itinerary.map((itine, index) => (
                         <div key={index} className="flex items-center gap-3 text-sm text-gray-300">
-                            <span className="material-symbols-outlined text-primary text-lg">
+                            <span className={`material-symbols-outlined ${tw.textPrimary} text-lg`}>
                                 {itine.icon}
                             </span>
                             {itine.title}
@@ -69,8 +70,8 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
                 <button 
                     onClick={() => router.push(`/packages/${pkg.id}`)}
                     className={`w-full py-3 cursor-pointer rounded-lg font-semibold transition-colors ${pkg.itinerary
-                            ? "bg-primary text-[#181611] hover:bg-yellow-500"
-                            : "border border-border-dark bg-[#27241c] text-white hover:bg-primary hover:text-black hover:border-primary"
+                            ? `${tw.bgPrimary} ${tw.textDark} hover:bg-yellow-500`
+                            : `border ${tw.borderDark} ${tw.bgSurfaceDark} text-white ${tw.bgPrimaryHover} hover:text-black ${tw.hoverBorderPrimary}`
                         }`}
                 >
                     {pkg.itinerary ? "Customize Now" : "View Details"}

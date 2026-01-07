@@ -2,6 +2,7 @@
 import { destinations } from "@/lib/data";
 import DestinationCard from "../ui/DestinationCard";
 import { useState } from "react";
+import { tw, colors } from "@/lib/theme";
 
 export default function DestinationsSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,12 +55,12 @@ export default function DestinationsSection() {
         //         </div>
         //     </div>
         // </div>
-       <div className="bg-surface-dark py-20" id="destinations">
+       <div className={`${tw.bgSurfaceDark} py-20`} id="destinations">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <span className="text-primary font-bold uppercase tracking-wider text-sm">
+            <span className={`${tw.textPrimary} font-bold uppercase tracking-wider text-sm`}>
               Explore Locations
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
@@ -70,14 +71,14 @@ export default function DestinationsSection() {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className="w-10 h-10 rounded-full border border-border-dark flex items-center justify-center hover:bg-border-dark text-white transition-colors disabled:opacity-50"
+              className={`w-10 h-10 rounded-full border ${tw.borderDark} flex items-center justify-center hover:bg-[${colors.borderDark}] text-white transition-colors disabled:opacity-50`}
             >
               <span className="material-symbols-outlined">arrow_back</span>
             </button>
             <button
               onClick={handleNext}
               disabled={currentIndex >= destinations.length - cardsPerView}
-              className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black hover:bg-yellow-500 transition-colors disabled:opacity-50"
+              className={`w-10 h-10 rounded-full ${tw.bgPrimary} flex items-center justify-center text-black hover:bg-yellow-500 transition-colors disabled:opacity-50`}
             >
               <span className="material-symbols-outlined">arrow_forward</span>
             </button>

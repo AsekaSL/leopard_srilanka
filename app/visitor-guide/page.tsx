@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import visitor_guide_hero from "@/public/visitor_guide_hero.png";
+import { tw, colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
     title: "Visitor Guide | Leopard Sri Lanka",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function VisitorGuidePage() {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+        <div className={`${tw.bgBackgroundLight} ${tw.darkBgBackgroundDark} text-slate-900 dark:text-white font-display overflow-x-hidden`}>
 
             {/* Hero Section */}
             <div className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center">
@@ -26,7 +27,7 @@ export default function VisitorGuidePage() {
                     />
                 </div>
                 <div className="relative z-20 text-center px-4 max-w-4xl mx-auto flex flex-col gap-6">
-                    <span className="text-primary font-medium tracking-widest uppercase text-sm">Essential Information</span>
+                    <span className={`${tw.textPrimary} font-medium tracking-widest uppercase text-sm`}>Essential Information</span>
                     <h1 className="text-white text-5xl md:text-7xl font-black tracking-tight leading-tight">
                         Visitor Guide
                     </h1>
@@ -43,7 +44,7 @@ export default function VisitorGuidePage() {
                     <div className="hidden lg:block w-64 shrink-0">
                         <div className="sticky top-24 flex flex-col gap-2">
                             <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4 px-3">Contents</p>
-                            <a className="px-3 py-2 text-primary font-medium border-l-2 border-primary bg-primary/5 rounded-r-md" href="#before-you-go">Preparation</a>
+                            <a className={`px-3 py-2 ${tw.textPrimary} font-medium border-l-2 ${tw.borderPrimary} rounded-r-md`} style={{ backgroundColor: `${colors.primary}05` }} href="#before-you-go">Preparation</a>
                             <a className="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-gray-700" href="#timings">Timings & Fees</a>
                             <a className="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-gray-700" href="#what-to-bring">Essentials</a>
                             <a className="px-3 py-2 text-gray-400 hover:text-white transition-colors border-l-2 border-transparent hover:border-gray-700" href="#rules">Park Regulations</a>

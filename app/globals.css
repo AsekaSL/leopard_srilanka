@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-primary: #ecb213;
-  --color-background-light: #f8f7f6;
-  --color-background-dark: #181611;
-  --color-surface-dark: #27241c;
-  --color-border-dark: #393428;
-  --font-display: var(--font-jakarta);
-}
+
 
 /* Material Symbols Icons */
 .material-symbols-outlined {
